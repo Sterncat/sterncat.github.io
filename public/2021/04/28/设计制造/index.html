@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Compact Lens设计制造 | 光学碎片</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="光学镜头" />
+  
+  
+  
+  
+  <meta name="description" content="Compact Lens设计制造镜头制造是一项系统工程，设计，制造每个流程都十分重要。 核心点在：把镜头做的又好又一样。（大规模生产） 科学+经验的结合，虽然每一个行业都是这样的结合，但是在文章中，我们会更强调说明如何光学公司和光学工程师们结合这些科学方法和经验的。 第零章镜头基本结构 镜片，镜筒，镜座，隔圈，隔片，压圈，滤光片 生产基本流程 设计→模具→注塑成型→镀膜→组立→品检">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Compact Lens设计制造">
+<meta property="og:url" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/index.html">
+<meta property="og:site_name" content="光学碎片">
+<meta property="og:description" content="Compact Lens设计制造镜头制造是一项系统工程，设计，制造每个流程都十分重要。 核心点在：把镜头做的又好又一样。（大规模生产） 科学+经验的结合，虽然每一个行业都是这样的结合，但是在文章中，我们会更强调说明如何光学公司和光学工程师们结合这些科学方法和经验的。 第零章镜头基本结构 镜片，镜筒，镜座，隔圈，隔片，压圈，滤光片 生产基本流程 设计→模具→注塑成型→镀膜→组立→品检">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_EFCD7D6F43CA-1.jpeg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/transmission.jpg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/molded-optical-lens.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Glass_transition_curve.jpg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/80152171717f450db4339251765f1a0d.jpeg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-24_at_1.34.48_AM.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_829FCB2E7008-1.jpeg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/zeon_slide.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/TB2yvGqgN1YBuNjy1zcXXbNcXXa_!!3348332463.jpg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-22_at_12.52.22_AM.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-25_at_10.12.51_PM.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/csm_Camera_Iris_small_2__e436455472.jpg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/unnamed.jpg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_013839EA9E47-1.jpeg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/zsj22.jpg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-25_at_10.38.50_PM.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-25_at_10.37.24_PM.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled%201.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled%202.png">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/e_03_dual-pixel-cmos-af-structure.jpg">
+<meta property="og:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled%203.png">
+<meta property="article:published_time" content="2021-04-29T05:36:27.000Z">
+<meta property="article:modified_time" content="2021-04-30T07:10:51.615Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="光学">
+<meta property="article:tag" content="镜头">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_EFCD7D6F43CA-1.jpeg">
+  
+    <link rel="alternate" href="/atom.xml" title="光学碎片" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  
+  <div class="site-header-image">
+    <img id="originBg" width="100%" alt="Hike News" src="">
+  </div>
+
+  <div id="header-blur" class="site-header-image blur" style="position: absolute; top:0; height: 207px; min-height: 207px; min-width: 100%;">
+    <img id="blurBg" width="100%" style="top: 96%" alt="Hike News" src="">
+  </div>
+
+  <script>
+        var imgUrls = "css/images/pose01.jpg,https://source.unsplash.com/collection/954550/1920x1080,https://source.unsplash.com/collection/954550/1920x1081".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("originBg").src=imgUrls[random];
+          document.getElementById("blurBg").src=imgUrls[random];
+        } else {
+          document.getElementById("originBg").src='/' + imgUrls[random];
+          document.getElementById("blurBg").src='/' + imgUrls[random];
+        }
+    </script>
+
+
+
+
+<header id="allheader" class="site-header" role="banner" 
+   style="width: 100%; position: absolute; top:0; background: rgba(255,255,255,.8);"  >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="光学碎片" rel="home"> 光学碎片 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-设计制造" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Compact Lens设计制造
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2021/04/28/%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0/" class="article-date">
+	  <time datetime="2021-04-29T05:36:27.000Z" itemprop="datePublished">April 28, 2021</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%A1%91%E6%96%99%E9%95%9C%E5%A4%B4%E5%88%B6%E9%80%A0/">塑料镜头制造</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h1 id="Compact-Lens设计制造"><a href="#Compact-Lens设计制造" class="headerlink" title="Compact Lens设计制造"></a>Compact Lens设计制造</h1><p>镜头制造是一项系统工程，设计，制造每个流程都十分重要。</p>
+<p>核心点在：把镜头做的又好又一样。（大规模生产）</p>
+<p>科学+经验的结合，虽然每一个行业都是这样的结合，但是在文章中，我们会更强调说明如何光学公司和光学工程师们结合这些科学方法和经验的。</p>
+<h1 id="第零章"><a href="#第零章" class="headerlink" title="第零章"></a>第零章</h1><p>镜头基本结构</p>
+<p>镜片，镜筒，镜座，隔圈，隔片，压圈，滤光片</p>
+<p>生产基本流程</p>
+<p>设计→模具→注塑成型→镀膜→组立→品检</p>
+<span id="more"></span>
+<h1 id="第一章：材料"><a href="#第一章：材料" class="headerlink" title="第一章：材料"></a>第一章：材料</h1><h2 id="白物材料：塑料"><a href="#白物材料：塑料" class="headerlink" title="白物材料：塑料"></a>白物材料：塑料</h2><p>塑料镜头材料主要有几种类型，不过本质上都是塑料（高分子聚合物）。他们都是热塑性塑料，是加热后软化、可塑，冷却后硬化，再加热后又会软化的塑料。运用加热及冷却，使其产生液态与固态之间的可逆变化的物理变化。有些材料发明时间较早，有些相对新一些。有些是通用应用塑料，有些材料是专门开发的光学塑料材料，更专门的用于一些光学领域。在光学设计中，我们可能会看到各个公司的材料牌号，如EP8000, K26R, APL5015, OKP-1等等。他们都属于某个塑料材料类型，其中以下几种类型比较常见，我们按他们的出现时间进行一个先后排序：</p>
+<p><strong>PMMA/Acrylic:</strong> Poly(methyl methacrylate)，聚甲基丙烯酸甲酯（有机玻璃，亚克力）。由于其便宜的价格和高透过率，高机械强度的特性，PMMA是生活中最常见的玻璃替代品，大部分的透明塑料都是PMMA制造的，比如透明板，透明勺子，Led上的Lens等等。PMMA在1930年代开始大规模生产。</p>
+<p><strong>PS:</strong> Polystyrene，聚苯乙烯，是无色透明的热塑性塑料，也是一种通用型塑料，在1930年代开始大规模生产。我们生活中常见的泡沫盒子，餐盒等很多都是PS材料。</p>
+<p><strong>PC:</strong> Polycarbonate，聚碳酸酯，也是一种无色透明的无定性热塑性，也是通用型塑料，1970年代开始才商业化。PC材料的抗冲击性很好，所以最常见的应用是饮水机的水桶，护目镜等。</p>
+<p><strong>COP &amp; COC:</strong> Cyclic olefin Polymer(COP), 环烯烃聚合物; Cyclic olefin copolymer(COC) 环烯烃共聚物，是一种具有环状结构的非晶性透明高分子材料，具有环内碳碳双键的环状烃，由环烯烃单体通过自聚（COP）或与其他分子（如乙烯）共聚（COC）制成 ，特性几乎是一样的。这种材料相对较新，最开始发明出来的时候就主要是考虑一些光学相关应用，现今广泛应用于薄膜，光学镜片，显示屏，医疗（包装瓶）行业。2005年左右该种材料才开始商业化。</p>
+<p><strong>O-PET：</strong>Optical polyester 光学聚酯纤维，O-PET在2010年代开始商业化。</p>
+<p>当分析一种光学材料时，我们主要关注他们的光学特性和机械/其他特性。</p>
+<h3 id="光学特性1：折射率-amp-色散"><a href="#光学特性1：折射率-amp-色散" class="headerlink" title="光学特性1：折射率&amp;色散"></a>光学特性1：折射率&amp;色散</h3><p>从下图可见，不同光学塑料材料基本上落到了两个区间：</p>
+<p>1）高折射率，高色散</p>
+<p>2）低折射率，低色散</p>
+<p>不过对比起玻璃材料可选的折射率和色散范围，我们会发现塑料材料的折射率可选范围很窄，所有光学塑料材料都是相对较低的折射率。总体而言，塑料材料可选范围更窄，商用的材料牌号只有10~20种左右，很大程度上从材料上限制了光学设计的自由度。</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_EFCD7D6F43CA-1.jpeg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_EFCD7D6F43CA-1.jpeg"></p>
+<p><a target="_blank" rel="noopener" href="https://www.spiedigitallibrary.org/ebooks/FG/Field-Guide-to-Molded-Optics/Plastic-Optic-Glass-Map/Plastic-Optic-Glass-Map/10.1117/3.2230581.ch23?SSO=1">https://www.spiedigitallibrary.org/ebooks/FG/Field-Guide-to-Molded-Optics/Plastic-Optic-Glass-Map/Plastic-Optic-Glass-Map/10.1117/3.2230581.ch23?SSO=1</a></p>
+<p>图片需要更新</p>
+<p><strong>折射率随温度变化Dn/DT</strong></p>
+<p>光学塑料的折射率温度系数比玻璃要大6倍到50倍，为负值，意味着随着温度的升高，折射率下降。比如对于546nm波长，-20°C<del>40°C，塑料材料的dn/dT数值在-8</del>-15X10^–5/°C，玻璃材料NBK7数值在3X10^–6/°C</p>
+<p>为什么塑料材料折射率相对玻璃材料折射率低？</p>
+<h3 id="光学特性2：透过率"><a href="#光学特性2：透过率" class="headerlink" title="光学特性2：透过率"></a>光学特性2：透过率</h3><p>大部分的光学塑料都在可见光波段有着90%以上的透过率；对于电子消费品常见的红外波段850nm和940nm，也有着很好的透过率。塑料材料的透过率随着时间也会有一定程度的下降。主要原因是塑料吸收了阳光中的紫外线，分子链断发生了降解与交联，导致了物理及化学性质变化，最明显的宏观表现就是塑料材料发黄。</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/transmission.jpg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/transmission.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://www.gsoptics.com/transmission-curves/">https://www.gsoptics.com/transmission-curves/</a></p>
+<p>图片需要更新</p>
+<h3 id="光学特性3：应力双折射Birefringence"><a href="#光学特性3：应力双折射Birefringence" class="headerlink" title="光学特性3：应力双折射Birefringence"></a>光学特性3：应力双折射Birefringence</h3><p>应力双折射是材料的一种光学性质，材料的折射率和入射光的偏振状态和传播方向相关。对于不同偏振态，材料显现出的折射率不同。对于一些系统来说，这种折射率偏差很小，对于系统并没有非常大的影响，但是对于一些特别的光学系统来说，这种偏差已经足以导致系统性能的严重下降。</p>
+<p>塑料材料本身并不具有各项异性的特点，但是对于塑料的注塑成型会引入应力双折射。主要产生原因就是在注塑成型时引入的应力和冷却后塑料大分子的排列方式。应力一般集中在注塑料口附近，如下图所示。一般的设计生产原则是让光学有效面内的应力双折射尽量小，这需要合理的设计镜片结构，注塑成型的模具和生产参数。几种材料中，PC材料更容易产生应力双折射，COP、COC、PMMA材料有更低的应力双折射。</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/molded-optical-lens.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/molded-optical-lens.png"></p>
+<p><a target="_blank" rel="noopener" href="https://www.moldex3d.com/blog/top-story/challenging-traditional-molding-methods-moldex3d-brings-out-the-best-of-injection-compression-molding/">https://www.moldex3d.com/blog/top-story/challenging-traditional-molding-methods-moldex3d-brings-out-the-best-of-injection-compression-molding/</a></p>
+<p>机械特性主要包括热膨胀性，吸水性，收缩率</p>
+<h3 id="机械特性1：玻璃转化温度Tg"><a href="#机械特性1：玻璃转化温度Tg" class="headerlink" title="机械特性1：玻璃转化温度Tg"></a>机械特性1：玻璃转化温度Tg</h3><p>塑料材料的玻璃转化温度Tg这个词从名字上看就知道是来源自玻璃。对于非晶聚物，对它施加恒定的力，观察它发生的形变与温度的关系，通常特称为温度形变曲线或热机械曲线。非晶聚物有三种力学状态，它们是玻璃态、高弹态和粘流态。在温度较低时，材料为刚性固体状，与玻璃相似，在外力作用下只会发生非常小的形变，此状态即为玻璃态：当温度继续升高到一定范围后，材料的形变明显地增加，并在随后的一定温度区间形变相对稳定，此状态即为高弹态，温度继续升高形变量又逐渐增大，材料逐渐变成粘性的流体，此时形变不可能恢复，此状态即为粘流态。我们通常把玻璃态与高弹态之间的转变，称为玻璃化转变，它所对应的转变温度即是玻璃化转变温度，或是玻璃化温度。常见的光学镜片用塑料的Tg在120~160℃间。</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Glass_transition_curve.jpg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Glass_transition_curve.jpg"></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/80152171717f450db4339251765f1a0d.jpeg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/80152171717f450db4339251765f1a0d.jpeg"></p>
+<p>室温是非晶态热塑性塑料使用的上限温度,是橡胶使用的下限温度。所以室温中，</p>
+<h3 id="机械特性2：热膨胀系数CTE"><a href="#机械特性2：热膨胀系数CTE" class="headerlink" title="机械特性2：热膨胀系数CTE"></a>机械特性2：热膨胀系数CTE</h3><p>热膨胀系数是衡量一个材料随温度变化而产生的大小的变化的参数。光学用塑料材料的热膨胀系数CTE大概都在(6<del>7)*10^-5 /℃左右，对比玻璃材料(5</del>10)<em>10^-6/℃，基本相差一个数量级。如果一个塑料材料的CTE是6</em>10^-5 /℃，那么对于一个直径10mm的塑料镜片，10°C的变化就会造成大概0.01<em>10</em>6<em>10^-5 = 6</em>10^-6 m = 6um的长度变化。</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-24_at_1.34.48_AM.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-24_at_1.34.48_AM.png"></p>
+<h3 id="机械特性3：吸水性"><a href="#机械特性3：吸水性" class="headerlink" title="机械特性3：吸水性"></a>机械特性3：吸水性</h3><p>COP和COC的吸水率都&lt;0.01%，PS材料吸水性0.03%，PMMA吸水性0.2%，PMMA吸水性0.3%。吸水率一般的测定方法是把完全干燥过被测材料，浸入23℃的水中，24小时后取出擦干测量重量的变化。（参考Water Absorption ASTM D570）由于COP和COC非常低的吸水性，所以COP和COC材料也常用来作为药品的包装瓶。塑料材料吸水性越强，就越容易受到温度和湿度的影响，造成镜片的面型改变，或者造成镜片之间的受力变化。由于塑料较强的吸水性，在注塑成型前，都会对塑料材料颗粒进行干燥处理，否则，塑料里的水分会影响塑料的粘滞性，影响成型过程，也可能对最终产品的外观造成影响。</p>
+<h3 id="其他特性"><a href="#其他特性" class="headerlink" title="其他特性"></a>其他特性</h3><p>塑料材料的其他特性有：强度，雾度，电气性能，耐化学品和药剂性等。</p>
+<h3 id="白物塑料材料牌号"><a href="#白物塑料材料牌号" class="headerlink" title="白物塑料材料牌号"></a>白物塑料材料牌号</h3><p>以下列出了一部分常用的电子消费品用塑料材料。光学镜头塑料只是这些公司塑料业务的一部分。各个光学镜头公司都有自己的材料喜好。</p>
+<p><a target="_blank" rel="noopener" href="https://www.notion.so/9f8f854355ac470e9f6fa2c94fabb137">Untitled</a></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_829FCB2E7008-1.jpeg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_829FCB2E7008-1.jpeg"></p>
+<p>材料形态：</p>
+<p>大部分光学塑料原材料都以颗粒形式存在，包装都类似于一袋大米或者一袋子水泥</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/zeon_slide.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/zeon_slide.png"></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/TB2yvGqgN1YBuNjy1zcXXbNcXXa_!!3348332463.jpg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/TB2yvGqgN1YBuNjy1zcXXbNcXXa_!!3348332463.jpg"></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-22_at_12.52.22_AM.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-22_at_12.52.22_AM.png"></p>
+<p>可用的塑料材料的最高折射率是多少？</p>
+<p>要关注的材料spec</p>
+<p>参考Link：</p>
+<p><a target="_blank" rel="noopener" href="https://www.gsoptics.com/materials-for-polymer-and-co-polymer-optics/">https://www.gsoptics.com/materials-for-polymer-and-co-polymer-optics/</a></p>
+<p>SPIE Field Guide to Molded Optics(FG37)</p>
+<p><a target="_blank" rel="noopener" href="https://www.ogc.co.jp/e/products/fluorene/okp.html">https://www.ogc.co.jp/e/products/fluorene/okp.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zeonex.com/optics.aspx.html">https://www.zeonex.com/optics.aspx.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://us.mitsuichemicals.com/service/product/apel.htm">https://us.mitsuichemicals.com/service/product/apel.htm</a></p>
+<h2 id="黑物材料：镜筒Barrel、隔片Spacer、压圈Retainer"><a href="#黑物材料：镜筒Barrel、隔片Spacer、压圈Retainer" class="headerlink" title="黑物材料：镜筒Barrel、隔片Spacer、压圈Retainer"></a>黑物材料：镜筒Barrel、隔片Spacer、压圈Retainer</h2><p>镜筒（Barrel），镜座（holder），隔片（Spacer），压圈（Retainer）等材料由于是黑色的，所以称为黑物。主要材料有PC，金属（黄铜）等。</p>
+<h3 id="镜筒"><a href="#镜筒" class="headerlink" title="镜筒"></a>镜筒</h3><p>白物镜片都会组装进镜筒，主要材料为PC。</p>
+<h3 id="镜座"><a href="#镜座" class="headerlink" title="镜座"></a>镜座</h3><p>对于非一体式镜头，镜筒和镜座是通过螺纹组装在一起的，镜座负责一面和传感器结合，一面和镜筒结合。镜座材料也多为PC。</p>
+<h3 id="隔圈"><a href="#隔圈" class="headerlink" title="隔圈"></a>隔圈</h3><p>隔圈（Spacer）负责在镜头中提供精确地镜片间距和遮挡杂光。用于提供间距的主要是PC或者金属材料，金属材料能提供更好的强度，常用的金属隔圈材料为黄铜。</p>
+<h3 id="隔片"><a href="#隔片" class="headerlink" title="隔片"></a>隔片</h3><p>同时镜片间会插入隔片用于遮挡杂光或者作为光阑，塑胶镜头大部分都会使用黑色薄膜类的隔片完成这项工作，主要是两种材料，分别为Kimoto公司生产的Carbon feather，一种是Somar公司生产的Soma Black R Film。隔片的厚度很多都是一些标准厚度，35um或者105um等。</p>
+<p><strong>Kimoto（株式会社）的产品：Carbon feather</strong></p>
+<p>Carbonfeather设计就是用于遮挡和吸收光学设备和系统中的杂光，这种材料是在PET薄膜上下表面进行碳化镀膜实现的。</p>
+<p><a target="_blank" rel="noopener" href="https://www.kimototech.com/products/product-lines/pl/carbonfeather.html">https://www.kimototech.com/products/product-lines/pl/carbonfeather.html</a></p>
+<p>Carbonfeather is designed to shield or block/absorb light inside optical assemblies and lighting equipment. Carbonfeather is a PET film that employs special coatings along with unique processing to produce a product with high optical density, good electrical resistance, low mechanical friction and minimal thermal expansion. The mechanical properties allow Carbonfeather to be used to create shutters and irises for all types of cameras and vision systems.</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-25_at_10.12.51_PM.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-25_at_10.12.51_PM.png"></p>
+<p>中间是PET薄膜，上下是镀黑膜</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/csm_Camera_Iris_small_2__e436455472.jpg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/csm_Camera_Iris_small_2__e436455472.jpg"></p>
+<p><strong>Somar（株式会社）的SomaBlack薄膜</strong></p>
+<p>SOMABLACK材料是Somar公司生产的用于光学系统遮光的材料，这种材料主要是聚酯纤维混入碳制成的，表面处理会做成雾面化。</p>
+<p><a target="_blank" rel="noopener" href="http://www.somar.co.jp/english/products/03_somablack.html">http://www.somar.co.jp/english/products/03_somablack.html</a></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/unnamed.jpg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/unnamed.jpg"></p>
+<h2 id="压圈Retainer-PC，金属"><a href="#压圈Retainer-PC，金属" class="headerlink" title="压圈Retainer: PC，金属"></a>压圈Retainer: PC，金属</h2><p>压圈一般在最后一个镜片外，提供额外的支撑力。有些镜头的最后一片镜片直接点胶和镜筒壁粘合在一起，但是有些设计或者应用中，这种点胶提供的黏合力不够，镜头可能会无法通过信赖性测试，所以会使用压圈。</p>
+<p>小tip：为什么这些黑物材料要使用黄铜？黄铜热稳定好，同时黄铜不会被磁化，不影响带有AF功能的模组的音圈马达VCM工作。</p>
+<h1 id="第二章-设计"><a href="#第二章-设计" class="headerlink" title="第二章 设计"></a>第二章 设计</h1><p>公差和constrains</p>
+<h2 id="设计波长Wavelength"><a href="#设计波长Wavelength" class="headerlink" title="设计波长Wavelength"></a>设计波长Wavelength</h2><p>wavelength weighting，选择这种wavelength weighting的理由</p>
+<p>问题：Lens design中的像差具体是如何体现在sensor上的（所有问题要放入光学系统去考虑）。可以在这里给出一些示意图。比如：色差，color fringe</p>
+<h3 id="色散"><a href="#色散" class="headerlink" title="色散"></a>色散</h3><p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_013839EA9E47-1.jpeg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/IMG_013839EA9E47-1.jpeg"></p>
+<p>Don’t make EFL larger than magnification EFL, large EFL requires large OIS and AF strokes.</p>
+<h3 id="场曲"><a href="#场曲" class="headerlink" title="场曲"></a>场曲</h3><ol>
+<li>场曲重要的原因是它反映了image plane和sensor plane的关系</li>
+<li>常去的变化方向也很重要，比如一个批次的镜头场曲偏向负，会使镜头巷macro场景下性能更好，但是xxxmm~infinity会变差。大部分user case是infinity要更好，因为AF infinity已经没有调节空间了，不会AF调节</li>
+</ol>
+<p>FEA Simulation：有限元分析</p>
+<p>1）横向力→thickness/PV change→how it influence your optical performance</p>
+<ol start="2">
+<li>纵向力→post-assembly的Z向stress，可能会引入REL的问题。</li>
+</ol>
+<p>但是，组装后的镜头是无法测量面型的，所以很难去和simulation对应。这是FEA一直的问题。</p>
+<h2 id="杂光Flare："><a href="#杂光Flare：" class="headerlink" title="杂光Flare："></a>杂光Flare：</h2><p>1）光学系统产生的：Ghost</p>
+<p>2）光学+结构产生的：Flare</p>
+<p>有些公司统称Flare</p>
+<p>Flare也有主观性质：颜色，出现场景，形状，强度都是要考虑的因素。</p>
+<p>主要产生原因：白物TIR，白物熔接痕折射反射，黑物，etc</p>
+<p>simulation软件：Lighttools，ASAP</p>
+<p>光线可以走的两个方向做simulation: 1) lightsource to sensor 2) sensor to light source</p>
+<p>杂光不单单只看像面内，要考虑lens to module assembly tolerance。比如image height 1.865mm, flare/MTF要做到1.945mm，一般image height + 50um~100um。取决于IH大小。</p>
+<p>Flare可能造成各种问题</p>
+<p>比如均匀图片下某处的亮度更高或者更低，</p>
+<p>解决Flare</p>
+<ol>
+<li>镀膜</li>
+<li>隔片</li>
+<li>涂黑，镀黑</li>
+</ol>
+<p>相对照度</p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/WEg-uLkzOj8Drh5YSQUhaw">相对照度解析第一篇–影响相对照度的因素</a></p>
+<h1 id="第三章-模具"><a href="#第三章-模具" class="headerlink" title="第三章 模具"></a>第三章 模具</h1><p>模具材料，模具设计</p>
+<p>硬化淬火，镀镍，</p>
+<p>补正, 收缩</p>
+<p>Designing with this in mind is called “steel safe” or “metal safe,” and doing so can save you both money and time when you have to modify your design.</p>
+<p>②注射成型过程影响表面面形精度.由于材料在成型过程中的流动模式和冷却，固化收缩，光学零件的面形精度会受到影响。大多数光学塑料零件在成型时的收缩率一般是模具尺寸的0.1%~0.6%，随材料和生产过程的不同而不同；</p>
+<p>模具的检测</p>
+<h1 id="第四章-成型"><a href="#第四章-成型" class="headerlink" title="第四章 成型"></a>第四章 成型</h1><p>成型机</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/zsj22.jpg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/zsj22.jpg"></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-25_at_10.38.50_PM.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-25_at_10.38.50_PM.png"></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-25_at_10.37.24_PM.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Screen_Shot_2021-04-25_at_10.37.24_PM.png"></p>
+<p>成型后镜片的检测</p>
+<p>面型</p>
+<p>偏心</p>
+<p>外观</p>
+<h1 id="第五章-镀膜"><a href="#第五章-镀膜" class="headerlink" title="第五章 镀膜"></a>第五章 镀膜</h1><h1 id="第六章-组装"><a href="#第六章-组装" class="headerlink" title="第六章 组装"></a>第六章 组装</h1><h1 id="第七章-评测"><a href="#第七章-评测" class="headerlink" title="第七章 评测"></a>第七章 评测</h1><p>光学性能</p>
+<p>机械性能</p>
+<p>信赖性</p>
+<h1 id="相位对焦技术"><a href="#相位对焦技术" class="headerlink" title="相位对焦技术"></a>相位对焦技术</h1><p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled.png"></p>
+<p><a target="_blank" rel="noopener" href="https://photographylife.com/how-phase-detection-autofocus-works">https://photographylife.com/how-phase-detection-autofocus-works</a></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled%201.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled%201.png"></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26515007">https://zhuanlan.zhihu.com/p/26515007</a></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled%202.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled%202.png"></p>
+<p>diagonally-split green pixels used in the ISOCELL GN2</p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/e_03_dual-pixel-cmos-af-structure.jpg" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/e_03_dual-pixel-cmos-af-structure.jpg"></p>
+<p><img src="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled%203.png" alt="Compact%20Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0%2079e73cb632bc443380f72cc63950f0d4/Untitled%203.png"></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Hi2xuErOKODcaAoAhCs-SQ">PDAF图像传感器的新演进</a></p>
+<h1 id="资料和待Cover内容"><a href="#资料和待Cover内容" class="headerlink" title="资料和待Cover内容"></a>资料和待Cover内容</h1><ol>
+<li>液态镜头</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/024h8tPvCPPUyuT53CCPWQ">液态镜头的发展与应用</a></p>
+<ol start="2">
+<li>切边镜头：Truncated</li>
+</ol>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%A1%91%E6%96%99%E9%95%9C%E5%A4%B4%E5%88%B6%E9%80%A0/">塑料镜头制造</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%89%E5%AD%A6/" rel="tag">光学</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%95%9C%E5%A4%B4/" rel="tag">镜头</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/04/28/My-New-Post/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          My New Post
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/04/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Compact-Lens%E8%AE%BE%E8%AE%A1%E5%88%B6%E9%80%A0"><span class="nav-number">1.</span> <span class="nav-text">Compact Lens设计制造</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E9%9B%B6%E7%AB%A0"><span class="nav-number">2.</span> <span class="nav-text">第零章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E6%9D%90%E6%96%99"><span class="nav-number">3.</span> <span class="nav-text">第一章：材料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BD%E7%89%A9%E6%9D%90%E6%96%99%EF%BC%9A%E5%A1%91%E6%96%99"><span class="nav-number">3.1.</span> <span class="nav-text">白物材料：塑料</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E5%AD%A6%E7%89%B9%E6%80%A71%EF%BC%9A%E6%8A%98%E5%B0%84%E7%8E%87-amp-%E8%89%B2%E6%95%A3"><span class="nav-number">3.1.1.</span> <span class="nav-text">光学特性1：折射率&amp;色散</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E5%AD%A6%E7%89%B9%E6%80%A72%EF%BC%9A%E9%80%8F%E8%BF%87%E7%8E%87"><span class="nav-number">3.1.2.</span> <span class="nav-text">光学特性2：透过率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E5%AD%A6%E7%89%B9%E6%80%A73%EF%BC%9A%E5%BA%94%E5%8A%9B%E5%8F%8C%E6%8A%98%E5%B0%84Birefringence"><span class="nav-number">3.1.3.</span> <span class="nav-text">光学特性3：应力双折射Birefringence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E7%89%B9%E6%80%A71%EF%BC%9A%E7%8E%BB%E7%92%83%E8%BD%AC%E5%8C%96%E6%B8%A9%E5%BA%A6Tg"><span class="nav-number">3.1.4.</span> <span class="nav-text">机械特性1：玻璃转化温度Tg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E7%89%B9%E6%80%A72%EF%BC%9A%E7%83%AD%E8%86%A8%E8%83%80%E7%B3%BB%E6%95%B0CTE"><span class="nav-number">3.1.5.</span> <span class="nav-text">机械特性2：热膨胀系数CTE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E7%89%B9%E6%80%A73%EF%BC%9A%E5%90%B8%E6%B0%B4%E6%80%A7"><span class="nav-number">3.1.6.</span> <span class="nav-text">机械特性3：吸水性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E7%89%B9%E6%80%A7"><span class="nav-number">3.1.7.</span> <span class="nav-text">其他特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BD%E7%89%A9%E5%A1%91%E6%96%99%E6%9D%90%E6%96%99%E7%89%8C%E5%8F%B7"><span class="nav-number">3.1.8.</span> <span class="nav-text">白物塑料材料牌号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BB%91%E7%89%A9%E6%9D%90%E6%96%99%EF%BC%9A%E9%95%9C%E7%AD%92Barrel%E3%80%81%E9%9A%94%E7%89%87Spacer%E3%80%81%E5%8E%8B%E5%9C%88Retainer"><span class="nav-number">3.2.</span> <span class="nav-text">黑物材料：镜筒Barrel、隔片Spacer、压圈Retainer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E7%AD%92"><span class="nav-number">3.2.1.</span> <span class="nav-text">镜筒</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%9C%E5%BA%A7"><span class="nav-number">3.2.2.</span> <span class="nav-text">镜座</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%94%E5%9C%88"><span class="nav-number">3.2.3.</span> <span class="nav-text">隔圈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%94%E7%89%87"><span class="nav-number">3.2.4.</span> <span class="nav-text">隔片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E5%9C%88Retainer-PC%EF%BC%8C%E9%87%91%E5%B1%9E"><span class="nav-number">3.3.</span> <span class="nav-text">压圈Retainer: PC，金属</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BE%E8%AE%A1"><span class="nav-number">4.</span> <span class="nav-text">第二章 设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E8%AE%A1%E6%B3%A2%E9%95%BFWavelength"><span class="nav-number">4.1.</span> <span class="nav-text">设计波长Wavelength</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%89%B2%E6%95%A3"><span class="nav-number">4.1.1.</span> <span class="nav-text">色散</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%BA%E6%9B%B2"><span class="nav-number">4.1.2.</span> <span class="nav-text">场曲</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%82%E5%85%89Flare%EF%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">杂光Flare：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%A8%A1%E5%85%B7"><span class="nav-number">5.</span> <span class="nav-text">第三章 模具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%88%90%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">第四章 成型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E9%95%80%E8%86%9C"><span class="nav-number">7.</span> <span class="nav-text">第五章 镀膜</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%BB%84%E8%A3%85"><span class="nav-number">8.</span> <span class="nav-text">第六章 组装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E8%AF%84%E6%B5%8B"><span class="nav-number">9.</span> <span class="nav-text">第七章 评测</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B8%E4%BD%8D%E5%AF%B9%E7%84%A6%E6%8A%80%E6%9C%AF"><span class="nav-number">10.</span> <span class="nav-text">相位对焦技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%84%E6%96%99%E5%92%8C%E5%BE%85Cover%E5%86%85%E5%AE%B9"><span class="nav-number">11.</span> <span class="nav-text">资料和待Cover内容</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2021 光学碎片 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+      var headerblur = document.getElementById("header-blur");
+      headerblur.style.minHeight = window.getComputedStyle(document.getElementById("allheader"), null).height;
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="https://s11.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
