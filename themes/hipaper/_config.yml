@@ -80,7 +80,7 @@ search:
 # comment ShortName, you can choose only ONE to display.
 duoshuo_shortname:
 disqus_shortname:
-livere_shortname: MTAyMC8yOTQ4MS82MDQ5 #需要改成自己的
+livere_shortname: MTAyMC81MzQzMS8yOTkwNQ #评论用代码
 uyan_uid:
 wumii:
 
@@ -103,7 +103,7 @@ baidu_site_verification:
 qihu_site_verification:
 
 # Miscellaneous
-google_analytics:
+google_analytics: 2601663774
 gauges_analytics:
 baidu_analytics:
 tencent_analytics:
