@@ -58,10 +58,10 @@ widgets:
 # Key is the name of FontAwsome icon.
 # Value is the target link (E.g. GitHub: https://github.com/iTimeTraveler)
 social:
-  Wechat: Link to 二维码html # Link to 二维码图片
+  Wechat: https://faster-than-light.net/about/ # Link to about
+  envelope: https://faster-than-light.net/about/ # Link to about
   Github: https://github.com/Sterncat
 #  Google-plus: marvin.fanxing@gmail.com
-  envelope: Link to 带Gmail的html
 #  Weibo:
 #  Twitter:
 #  Facebook:
@@ -103,7 +103,7 @@ baidu_site_verification:
 qihu_site_verification:
 
 # Miscellaneous
-google_analytics: UA-196810386-1 #G-XWTRVXZQZW 
+google_analytics: UA-196810386-1 #G-XWTRVXZQZW
 gauges_analytics:
 baidu_analytics:
 tencent_analytics:
