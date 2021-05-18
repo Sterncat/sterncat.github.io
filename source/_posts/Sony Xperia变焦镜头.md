@@ -3,7 +3,7 @@ title: Sony Xperia 1&5 Mark III变焦镜头
 date: 2021-05-16 00:05:00
 tag:  [镜头, 技术评论]
 categories: 技术评论
-photos: https://raw.githubusercontent.com/Sterncat/BlogPics/main/BlogPics/TechReview/1-SonyZoom/1.png
+photos: https://raw.githubusercontent.com/Sterncat/BlogPics/main/TechReview/1-SonyZoom/1.png
 ---
 
 Sony 近期推出了自己的Xperia 1和Xperia 5 Mark III手机，里面很有意思的是一款变焦镜头。说变焦可能不太准确，因为这款镜头并是不连续变焦镜头，而是一款只实现两个焦段70mm和105mm的潜望式镜头，不过确实焦距变了，叫变焦也无可厚非。所有70mm~105毫米中间的焦距都靠数字变焦实现。这次的三颗摄影镜头的参数如下。
