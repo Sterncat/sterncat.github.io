@@ -1,5 +1,6 @@
 ---
 title: Looking GLass Portrait背后的光学原理
+urlname: TechReview_2_LookingGlass
 date: 2021-05-21 02:00:00
 tag:  技术评论
 categories: 技术评论

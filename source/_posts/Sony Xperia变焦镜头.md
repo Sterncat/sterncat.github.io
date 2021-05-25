@@ -1,8 +1,10 @@
 ---
 title: Sony Xperia 1&5 Mark III变焦镜头
+urlname: TechReview_1_SonyXperiaLens
 date: 2021-05-16 00:05:00
 tag:  [镜头, 技术评论]
 categories: 技术评论
+description: Sony Xperia 1&5 Mark III变焦镜头
 photos: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/1-SonyZoom/1.png
 ---
 
