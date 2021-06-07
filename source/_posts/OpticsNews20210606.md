@@ -7,6 +7,16 @@ categories: 光学新闻
 photo: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20200606/1.jpg
 ---
 
+**本周五篇光学新闻**：
+
+1. 意法半导体（ST）和Metalenz合作---
+2. Sony发布了一篇介绍偏振传感器的技术文章---
+3. 新一代金星探测器会搭载一个自由曲面光学设备---
+4. 各种新式应用加速硅光子学工业界发展---
+5. Velodyne Lidar公司的创始人写公开信要求董事会主席和CEO下台   
+
+<!--more-->
+
 ## 意法半导体（ST）和Metalenz合作进行Metalens的工艺开发，工业化和技术授权
 
 评论：Metalenz和ST合作确实是一步好棋，ST对于各种制程的掌握可能可以很快工业化Metalenz的各种技术优势。ST已经在红外光学传感有一席之地，由此ST也可能会进入到更多光学传感领域或者占据更好的技术优势。超表面透镜可以对复杂光学系统带来性能，功耗，大小和价格上的优化。
@@ -26,8 +36,6 @@ photo: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20200606/1.jpg
 ![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20200606/2.png)
 
 ![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20200606/3.png)
-
-<!--more-->
 
 ## 新一代金星探测器会搭载一个自由曲面光学设备
 
