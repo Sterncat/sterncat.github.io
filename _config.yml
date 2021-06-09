@@ -16,7 +16,7 @@ timezone: ''
 url: http://sterncat.github.io
 # permalink: :year/:month/:day/:title/
 # permalink_defaults:
-permalink: :year/:month/:day/:urlname/
+permalink: :urlname/
 permalink_defaults:
   urlname: index
 pretty_urls:
