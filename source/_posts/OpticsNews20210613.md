@@ -13,7 +13,7 @@ photo: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210613/5.png
 2. Sony展示了一个视频Demo，使用智能AI芯片IMX500进行工作监控和培训---
 3. Honeywell和剑桥量子计算合并成立量子计算巨头---
 4. 台积电正在调研在熊本县建立一个靠近索尼的新厂---
-5. First Solar计划投资6.8亿美元用以增强美国本土光伏太阳能产能---
+5. First Solar计划投资6.8亿美元用以增强美国本土光伏太阳能产能
 
 <!--more-->
 
