@@ -2,7 +2,7 @@
 title: 光学新闻 20210626
 urlname: OpticsNews20210626
 date: 2021-06-26 18:00:00
-tag:  [光学新闻, 技术评论]
+tag:  [光学新闻]
 categories: 光学新闻
 photo: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210626/5.jpg
 ---

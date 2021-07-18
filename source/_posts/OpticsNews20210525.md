@@ -2,7 +2,7 @@
 title: 法国CEA-Leti超低功耗识别设备
 urlname: OpticsNews20210525
 date: 2021-05-25 21:00:00
-tag:  [光学新闻, 技术评论]
+tag:  [光学新闻]
 categories: 光学新闻
 description: 
 photos: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/CEA-Leti-autonomous-imager-device.png

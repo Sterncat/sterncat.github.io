@@ -2,7 +2,7 @@
 title: 光学新闻 20210710
 urlname: OpticsNews20210710
 date: 2021-07-10 17:00:00
-tag:  [光学新闻, 技术评论]
+tag:  [光学新闻]
 categories: 光学新闻
 photo: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210710/2.jpg
 ---
@@ -45,7 +45,7 @@ photo: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210710/2.jpg
 
 评论：法国公司 [Mauna Kea Technologies](https://www.maunakeatech.com/)公司开发的Cellvizio平台可以实现恶性肿瘤识别，该设备使用confocal laser endomicroscopy(nCLE)（激光共焦内窥显微镜）实现。在小范围的26个潜在患者的检测实验中，该设备可以更快得到检测将诶过。该设备发现了有肿瘤的23个患者中的22位。
 
-![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210710/3.jpg)
+![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210710/4-1.jpg)
 
 [新闻稿](https://optics.org/news/12/7/8)
 
