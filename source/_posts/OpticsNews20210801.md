@@ -24,9 +24,9 @@ photo: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210801/5.png
 
 从介绍图上看，猜测是通过测量镜头的像差，然后在ISP里进行了处理。猜测实现方式可能是在镜头组装进模组前，进行点扩散函数的测量。最可能的实现位置就是AA组装前。或者也可能是组装后，通过进行一系列图像，对焦位置的成像信息收集，然后使用算法实现预先修正。不过这个效果和只使用ISP，以及ISP本身算法好坏有多大关系还需要再思考一下。
 
-![1-1](/Users/xing/Personal/Blog/OpticsNews/20210801/1-1.jpg)
+![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210801/1-1.jpg)
 
-![1-2](/Users/xing/Personal/Blog/OpticsNews/20210801/1-2.jpg)
+![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210801/1-2.jpg)
 
 ![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210801/1.jpg)
 
