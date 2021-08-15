@@ -84,6 +84,10 @@ UCLA领导的研究小组设计出了一种新解决方案，他们通过探索�
 
 ![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210815/5.png)
 
+![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20210815/5-1.png)
+
+光纤尖端的纳米天线阵列，可用于太赫兹波长转换
+
 [新闻稿](https://samueli.ucla.edu/ucla-engineers-bend-light-to-enhance-wavelength-conversion/)
 
 [Mona Jarrahi的UCLA太赫兹实验室](https://www.seas.ucla.edu/~mjarrahi/)
