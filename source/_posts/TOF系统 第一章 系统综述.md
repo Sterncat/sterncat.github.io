@@ -7,7 +7,7 @@ categories: TOF系统
 photos: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C1/C1-0.jpg
 ---
 
-新开一个专题用于介绍近几年非常流行的TOF系统，给读者提供一个深入了解TOF系统的起点文章。内容会包括TOF系统综述；iTOF和dTOF的具体介绍，系统参数，优劣势，算法等；TOF系统中的各个零部件的介绍和特性，如VCSEL，发射和接收镜头，接收端传感器CIS/APD/SPAD/SiPM，驱动电路ASIC等。
+新开一个专题用于介绍近几年非常流行的TOF系统，这个系列目的是给读者提供一些由浅入深了解TOF系统的文章。内容会包括TOF系统综述；iTOF和dTOF的具体介绍，系统参数，优劣势，算法等；TOF系统中的各个零部件的介绍和特性，如VCSEL，发射和接收镜头，接收端传感器CIS/APD/SPAD/SiPM，驱动电路ASIC等。
 
 <!--more-->
 
