@@ -108,7 +108,7 @@ iTOF再细分，可以按发射光波的调制方式分成连续波调制和脉�
 
 在接收端，需要做的事情就是确定相位偏移了多少，本质上是一种相位解调方法。对于iTOF，使用相同间隔的积分时间，让传感器每1/4个波长的发射时间内进行积分，接收光线，得到光强数据I1，I2，I3，I4，由此可以得到相位值：
 
-![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C1/C1-11.png)
+![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C1/C1-9.png)
 
 由于相位值在0-2π范围内，所以只靠一次测量，iTOF系统是无法分辨接收到的信号是延迟了ϕ还是ϕ+2π，所以iTOF会用各种方法的测量去消除这种测量同义性，我们会在后面的章节具体讨论。
 
@@ -116,11 +116,11 @@ iTOF再细分，可以按发射光波的调制方式分成连续波调制和脉�
 
 脉冲调制是使用方波作为调制信号，在接收端进行信号读取，确认接收到的信号和发射信号的相位偏移。我们看一下iTOF是如何通过这种像素点计算出来相位偏移ϕ的。如下图所示，四个方波分别为发射信号，接收信号，一个传感器A以和发射信号同样频率的波形进行工作，和发射光光波同步进行光信号读取积分。一个传感器B以和发射信号同样频率的波形进行工作，但是在时域上有π的相位偏差，进行光信号读取积分。可以看到传感器A和传感器B在交替开关对接收信号进行积分，他们分别接收到了返回信号的一部分。输出的强度信号B/(A+B) * π既是发射信号和接收信号的相位差ϕ。
 
-![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C1/C1-10.png)
+![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C1/C1-11.png)
 
 实际iTOF传感器是使用类似于照相用图像传感器进行光强的测量，但是成像型图像传感器在进行测量时，是有积分时间，读出时间，静止时间的，所以采样的中间是有间隔的，这无法满足iTOF原理的需求。所以用于iTOF的传感器会在传感器电路上进行一些改变，以一个像素可以实现连续采样的功能。普通的传感器一个像素点（Pixel）对应一个输出，而iTOF的传感器一个像素点对应两个输出（如下图所示），在一个pixel上面接两个开关，一半时间用电流到A端口，一半时间到B端口，这样A端口在进行光子接收时，B端口在这个时间片段内可以进行各种模拟电路的准备操作等，待A端口完成信号接收，断开电路后，B端口进行信号接收，A端口可以用这段时间进行信号输出等事项。这两个端口就可以对应前面的传感器A和传感器B。
 
-![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C1/C1-9.png)
+![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C1/C1-10.png)
 
 再接近实际一些，这些传感器上使用的不是开关，而是电压去操纵像素点里的电流流动，这种被称为电流辅助光子解调像素点(current assisted photonic demodulator pixel)，简称CAPD，我们在后面的章节会进行更具体的说明。下图([链接](https://thinklucid.com/tech-briefs/sony-depthsense-how-it-works/))比较形象的展示了脉冲调制型iTOF的原理。
 
