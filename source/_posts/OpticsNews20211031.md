@@ -49,11 +49,13 @@ photo:  https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20211031/1-2.pn
 -----
 ## 雷鸟创新发布雷鸟智能眼镜先锋版
 
-评论：TCL电子孵化的雷鸟创新发布了一款AR眼镜：雷鸟智能眼镜先锋版。这是继Facebook，华为，小米等发布智能眼镜后，又一款智能眼镜。当我们说智能眼镜是，一般是为了和AR或者MR眼镜区分，这种眼镜可能带有显示功能，但是并不能有AR或者MR功能。据雷鸟创新表示，为了实现佩戴舒适，产品整体重量是不能超过 60 克的。为了实现这一目标，经过多年无数次的实验，最终找到切实可行的方案——全息光栅的衍射光波导搭配 MicroLED 技术方案。
+评论：TCL电子孵化的雷鸟创新发布了一款AR眼镜：雷鸟智能眼镜先锋版。这是继Facebook，华为，小米等发布智能眼镜后，又一款智能眼镜。当我们说智能眼镜是，一般是为了和AR或者MR眼镜区分，这种眼镜可能带有显示功能，但是并不能有AR或者MR功能。据雷鸟创新表示，为了实现佩戴舒适，产品整体重量是不能超过 60 克的。为了实现这一目标，经过多年无数次的实验，最终找到切实可行的方案——全息光栅的衍射光波导搭配 MicroLED 技术方案。根据行业信息，其显示和光机部分应该来自于JBD，光波导来自于Waveoptics。
 
 不提这里的技术，这条新闻代表随着衍射光波导以及AR显示逐渐成熟，供应链开始完善，开始有着各种器件可选的情况下，终端公司开始下场，尝试推出自己的产品。
 
 ![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20211031/4.webp)
+
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20211031/4-2.png" style="zoom:50%;" />
 
 [宣传视频](https://www.bilibili.com/video/BV1DQ4y1i7V3/)
 
