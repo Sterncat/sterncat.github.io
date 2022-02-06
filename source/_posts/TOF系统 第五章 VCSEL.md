@@ -25,7 +25,7 @@ photos:  https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-3.png
 - 光强上，EEL可以提供单一元件的最强光强，所以常用在光通信领域。单一的VCSEL和LED光强受限于本身的几何结构，但是可以使用阵列的形式提供高强度光强。
 - 光谱宽度方面，VCSEL和EEL都是受激发光，属于激光，都有很窄的光谱宽度。LED属于发光半导体，光谱宽度较宽。
 - 光束质量上，VCSEL可以提供相对小发散角的光束，而LED发光是Lambertian，EEL发出的是椭圆形光束，常需要光束整形。
-- 调制速度上VCSEL和EEL都可以达到相对高速，所以常用于光通信领域，同时VCSEL的高调制速度使其可以使用在TOF应用中。LED相对
+- 调制速度上VCSEL和EEL都可以达到相对高速，所以常用于光通信领域，同时VCSEL的高调制速度使其可以使用在TOF应用中。LED相对较慢。
 - 光电转换效率上，VCSEL对比LED有着更高的效率，所以也受电子消费品领域的青睐。
 - 封装方式上，VCSEL和LED由于是表面发光，可以使用多种表面元器件通用的封装技术，而EEL受限于侧面发光，封装方式需要特别设计。
 
@@ -41,7 +41,7 @@ photos:  https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-3.png
 
 ![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-3.png)
 
-下图展示另一个单点VCSEL，左图展示了有1个点和4个点的VCSEL，每个发光点被称为Mesa。右图展示了一个单点VCSEL，可以看到中间的发光点，该VCSEL包括一个anode和3个cathode触点，可以看到Mesa本身的宽度和厚度的比例。
+下图展示另一个单点VCSEL，左图展示了有1个点和4个点的VCSEL，每个发光点被称为Mesa。右图展示了一个单点VCSEL，可以看到中间的发光点，该VCSEL包括1个anode和3个cathode触点，可以看到Mesa本身的宽度和厚度的比例。
 
 ![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-4.png)
 
@@ -171,7 +171,7 @@ VCSEL设计中还有很多其他需要考量的因素，包括其阈值电流，
 
 由于VCSEL是一种千层饼式的激光结构，这种结构的每层都是不同物质，同时每层都很薄，所以这种结构很容易收到各种影响，其中包括水汽，应力和热等。绝缘保护制程可以很好的增强防水氧侵袭，良好的封装散热也很重要，制造的参数控制也对应力很有帮助（比如会有退火的流程）。
 
-# VCSEL企业和视场
+# VCSEL企业和市场
 
 ## VCSEL企业
 
