@@ -1,5 +1,5 @@
 ---
-title: TOF系统 第五章：VCSEL
+title: TOF系统 第五章 VCSEL
 urlname: TOFSystem_C5
 date: 2022-2-05 18:00:00
 tag:  [TOF, 专题]
