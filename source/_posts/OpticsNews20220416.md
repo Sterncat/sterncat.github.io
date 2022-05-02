@@ -33,7 +33,7 @@ photo: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220416/2.jpg
 -----
 ## Lumentum推出M系列高性能多结VCSEL阵列
 
-评论：Lumentum突出M51-100，70W 905nm多结VCSEL阵列，是用于下一代车载激光雷达和工业3D的解决方案。整体阵列小型化，适用于中短距离LiDAR方案。该VCSEL可以很好地放入机械旋转式Lidar结构中并进行升级，或者组合进定制化的可寻址的固态LiDAR。M51-100是M系列（多结）的一种，用于未来LiDAR，以提供高质量，低成本的解决方案。重要参数如下
+评论：Lumentum推出M51-100，70W 905nm多结VCSEL阵列，是用于下一代车载激光雷达和工业3D的解决方案。整体阵列小型化，适用于中短距离LiDAR方案。该VCSEL可以很好地放入机械旋转式Lidar结构中并进行升级，或者组合进定制化的可寻址的固态LiDAR。M51-100是M系列（多结）的一种，用于未来LiDAR，以提供高质量，低成本的解决方案。重要参数如下
 
 - 0.19 mm^2 的chip size
 - 70 W (25°C, 2 ns PW, 0.03% DC)
@@ -49,7 +49,7 @@ photo: https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220416/2.jpg
 -----
 ## 微软Surface Hub 2 Smart Camera
 
-评论：微软为Surface Hub 2开发了一款新的AI Camera “Smart Camera”，该Camera使用了定制的镜头，AI模型，边缘计算等，可以提供4K的影像。镜头是一个11镜片的f/1.8全玻璃镜头，接近衍射极限的性能，配合12MP(4000x3000)的传感器。Camera可以达到136°FOV，镜头FOV达到了184°。这款camera的性能看起来非常不错，虽然价格看起来比较贵，但是如果考虑到使用场景是商业场景的大型会议室，而且Surface Hub 2的50英寸的产品为$9000，85英寸的产品为$22,000，那么，升级到这款Camera就感觉非常值了。
+评论：微软为Surface Hub 2开发了一款新的AI Camera “Smart Camera”，该Camera使用了定制的镜头，AI模型，边缘计算等，可以提供4K的影像。镜头是一个11镜片的f/1.8全玻璃镜头，接近衍射极限的性能，配合12MP(4000x3000)的传感器。Camera可以达到136°FOV，镜头FOV达到了184°。这款camera的性能看起来非常不错，虽然价格看起来比较贵$799，但是如果考虑到使用场景是商业场景的大型会议室，而且Surface Hub 2的50英寸的产品为$9000，85英寸的产品为$22,000，那么，升级到这款Camera就感觉非常值了。
 
 ![](https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220416/3-1.png)
 
