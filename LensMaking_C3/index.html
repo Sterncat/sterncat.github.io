@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>塑料镜头制造 第三章：模具 | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="镜头专题" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="模具是现代工业中非常常见的一种工器具。模具虽然分类为很多种类，但是总而言之它们的作用都是相近的：依赖它们自身的形状，通过一定手段使得具有一定塑性或流动性的工料也成为特定的形状。通常意义上的模具是指的三类模具：铸造模具、金属塑性成形模具和注塑模具。 本章我们主要简单讨论和塑料镜片成型相关的一些模具知识，包括注塑模具的基本结构，光学模具的结构和设计，模流分析，模具加工，模具检测和模具维护等内容，重点介">
+<meta property="og:type" content="article">
+<meta property="og:title" content="塑料镜头制造 第三章：模具">
+<meta property="og:url" content="https://faster-than-light.net/LensMaking_C3/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="模具是现代工业中非常常见的一种工器具。模具虽然分类为很多种类，但是总而言之它们的作用都是相近的：依赖它们自身的形状，通过一定手段使得具有一定塑性或流动性的工料也成为特定的形状。通常意义上的模具是指的三类模具：铸造模具、金属塑性成形模具和注塑模具。 本章我们主要简单讨论和塑料镜片成型相关的一些模具知识，包括注塑模具的基本结构，光学模具的结构和设计，模流分析，模具加工，模具检测和模具维护等内容，重点介">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-18.jpg">
+<meta property="article:published_time" content="2021-05-24T14:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T11:32:05.727Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="镜头">
+<meta property="article:tag" content="专题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-18.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-塑料镜头制造 第三章：模具" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-18.jpg" rel="gallery_cldopy7x9004kg8w6fval4fja noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-18.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      塑料镜头制造 第三章：模具
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/LensMaking_C3/" class="article-date">
+	  <time datetime="2021-05-24T14:00:00.000Z" itemprop="datePublished">May 24, 2021</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%A1%91%E6%96%99%E9%95%9C%E5%A4%B4%E5%88%B6%E9%80%A0/">塑料镜头制造</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>模具是现代工业中非常常见的一种工器具。模具虽然分类为很多种类，但是总而言之它们的作用都是相近的：依赖它们自身的形状，通过一定手段使得具有一定塑性或流动性的工料也成为特定的形状。通常意义上的模具是指的三类模具：铸造模具、金属塑性成形模具和注塑模具。</p>
+<p>本章我们主要简单讨论和塑料镜片成型相关的一些模具知识，包括注塑模具的基本结构，光学模具的结构和设计，模流分析，模具加工，模具检测和模具维护等内容，重点介绍光学镜片的模具重点，下一章我们会介绍注塑成型的内容。</p>
+<span id="more"></span>
+
+<h1 id="注塑模具的基本结构"><a href="#注塑模具的基本结构" class="headerlink" title="注塑模具的基本结构"></a>注塑模具的基本结构</h1><p>我们从最简单的设计开始，一步一步逐渐复杂化，了解现代化精密模具的各个组成部分和他们的作用，读者会发现，看起来很复杂的模具结构其实很大一部分都是很直觉的合理化设计。然后我们再讨论光学模具和普通的塑料制品模具的不同。</p>
+<p>假设我们想成型一个直径10mm，双凸，如图所示的镜片（侧截面和俯视图），我们需要什么样子的模具？</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-1.jpg" style="zoom:30%;" />
+
+<ol>
+<li><p>首先，我们已经了解了热塑型塑料的特性，经过玻璃转化温度Tg温度后，塑料会成为高弹态，温度更高会变成粘流态，或者简单思考，变成了“液态”。待温度降低到Tg温度下，又会变回玻璃态（固态）。那类似于我们小时候在沙滩做城堡或者玩泥巴的经验，我们把沙子或者黄泥倒入到各种形状的模子，然后扣在地上，我们就制成了我们想要的形状。同样，为了做一个镜片，我们可以把液态的塑料注入一个模子中，然后冷却就形成了我们要的形状。那第一步，我们要有一个最简单的模子。一半一半，两个凹下去的坑，然后留一个口，让塑料“液体”从侧面一个小孔流进去，冷却就好了。冷却后，我们就有了一个柄上带着一个小镜片。只要把它切下来我们就有了我们的镜片了。现在我们已经有个一个模具最重要的几部分：<strong>模具的两半，模穴型腔(Cavity)，浇筑系统（流道）</strong></p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-2-1.jpg" style="zoom:35%;" /></li>
+<li><p>好的，现在这个模具可以做镜片了，但是看起来确实不是很精确。每次我们扣上左右两面肯定都不是很准确，总会有一些偏移。这个可以用一些方法解决，比如我们在一个板子的四个角上做几个孔，另一个板子上做几个凸起，然后每次对准他们就可以保证每次对位都是一样了。这就是模具的<strong>导向机构</strong>。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-3.jpg" style="zoom:30%;" /></li>
+<li><p>看起来不错，每次我们扣上模具的两面就可以做出来一个镜片，可是这样还是很不经济，生产效率不高。可不可以一次做好多镜片呢？当然可以，我们可以加大模具的两侧，制作出来很多模穴，然后用流道将他们连接起来最后汇聚到一个口上，每次我们灌入塑料“液体”，都会流到所有穴中，冷却后就可以形成如下图所示的好多柄，每个上面都有一个小镜片。设计每次成型多少个合适呢？这取决成型机的锁模力，模具的大小，流道的长度（太长了的话，那可能流到所有穴里时间太长了，前面进去的塑料已经开始冷却了，可后面的还没流进去）等参数。直觉上，做一个流道对每个穴等长的设计不错。这样每个镜片成型的时间是一样的。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-4.jpg" style="zoom:33%;" /></li>
+<li><p>我们发现每次打开一侧模具的板子后，用手拿出来整个成型件好麻烦，而且从一侧拽下来有时会把我们的镜片给拽歪。我们可以在每个镜片靠近边缘的地方顶一下，把他们顶出来。我们只需要在模板上再钻一些孔，然后放进去长的金属条，然后把所有金属条固定在一个板子上，这就是<strong>顶出结构</strong>，这个板子叫顶出板。每次注塑冷却结束，打开一侧的模具（步骤1），然后顶出结构整体移动一下，整个成型件就被顶出来了（步骤2）。当然我们每次不希望成型件出来就掉地上，我们可以去接着它或者我们用一个机械手轻轻的抓住流道，然后把镜片移出（步骤3）。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-5.jpg" style="zoom:33%;" /></li>
+<li><p>不错，我们已经具备了一定的大规模生产能力，可以开个镜片作坊了。不过每次合上模具的两面，然后把塑料“液体”管子接上去，然后把塑料注入进去这个步骤看起来很麻烦。我们可以把注塑流道固定在一侧的板子上，穿过这边的模板，这样我们每次注入塑料都不需要反复连接这个管子了。不过有一个问题，现在管子不是在上面了，液体要往上面的穴流就流不进去了怎么办，这个很简单，我们给塑料“液体”加一些压力，等液体流满了，我们在注塑口那里设置一个小开关，把流道口堵上，这样塑料“液体”就不会回流回来了。同时，为了防止等待注入的塑料冷却，我们在模具流道口的注入设备这里加一个加热器（我们甚至开始设计注塑成型机了，下一章我们会看到注塑成型机是如何加热塑料和保保持温度的）。同时，我们固定右侧的模具，每次开关只移动左侧的模具，这样，模具的两边一个叫可动侧，一个叫固定侧。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-6.jpg" style="zoom:33%;" /></li>
+<li><p>客户给我们下订单了，生产8万片镜片，很不错，我们兴致勃勃的开始生产了。每次我们生产8个镜片，那我们一共需要注塑1万次，每注塑一次叫一个模次。每次注入到冷却到镜片拿出来需要5分钟，生产8万片我们每天开工24小时需要将近7天，要是冷却能快一些就好了。我们可以在模具中加工一些孔洞，然后让冷水在里面流动起来，这样就加快了冷却速度。我们每一模次速度一下子就快起来了，假设我们降低到15秒，很不错。41.6小时就可以完成工作了，每天工作8小时，这周我们稍微加一个多小时班就做出来了。大家都很开心，既完成了工作，又没加班。这就是模具的<strong>冷却系统</strong>，有些模具也可能需要热油/水在模具中流动，或者同时使用冷水和热水系统。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-7.jpg" style="zoom:33%;" /></li>
+<li><p>生产开始了，可是和我们的预期不同，生产过程中，我们发现塑料材料冷却后一小块粘在模具的穴上了，下一次注塑的镜片上面就会多一个凹坑。这样有一个镜片就不能要了，我们一次只能生产9个了。又过了一段时间，我们又在一个穴上发现了这个问题。我们决定停下生产，清洁一下我们的模穴，这就是<strong>模具维护</strong>。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-8.jpg" style="zoom:40%;" /></li>
+<li><p>维护好，重新生产了一段时间后，我们发现一个穴出产的镜片上开始有表面划痕了，看起来是我们的模穴磨损了。或者，我们在维护时，发现清除掉塑料小颗粒后，模穴表面也被压出来了一个小坑。这个模穴就彻底用不了了。因为我们加工的是凹坑，要是再抛光一下这个穴，那么这个穴生产出来的镜片的大小就会比别的镜片大了，我们只等丢弃这个穴不用了。可是生产中这种情况经常发生，损失一个穴可能还可以接受，可是要是损失4个穴，我们一下子效率就降低了到了一半。有什么办法能保证这个模具维护后总是能一次生产8个呢？其实很简单，我们可以把模具做成两部分，一部分是我们的模穴，做成一对一对的小圆柱体，上面是我们的凹穴（型腔），这就是<strong>模芯和模架。</strong>模具的其他部分上我们钻出大孔用来放置这些模芯，可能还有会衬套来套在模芯上。我们可以提前做好20对模芯，然后如果哪个模芯坏掉了，我们就替换掉它。这种方式还有很多优点：模芯加工需要高精度的单点金刚石车削加工，需要旋转加工件，一个小的模芯面型加工要比旋转整个模具容易多了，也容易保证精度。而这种方式，也保证了模架可以复用，比如下次我们如果要做一个小一些的镜片，我们可以替换小一些的模芯上去，而不需要重新制造模架。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-9.jpg" style="zoom:33%;" /></li>
+</ol>
+<p>除了这些部分，模具还会有排气系统，排气系统是为了将注射成型过程中型腔内的空气及塑胶融化所产生的气体排除到模具外而设立，排气不畅时制品表面会形成气痕（气纹）、烧焦等不良；塑胶模具的排气系统通常是在模具中开设的一种槽形出气口，用以排出原有型腔空气的及熔料带入的气体。有些模具还会有抽芯结构（比如圆珠笔杆），光学镜片的注塑一般不需要抽芯，但是镜筒的制造有些需要更复杂的结构，可能会有抽芯或者滑块结构。<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a00697d99f73">可以参考“塑胶模具七大系统”了解模具</a>。</p>
+<h1 id="光学镜片模具设计和制造"><a href="#光学镜片模具设计和制造" class="headerlink" title="光学镜片模具设计和制造"></a>光学镜片模具设计和制造</h1><h2 id="基本要求"><a href="#基本要求" class="headerlink" title="基本要求"></a>基本要求</h2><p>我们已经有了基本的一个现代化的模具，对于塑料模具来说，这些结构基本都是通用的。那光学注塑模具和普通塑料制品注塑模具有什么区别呢？</p>
+<p><strong>答案是：非常高的精度和均一性要求</strong>。我们希望制造出来的镜片都有很高的精度；我们同时希望这些镜片越一样越好，这里指的一样是每个镜片越一样越好，我们不同穴制造的镜片都都一样的精度，不同模具生产出来的镜片也有一样的精度，随着生产时间的进行，我们的镜片精度也有保证。</p>
+<h2 id="模具重要参数"><a href="#模具重要参数" class="headerlink" title="模具重要参数"></a>模具重要参数</h2><p>光学模具实现高精度主要是靠高精度的模具设计和模具加工设备实现的。光学单镜片关心公差有很多，模具主要可以保证成形出来的镜片的面型精度，偏心以及表面光洁度。成型后光学镜片面型精度P-V可以达到±0.1到±0.5um，尺寸准确度和偏心可以达到&lt;2um。而模具本身的精度更高，比如对于模芯本身的尺寸精度会在&lt;0.5um。模芯表面光洁最高可以达到Ra0.2nm~0.3nm。模具的加工评价包括尺寸精确度，圆度，平行度，垂直度，偏心，平面度，表面粗糙度评价等。</p>
+<p>下面几张图展示了相对简单的光学塑料镜片成型模具和成形出来的镜片的形态。模具主要部分有：</p>
+<p><strong>模芯：</strong>对于手机镜头大小的镜片，根据镜片大小的不同，有4，8，12，16，32等穴数。下图展示的是12穴的情况。</p>
+<p><strong>浇筑系统：</strong>从示意图可以看到主流道分出6条分流道，每个分流道上在末端再分出两个流道，最终成型12个镜片。可以看到分流道末端有冷料井，是在塑料注射成型模具中用来储存注射间隔期间产生的温度相对低的塑料的，这样可以保证这些塑料不会进入最终成型件。</p>
+<p><strong>料口设计：</strong>从示意图可以看到镜片和流道的连接处是很小的收缩料口，这是为了增加塑料进入的速度以及缩小剪切口的大小。</p>
+<p><strong>顶出方式：</strong>根据顶出方式的不同可以分成顶针顶出式和模芯顶出式模具，也有两种顶出方式同时使用的。对光学零部件的区别是顶针式顶出的镜片偏心控制好一些，模芯顶出式的镜片面型控制更好一些。但是这个不是绝对的，取决于具体生产的镜片和模具设计。可以在示意图中看到蓝色的标注出的顶出位置。</p>
+<p><strong>排气系统：</strong>下图最外圈的凹槽型结构就是模具的排气槽。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-10.png"></p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-11.jpg" style="zoom:40%;" />
+
+<p>这张图展示了更精密的模具样式, a图展示了模芯的样式，b图展示了模具的两侧，我们可以看到模芯，流道，导向机构等，<a target="_blank" rel="noopener" href="https://www.researchgate.net/figure/Illustration-of-key-features-for-injection-molding-aspheric-lenses-Fig-a-shows_fig1_343781989">Link</a>。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-16.png"></p>
+<p>下图展示了模芯的样式，来自于<a target="_blank" rel="noopener" href="https://www.best-opto.com/%E6%89%8B%E6%A9%9F%E6%A8%A1%E4%BB%81.html">台湾伯特光电</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-17.png"></p>
+<p>下图展示了实际模架的多层架构，包括可动侧，固定侧，支撑板，顶出板等。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-18.jpg"></p>
+<h2 id="镜筒模具"><a href="#镜筒模具" class="headerlink" title="镜筒模具"></a>镜筒模具</h2><p>镜筒的成型模具和镜片类似，主要由于镜筒的结构，模具会增加镶件，滑块等结构，同时由于镜筒较大，所以镜筒制造模穴数更多的是4或者8，并采用每个模穴多浇口来保证填充。综合而言，镜筒注塑比镜片模具精度要求略低，但是由于现在手机镜头越来越大，镜筒越做越大，镜筒壁越做越薄，难度也就越来越高。同时，镜筒承担着部分保证镜片间相对偏心位置的作用，精度要求也越来越高。</p>
+<h1 id="模流分析"><a href="#模流分析" class="headerlink" title="模流分析"></a>模流分析</h1><p>现代塑料成型的模具和成型参数设计都先使用计算机辅助设计来进行模流分析，如Autodesk Moldflow，MoldFlow Plastics Insight (MPI)，Moldex3D等。这些软件可以通过3D建模，然后输入成型注塑的速度温度等参数，然后分析塑料在模具内流动情况，填充情况（填充度，熔接痕），填充压力，填充时间，冷却时间，压力变化，锁模力需求，模具困气等。我们在下一章成型中再具体说明镜片成型的问题。</p>
+<h1 id="模具加工流程和设备"><a href="#模具加工流程和设备" class="headerlink" title="模具加工流程和设备"></a>模具加工流程和设备</h1><p>光学模具的零部件加工主要有模芯预加工处理，模芯表面面型加工，模板切割，研磨，打孔，铣削等工序。</p>
+<h2 id="粗加工，预处理："><a href="#粗加工，预处理：" class="headerlink" title="粗加工，预处理："></a>粗加工，预处理：</h2><p>模具流道和型腔要承受注塑成型的压力以及快速流过的塑料对于内壁的磨损；模具的两半是被成型机的压力装置牢固的压在一起，也要承受很大压力；而且光学模具要进行长时间的大规模生产，同时希望保持很好的精度，同时尽量降低维护周期。所以模具的重要部件都是经过预处理的。首先先对这些零部件进行粗加工，然后进行模具预处理，最再进行精加工。预处理包括淬火（加硬Harden）和热处理。加硬是通过把模具钢加热到一个温度后再快速冷却以提升模具硬度，热处理时先对模具进行升温然后缓慢降温（退火）以降低硬度，降低残余应力，稳定尺寸。</p>
+<h2 id="模架加工"><a href="#模架加工" class="headerlink" title="模架加工"></a>模架加工</h2><p>模架包括模板加工，成型流道加工，冷却水道加工等除了模芯以外的其他部分的加工。这部分的材料经过第一步的粗加工及预处理后，会进行进一步的精加工来最大化的保证精度。其中会使用各种高精密车床，铣床，磨床，电火花加工，电化学加工等多种加工方式。提供这些精密设备的公司有日本Shibaura，Makino，Seibu，Nachi，美国Moore等。</p>
+<h2 id="模芯加工"><a href="#模芯加工" class="headerlink" title="模芯加工"></a>模芯加工</h2><h3 id="模芯的面型加工"><a href="#模芯的面型加工" class="headerlink" title="模芯的面型加工"></a>模芯的面型加工</h3><p>使用超精密加工方式-单点金刚石车削加工(diamond turning machine，DTM)，如图所示，这种加工方式一面是旋转的被加工件，加工时一般向X或Y方向移动，一面是一个金刚石的刀头，以某个角度安装，同时整体可以在Z方向移动。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-12-1.jpg" style="zoom:40%;" />
+
+<h3 id="设备特点"><a href="#设备特点" class="headerlink" title="设备特点"></a>设备特点</h3><p>这种方式和普通车床没有什么本质不同，最大的特点就是极高的精度。实现高精度是整个系统的每个部分都充分考虑精度，比如整个设备采用大理石底座，采用高精密的移动系统，气浮轴承，流体静力轴承系统等。同时设备所在的环境也有严格的控制，首先设备在严格温控的环境下进行生产，温度甚至会控制在±0.5K内。设备也会严格控制震动，比如加工设备整体放置在特别浇灌的地基上，同时该部分地基和建筑的其他部分隔离开以降低建筑内其他部分的人员走动和震动的影响。超精密加工可以实现极高的表面的精度、重复性和光洁度。提供这些精密设备的公司有日本Shibaura, Makino, Seibu, Nachi, 美国Moore等。比如下图就展示了<a target="_blank" rel="noopener" href="https://www.shibaura-machine.co.jp/cn/product/nano/lineup/ulg_lg/">Shibaura（芝浦）</a>公司的各种提供不同自由度的精密加工设备，最基础的可以加工旋转中心对称的模芯，而自由度更高的设备可以加工自由曲面模芯，但是有些时候，自由度高也可能会损失一些精度。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-13.png"></p>
+<h3 id="模芯镀镍"><a href="#模芯镀镍" class="headerlink" title="模芯镀镍"></a>模芯镀镍</h3><p>由于模具的材料模具钢硬度很高，直接加工该材料对于DTM的金刚石加工刀头的磨损非常大。所以，模芯上表面首先都会镀一层镍-磷合金（Nickel-Phosphorus，NiP），该过程一般通过电解方式或者电化学方式完成。这一层镍-磷合金硬度远低于模具钢，极大地提升了模芯的可加工性和加工速度。一般模芯会先加工出光学基本面型，然后镀一定厚度的镍-磷合金，这个厚度取决于预制的面型，光学面的sag情况以及后期需要的补正次数决定，一般为几微米~几十微米，最大可至几百微米。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-14.png"></p>
+<h3 id="模芯检测和补正"><a href="#模芯检测和补正" class="headerlink" title="模芯检测和补正"></a>模芯检测和补正</h3><p>模芯按设计面型加工完成后，会组装进模具放入成型机进行成型试制，由于塑料成型的收缩问题，成型件和模具型腔面型会有差异。成形出来的镜片经过检测后，根据和设计面型对比，会进行补正计算，然后在模芯上再进行加工，补偿收缩的部分。通过迭代，让成型件一次一次更接近设计面型。我们会在下一章成型里更具体说明这个问题。</p>
+<h3 id="模具的表面处理"><a href="#模具的表面处理" class="headerlink" title="模具的表面处理"></a>模具的表面处理</h3><p><strong>抛光：</strong>模具有些时候需要抛光处理以降低成型件表面粗糙度，</p>
+<p><strong>粗糙处理：</strong>有些时候需要表面粗糙处理用以形成一些粗糙纹理，比如对于单镜片，法兰有些位置需要粗糙表面，来散射掉杂光的光路；镜筒的内侧要粗糙化等。这些粗糙化的表面处理方式有喷砂，放电处理，</p>
+<h1 id="模具检测"><a href="#模具检测" class="headerlink" title="模具检测"></a>模具检测</h1><p>模具加工过程中要进行多次检测，主要检测就是制造精度的测量。主要使用多种不同精度和行程的三坐标检测设备以及面型检测设备，如</p>
+<ol>
+<li>原子力型轮廓仪：Panasonic UA3P，检测模芯面型</li>
+<li>非接触式面型检测：Zygo Compass和Nexview（使用Coherence Scanning Interferometry, CSI方法）</li>
+<li>接触式三坐标：Mitutoyo Legex系列（三坐标）,Taylor Hobson公司的三坐标检测设备，Zeiss公司的三坐标检测设备等，用于检测相对比较大的模具部件的精度。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C3/C3-15.png"></p>
+<h1 id="模具维护"><a href="#模具维护" class="headerlink" title="模具维护"></a>模具维护</h1><p>如果多个模穴产品开始出现瑕疵，比如尺寸精度损失或者表面产生污迹等，模具就要进行维护，主要是处理损坏部分，清洁型腔以及重新组装调整精度。</p>
+<h1 id="模具成本"><a href="#模具成本" class="headerlink" title="模具成本"></a>模具成本</h1><p>模具部门的硬件资产是一个塑料光学镜头企业的核心资产之一，同时一个项目的模具本身也是镜头制造的重要成本组成部分。</p>
+<p>资金成本：高精模具的成本很高，包括模具的原材料，模具的加工及检测设备等。</p>
+<p>时间成本：模具设计，加工，组装，成型修模的迭代，模具维护都是很大的时间成本。</p>
+<p>人力成本：模具部门的设计工程师，加工工程师，组装和维护人员。</p>
+<p>一个塑料镜头制造企业的模具部的核心能力在于模具精度以及快速地设计以及制造模具。由于现代手机类塑胶镜头的大小基本相似，某些镜片面型非常类似（比如最后一片），模具部门可能会准备一些预加工模芯（完成镀镍磷合金的模芯）用于快速开发。</p>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%A1%91%E6%96%99%E9%95%9C%E5%A4%B4%E5%88%B6%E9%80%A0/">塑料镜头制造</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E9%A2%98/" rel="tag">专题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%95%9C%E5%A4%B4/" rel="tag">镜头</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/OpticsNews20210525/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          法国CEA-Leti超低功耗识别设备
+        
+      </div>
+    </a>
+  
+  
+    <a href="/TechReview_2_LookingGlass/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Looking Glass Portrait背后的光学原理</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E5%A1%91%E6%A8%A1%E5%85%B7%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">注塑模具的基本结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E5%AD%A6%E9%95%9C%E7%89%87%E6%A8%A1%E5%85%B7%E8%AE%BE%E8%AE%A1%E5%92%8C%E5%88%B6%E9%80%A0"><span class="nav-number">2.</span> <span class="nav-text">光学镜片模具设计和制造</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%A6%81%E6%B1%82"><span class="nav-number">2.1.</span> <span class="nav-text">基本要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E5%85%B7%E9%87%8D%E8%A6%81%E5%8F%82%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text">模具重要参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%95%9C%E7%AD%92%E6%A8%A1%E5%85%B7"><span class="nav-number">2.3.</span> <span class="nav-text">镜筒模具</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%B5%81%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">模流分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%85%B7%E5%8A%A0%E5%B7%A5%E6%B5%81%E7%A8%8B%E5%92%8C%E8%AE%BE%E5%A4%87"><span class="nav-number">4.</span> <span class="nav-text">模具加工流程和设备</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B2%97%E5%8A%A0%E5%B7%A5%EF%BC%8C%E9%A2%84%E5%A4%84%E7%90%86%EF%BC%9A"><span class="nav-number">4.1.</span> <span class="nav-text">粗加工，预处理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%9E%B6%E5%8A%A0%E5%B7%A5"><span class="nav-number">4.2.</span> <span class="nav-text">模架加工</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E8%8A%AF%E5%8A%A0%E5%B7%A5"><span class="nav-number">4.3.</span> <span class="nav-text">模芯加工</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E8%8A%AF%E7%9A%84%E9%9D%A2%E5%9E%8B%E5%8A%A0%E5%B7%A5"><span class="nav-number">4.3.1.</span> <span class="nav-text">模芯的面型加工</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87%E7%89%B9%E7%82%B9"><span class="nav-number">4.3.2.</span> <span class="nav-text">设备特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E8%8A%AF%E9%95%80%E9%95%8D"><span class="nav-number">4.3.3.</span> <span class="nav-text">模芯镀镍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E8%8A%AF%E6%A3%80%E6%B5%8B%E5%92%8C%E8%A1%A5%E6%AD%A3"><span class="nav-number">4.3.4.</span> <span class="nav-text">模芯检测和补正</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%85%B7%E7%9A%84%E8%A1%A8%E9%9D%A2%E5%A4%84%E7%90%86"><span class="nav-number">4.3.5.</span> <span class="nav-text">模具的表面处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%85%B7%E6%A3%80%E6%B5%8B"><span class="nav-number">5.</span> <span class="nav-text">模具检测</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%85%B7%E7%BB%B4%E6%8A%A4"><span class="nav-number">6.</span> <span class="nav-text">模具维护</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%85%B7%E6%88%90%E6%9C%AC"><span class="nav-number">7.</span> <span class="nav-text">模具成本</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

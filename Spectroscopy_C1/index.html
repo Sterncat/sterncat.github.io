@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>浅谈吸收光谱学 第一章 光谱学及吸收光谱测量 | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="专题光谱学" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="浅谈吸收光谱学这个系列来自于作者Jenkins（微信号：Jenkins123，作者具体介绍见文末）的投稿，作者将通过3章的内容介绍光谱学分类，重点探讨吸收光谱学中的两种痕量测量方法：腔体增强型吸收光谱测量（Cavity Enhanced Absorption Spectroscopy，CEAS）以及腔衰荡光谱（Cavity Ring-Down Spectroscopy, CRDS）。 本文是第一章">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈吸收光谱学 第一章 光谱学及吸收光谱测量">
+<meta property="og:url" content="https://faster-than-light.net/Spectroscopy_C1/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="浅谈吸收光谱学这个系列来自于作者Jenkins（微信号：Jenkins123，作者具体介绍见文末）的投稿，作者将通过3章的内容介绍光谱学分类，重点探讨吸收光谱学中的两种痕量测量方法：腔体增强型吸收光谱测量（Cavity Enhanced Absorption Spectroscopy，CEAS）以及腔衰荡光谱（Cavity Ring-Down Spectroscopy, CRDS）。 本文是第一章">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/Spectroscopy/C1/C1-1.jpg">
+<meta property="article:published_time" content="2021-10-05T03:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T11:32:05.730Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="专题">
+<meta property="article:tag" content="光谱学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/Spectroscopy/C1/C1-1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-浅谈吸收光谱学 第一章 光谱学及吸收光谱测量" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/Spectroscopy/C1/C1-1.jpg" rel="gallery_cldopy7xm0068g8w6dd97260v noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/Spectroscopy/C1/C1-1.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      浅谈吸收光谱学 第一章 光谱学及吸收光谱测量
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/Spectroscopy_C1/" class="article-date">
+	  <time datetime="2021-10-05T03:00:00.000Z" itemprop="datePublished">October 5, 2021</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%85%89%E8%B0%B1%E5%AD%A6/">光谱学</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>浅谈吸收光谱学这个系列来自于作者Jenkins（微信号：Jenkins123，作者具体介绍见文末）的投稿，作者将通过3章的内容介绍光谱学分类，重点探讨吸收光谱学中的两种痕量测量方法：腔体增强型吸收光谱测量（Cavity Enhanced Absorption Spectroscopy，CEAS）以及腔衰荡光谱（Cavity Ring-Down Spectroscopy, CRDS）。</p>
+<p>本文是第一章，介绍光谱学分类及吸收光谱学中的具体技术分类及他们的应用范围。</p>
+<span id="more"></span>
+
+<hr>
+<p>作为开篇笔者想借用工作上一本入门书《An Introduction to Cavity Ring-DownSpectroscopy》的第一章来打开光谱学以及直接/间接吸收光谱学这个话题：<em>“光谱学，研究光（电磁辐射）和物质的相互作用，是物理科学家可用的最普遍和最精确的方法。特别是对于孤立的原子、分子和小簇，它没有同伴。它用于阐明从原子核到天然蛋白质的量子系统的结构和动力学。基本上我们所知道的超出人类和他们的仪器可以物理接触范围关于宇宙的一切都，来自光谱学。没有它，天文学只不过是集邮而已。虽然是一个成熟的领域，但光谱学是周期性的通过开发新工具重生，开辟新视野，例如开拓未充分探索光谱区域，显著提高分辨率或灵敏度。几乎总是，这些新的工具最初并没有这么高的预期，并且最早是用于解决一些特定的问题。然而，真正开创性的工作会激发并导致新应用程序的爆炸式增长以及方法的进步。核磁共振波谱是这段经历的缩影。”</em></p>
+<h1 id="光谱的分类"><a href="#光谱的分类" class="headerlink" title="光谱的分类"></a>光谱的分类</h1><p>光谱分类多种多样，主流的分类方式有根据最终测量的辐射能量类型或者是光与物质相互作用的方式，这里使用后一种光谱学根据测试能量产生方式可以分为：<strong>发射光谱、散射光谱、反射光谱和吸收光谱</strong>。</p>
+<h2 id="发射光谱"><a href="#发射光谱" class="headerlink" title="发射光谱"></a>发射光谱</h2><p>有的物体能自行或者激发后发光，由它直接或被激发产生的光形成的光谱叫做<strong>发射光谱</strong>。例如荧光反应，黑体辐射产生的光谱等</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/Spectroscopy/C1/C1-2.png"></p>
+<h2 id="散射和反射光谱"><a href="#散射和反射光谱" class="headerlink" title="散射和反射光谱"></a>散射和反射光谱</h2><p><strong>弹性散射和反射光谱</strong>决定了入射辐射如何被材料反射或散射。晶体学利用高能辐射（例如 X 射线和电子）的散射来检查蛋白质和固体晶体中原子的排列。当光照射到物质上时，还会发生<strong>非弹性散射</strong>，在散射光中除有与激发光波长相同的弹性成分（瑞利散射）外，还有比激发光波长长的和短的成分，后一现象统称为拉曼效应。这种现象于1928年由印度科学家拉曼所发现，因此这种产生新波长的光的散射被称为拉曼散射，所产生的光谱被称为拉曼光谱或拉曼散射光谱。</p>
+<h2 id="吸收光谱"><a href="#吸收光谱" class="headerlink" title="吸收光谱"></a>吸收光谱</h2><p>当来自辐射源的能量被材料消耗时，就会发生吸收。吸收通常通过测量通过材料的能量的比例来确定，吸收会减少通过光的部分。本系列文章主要重点介绍直接吸收光谱。</p>
+<h1 id="直接吸收光谱"><a href="#直接吸收光谱" class="headerlink" title="直接吸收光谱"></a>直接吸收光谱</h1><p>最简单也是最早发展的光谱计量方法就是直接吸收光谱（Direct absorption spectroscopy）。直接吸收光谱是一种简单、无创并且可在样品原生状态下使用的技术，用于获得有关气相、液相或固相中物种的信息。通过分析吸收光谱，可以提取定量绝对浓度或绝对频率相关信息。在直接吸收实验中，光穿过一个样品后的衰减过程被测量（如下图所示）。</p>
+<p>透射后的强度遵循 Beer-Lambert 定律：I = I0*exp(-ad) ，其中 Io 是入射光的强度，d 是样品的长度， α是吸收样本系数。我们这里假设吸收发生在单一物种样品： a(v) = Nσ(v) ;   σ(v)是吸收的横截面积， N 是样品的密度信息（单位体积内的分子数量）， v 是光源的频率（波段）。</p>
+<h2 id="单程通过吸收池"><a href="#单程通过吸收池" class="headerlink" title="单程通过吸收池"></a>单程通过吸收池</h2><p>经典的直接吸收光谱计量方法的例子就是<strong>单程通过吸收池</strong>（single pass absorption cell）的例子，如下图所示: 这里的光源是可调谐激光器(波段可调)，样品（例如气体）包含在吸收池cell中。激光通过第一个窗口W进入吸收池，经过吸收衰弱过的激光通过第二个窗口W穿出吸收池被特定的传感器接收。实验者通过记录光强vs波长，可以得到吸收池中样品的吸收光谱。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/Spectroscopy/C1/C1-3.jpg"></p>
+<p>下图展示了氢气的吸收光谱</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/Spectroscopy/C1/C1-4.jpg"></p>
+<p>单程吸收技术原理最简单，是最早的直接吸收光谱计量方法，但是其灵敏度低，限制了它在许多研究领域的应用（例如痕量气体检测，既及其微量的气体检测）。这种低灵敏度主要因为这种计量方法必须在高强度的背景信号（与光强成正比）下测量小强度的光衰减，导致信噪比不优秀。即使是稳定的光线来源，这种计量方法最多只能检测到背景信号0.1%级别的信号变化。常用的单程通过吸收池方法会使用的脉冲激光器，脉冲激光器很难保证时域上不同的脉冲的绝对值强度相同，所以对于绝对剂量的检测是存在一定误差的。</p>
+<h1 id="间接吸收光谱"><a href="#间接吸收光谱" class="headerlink" title="间接吸收光谱"></a>间接吸收光谱</h1><p>随着应用端的需求，单程池直接吸收光谱测量法因其的局限性没办法满足灵敏度和精准度的要求（sensitivity and accuracy），科学家们就开始通过使用间接吸收技术来提高灵敏度，这些技术是测量光吸收引起的效应而非测量光本身的吸收。</p>
+<h2 id="激光诱导荧光"><a href="#激光诱导荧光" class="headerlink" title="激光诱导荧光"></a>激光诱导荧光</h2><p>在激光诱导荧光 （laser induced fluorescence，LIF) 技术中（如下图所示），被测物体分子吸收光并激发荧光（荧光，即当分子衰变回它们的基态时发出的光），然后测量这个荧光。原则上，LIF 是一个不受背景信号干扰的技术，但来自激发激光的散射光可能会增加噪声。降低噪声的方法有：如果发射中有明显的斯托克斯位移（Stokes effect，即激发光波段和荧光发射波段在光谱上错开），可以使用滤波器阻挡大部分散射光；还可以使用时间门控（time-gated）检测来阻止大部分剩余的散射光同时仍能检测大部分荧光。但是LIF 不太适合高气压气体测量的应用，由于高压下会产生的碰撞淬灭（collision quenching，由于高压环境，被激发的荧光团与分子或者原子直接接触导致激发态变化到基态的过程中不发射光子）和散射增加。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/Spectroscopy/C1/C1-5.gif"></p>
+<h2 id="共振增强多光子电离"><a href="#共振增强多光子电离" class="headerlink" title="共振增强多光子电离"></a>共振增强多光子电离</h2><p>在共振增强多光子电离 （resonant enhanced multiphoton ionization，REMPI）测量技术中，待测样品中分子可以通过中性分子的中间能级吸收两个或更多光子后电离。在许多情况下，REMPI 提供了单光子光谱方法无法获得的光谱信息，例如，使用这种技术很容易看到分子中的旋转结构。REMPI 理论上也是不受背景信号干扰的，可以与批量的光子选择相结合，通常使用飞行时间方法（这里笔者不多赘述，感兴趣可以自行google）。尽管具有高灵敏度和选择性，REMPI在大气条件下难以进行。也很难用它来检测经历快速非辐射衰减的振动跃迁或激发电子态。由于 REMPI 检测的多光子特性，绝对信号强度取决于聚焦甚至激光脉冲形状，这使得它很难使用REMPI 用于定量测量。</p>
+<h2 id="光声光谱"><a href="#光声光谱" class="headerlink" title="光声光谱"></a>光声光谱</h2><p>光声光谱 （photoacoustic spectroscopy，PAS）方法也是一种间接吸收光谱法。当分子中沉积的能量不再重新释放时，碰撞弛豫（collisional relaxation）将这种能量转化为热量，这将提高气体的温度和压力。因此，样品对调幅调制光束的吸收将产生可检测的声波。这种光声（或光声）效应是由亚历山大·格雷厄姆·贝尔 (Alexander Graham Bell) 首次研究发现。这种反应所产生的声音的幅度与样品吸收的光强度成正比。使用可调谐激光源，声级检测与激光频率的关系可以被记录下来，这被称为光声光谱 (PAS)。PAS 可应用于固体、液体和气体，并且仅对样品吸收敏感，没有散射损失。在许多实验中，样品包含在一个声共振结构中，入射光源也在共振频率调制，这也能显著增强信号。由于人耳的阈值灵敏度和最低噪声麦克风，是一个压力单位增加10^-9 bar，只需要很小的热量就可以产生可检测的声音信号。即使是在高功率激光入射时，使用连续波激光器吸收监测的灵敏度仍能维持在10^-10cm^(-1), (cm-1 也做波数，常做光谱相关的能量单位)。这个灵敏度已经可以和我们的主角外腔体吸收光谱计量 CRDS 的灵敏度极限相当。然而当只有低功率激光器可用时，灵敏度要低得多。环境噪声和噪声气流产生的气体也会显着降低灵敏度。 目前PAS 仪器利用石英音叉提高了环境噪声抗扰度和检测能，目前能够测试一立方毫米的气体样品。 PAS 需要足够的压力进行碰撞弛豫以及有效率的与麦克风声学耦合，因此灵敏度在气体压力低于1bar的情况下受影响很大。由于是间接检测，设备需要定期用校准样品以获得绝对吸收截面面积或浓度数值。 《An Introduction to Cavity Ring-Down Spectroscopy》的一位共同作者就因为校准过程的难度从而放弃了PAS 并且转投校准难度更小的CRDS。</p>
+<p>如下图所示，待测固体样品置于密封容器中，并附有小麦克风，当调制的红外光束被样品吸收时，入射光会产生热量。这种热量会导致周围气态层的压力发生变化，高灵敏度麦克风可以检测到这种变化。来自麦克风的信号是声干扰波。对这些信号应用傅立叶变换会产生类似于吸收光谱的光谱。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/Spectroscopy/C1/C1-6.jpg"></p>
+<h1 id="腔体增强型吸收光谱及腔衰荡光谱测量"><a href="#腔体增强型吸收光谱及腔衰荡光谱测量" class="headerlink" title="腔体增强型吸收光谱及腔衰荡光谱测量"></a>腔体增强型吸收光谱及腔衰荡光谱测量</h1><p>尽管间接吸收技术具有惊人的灵敏度，但它们并不会自校准，这意味这我们仅能获得相对吸收系数。直接吸收光谱最大的优点就是它提供了获得绝对吸收系数最直接的方法，但是我们前文描述了，单程吸收光谱受限于灵敏度不足。通过以下方式可以提高其灵敏度：</p>
+<ol>
+<li>增加通过样本的路径长度（即增加前文公式中的 d），这个可以通过复杂的多程池配置来实现。 多程池由两个或更多高反射镜组成。每次反射时，光都会通过不同的光路穿过细胞。随着配置的改进，可以实现几百米的吸收路径长度。然而，在这些传统的多程吸收池中，光子的单个程（pass）必须是在空间上分开。这导致需要使用相对较大的镜子和样品体积。此外，即使是非常小的光线空间重叠也使不同的通过光（multi-pass light）产生干涉条纹从而增加吸收光谱的噪声，这通常会限制灵敏度。</li>
+<li>我们也可以通过快速 (fm ~ 100 MHz) 频率调制的激光，检测高频吸收，从而提高灵敏度。这种检测方法被称为调频 (FM) 光谱，使用这种方法可以使检测到的样品吸收参数灵敏度达到10^(-6)cm^(-1)，当组合路径长度达到100m，吸收系数测量灵敏度可以达到10^(-10)cm^(-1)。然而，这种敏感性仅适用于吸收光谱线宽(linewidth)与调制频率相当的吸收特征，线宽越大，吸收参数监测灵敏度会随之下降。</li>
+</ol>
+<p>然而现实情况下在多程吸收池的结构中，光子会在吸收池中的多次穿过（multi-pass），会有空间上的重叠，虽然这种情况并不是最初所能预见的理想情况，但却能大大减少需要探测样品的体积，并且更进一步说，由于允许不同光程相互重叠，空间上不需要互相独立，样品的通过光程次数原则上仅受镜片镀膜和样品的损失限制，从而可以提高灵敏度。在这种情况下，吸收池便充当光学谐振器，并且只能在非常窄的频率范围内传输光（如果镜面反射率非常高）。这种情况下，微小 (kHz) 级的激光频率不稳定或机械抖动也会导致吸收光谱的高噪声，直接使用这种多程吸收池似乎没法在现实中应用。但是，如果我们将重点转移到把多程吸收池视为光的存储容器，上述问题就能得到克服，并且这种新技术对微量样品的灵敏度比以前高得多。这种分析光强vs时间函数的计量方法就引出了我们系列的主角腔衰荡光谱（Cavity Ring-Down Spectroscopy，CRDS ）和腔增强吸收光谱（Cavity Enhanced Absorption Spectrscopy，CEAS）。两者略有不同，CRDS主要是通过计算通过外腔体的光强vs 时间函数 来算出入射激光在腔体中停留时间从而计算出外腔体中的气体吸收系数；而CEAS，使用同样的外腔体，测量通过外腔体的时间平均光强对照初始入射激光强度来计算出样品气体吸收系数。我们会在后面的章节对这两种痕量光谱检测技术进行细致的讨论。</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><strong>本系列文章主要参考于</strong></p>
+<p>《Cavity Ring-Down Spectroscopy Techniques and Applications》，作者：Giel Berden, Richard Engeln</p>
+<p>《Cavity-Enhanced Spectroscopy and Sensing》， 作者：Gianluca Gagliardi, Hans-Peter Loock </p>
+<p><strong>光于本文作者Jenkins：</strong>笔者光学背景，对光学最早产生兴趣来自于光谱学，研究生毕业以后来到美国中西部的一家气体监测设备产商任职，主要负责研发OF-CEAS 光谱可携带仪器，用于监控土壤的温室气体痕量检测，笔者想结合自己的经历以及这两本工作上的启蒙教材比较详细的介绍高灵敏度高精度的现代吸收光谱学计量方法。有兴趣的朋友可以加微信：Jenkins123</p>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%85%89%E8%B0%B1%E5%AD%A6/">光谱学</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E9%A2%98/" rel="tag">专题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%85%89%E8%B0%B1%E5%AD%A6/" rel="tag">光谱学</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/TOFSystem_C3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          TOF系统 第三章 iTOF系统
+        
+      </div>
+    </a>
+  
+  
+    <a href="/OpticsNews20211003/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">光学新闻 20211003</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E8%B0%B1%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">光谱的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B0%84%E5%85%89%E8%B0%B1"><span class="nav-number">1.1.</span> <span class="nav-text">发射光谱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%A3%E5%B0%84%E5%92%8C%E5%8F%8D%E5%B0%84%E5%85%89%E8%B0%B1"><span class="nav-number">1.2.</span> <span class="nav-text">散射和反射光谱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%B8%E6%94%B6%E5%85%89%E8%B0%B1"><span class="nav-number">1.3.</span> <span class="nav-text">吸收光谱</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E5%90%B8%E6%94%B6%E5%85%89%E8%B0%B1"><span class="nav-number">2.</span> <span class="nav-text">直接吸收光谱</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E7%A8%8B%E9%80%9A%E8%BF%87%E5%90%B8%E6%94%B6%E6%B1%A0"><span class="nav-number">2.1.</span> <span class="nav-text">单程通过吸收池</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%97%B4%E6%8E%A5%E5%90%B8%E6%94%B6%E5%85%89%E8%B0%B1"><span class="nav-number">3.</span> <span class="nav-text">间接吸收光谱</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E5%85%89%E8%AF%B1%E5%AF%BC%E8%8D%A7%E5%85%89"><span class="nav-number">3.1.</span> <span class="nav-text">激光诱导荧光</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E6%8C%AF%E5%A2%9E%E5%BC%BA%E5%A4%9A%E5%85%89%E5%AD%90%E7%94%B5%E7%A6%BB"><span class="nav-number">3.2.</span> <span class="nav-text">共振增强多光子电离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E5%A3%B0%E5%85%89%E8%B0%B1"><span class="nav-number">3.3.</span> <span class="nav-text">光声光谱</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%85%94%E4%BD%93%E5%A2%9E%E5%BC%BA%E5%9E%8B%E5%90%B8%E6%94%B6%E5%85%89%E8%B0%B1%E5%8F%8A%E8%85%94%E8%A1%B0%E8%8D%A1%E5%85%89%E8%B0%B1%E6%B5%8B%E9%87%8F"><span class="nav-number">4.</span> <span class="nav-text">腔体增强型吸收光谱及腔衰荡光谱测量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">5.</span> <span class="nav-text">Reference</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TOF系统 第四章 dTOF和iTOF比较，产业链及应用 | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="TOF专题" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="第一章中我们介绍了TOF的基本原理，应用，系统架构和分类。第二章和第三掌中，我们详细介绍了dTOF和iTOF系统，系统原理，从架构和零部件性能出发，分析重要的系统参数。本章，我们对iTOF系统和dTOF系统进行一个比较，同时介绍TOF的产业链，并且介绍一些应用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TOF系统 第四章 dTOF和iTOF比较，产业链及应用">
+<meta property="og:url" content="https://faster-than-light.net/TOFSystem_C4/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="第一章中我们介绍了TOF的基本原理，应用，系统架构和分类。第二章和第三掌中，我们详细介绍了dTOF和iTOF系统，系统原理，从架构和零部件性能出发，分析重要的系统参数。本章，我们对iTOF系统和dTOF系统进行一个比较，同时介绍TOF的产业链，并且介绍一些应用。">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics//TOFSystem/C4/C4-2.png">
+<meta property="article:published_time" content="2021-12-16T14:50:00.000Z">
+<meta property="article:modified_time" content="2021-12-17T14:04:57.361Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="TOF">
+<meta property="article:tag" content="专题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics//TOFSystem/C4/C4-2.png">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-TOF系统 第四章 dTOF和iTOF比较，产业链及应用" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics//TOFSystem/C4/C4-2.png" rel="gallery_cldopy7x60049g8w6a8rlhmq2 noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics//TOFSystem/C4/C4-2.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      TOF系统 第四章 dTOF和iTOF比较，产业链及应用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/TOFSystem_C4/" class="article-date">
+	  <time datetime="2021-12-16T14:50:00.000Z" itemprop="datePublished">December 16, 2021</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一章中我们介绍了TOF的基本原理，应用，系统架构和分类。第二章和第三掌中，我们详细介绍了dTOF和iTOF系统，系统原理，从架构和零部件性能出发，分析重要的系统参数。本章，我们对iTOF系统和dTOF系统进行一个比较，同时介绍TOF的产业链，并且介绍一些应用。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="dTOF和iTOF比较"><a href="#dTOF和iTOF比较" class="headerlink" title="dTOF和iTOF比较"></a>dTOF和iTOF比较</h1><p>根据前两章的介绍，dTOF和iTOF的比较总结如下。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics//TOFSystem/C4/C4-1.png"></p>
+<p><strong>基本原理：</strong>两者都是去尝试获得飞行时间，dTOF是直接测量了飞行时间，而iTOF是通过相位差的方式间接得到这个信息。</p>
+<p><strong>核心组件：</strong>dTOF的核心组件是SPAD单光子雪崩传感器，而iTOF的核心元件是iTOF CIS传感器。根据基本原理和传感器的不同，两者使用不同的模拟数字混合电路及IC。</p>
+<p><strong>探测距离和探测精度：</strong>探测距离上，dTOF的探测距离可以较远，主要原因是其精度不随距离下降；而iTOF受限于原理，随着探测距离增加，探测精度随之下降。dTOF的贪色精度受限于脉冲宽度，而iTOF的探测精度反比于调制频率。</p>
+<p><strong>误差：</strong>TOF系统是测距系统，再深层一些，是使用光飞行时间进行距离的计算，其中重要的参数有光波的波长，飞行的时间。所有对于这两个参数会产生影响的器件都是误差产生的原因，比如激光波长偏移，SPAD，TDC的时间误差，时钟精度，读出噪声等等。</p>
+<p><strong>距离歧义：</strong>由于iTOF是通过相位计算飞行时间，相位是周期性变化的，所以会产生距离歧义。</p>
+<p><strong>空间图像分辨率：</strong>dTOF的SPAD制造技术依然pixel较大，filling factor较低，所以空间图像分辨率较低；iTOF的传感器基于CMOS sensor，可以做到较高的像素数量。</p>
+<p><strong>抗干扰能力：</strong>总体上讲，dTOF的抗干扰能力比iTOF强，由于其使用时间相关单光子计数法，所以可以通过统计方式去除干扰；iTOF容易收到各种干扰，需要使用各种算法去补偿和校正，这也是各种iTOF方案公司的主攻方向。</p>
+<p><strong>功耗：</strong>dTOF无论在发射端还是接收端功耗都比iTOF低。</p>
+<p><strong>工艺：</strong>dTOF主要的工艺难点在SPAD的获得和TDC电路的制造商，iTOF的工艺类似于传统手机内照相机系统工艺，相对简单。</p>
+<p><strong>成本：</strong>dTOF的成本主要集中在SPAD和电路上，iTOF成本相对低一些。</p>
+<h1 id="产业链"><a href="#产业链" class="headerlink" title="产业链"></a>产业链</h1><p>TOF的产业链总结如下图，其中特别列出了一些有代表性的中国企业。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics//TOFSystem/C4/C4-2.png"></p>
+<p><strong>VCSEL供应商：</strong>VCSEL的供应商大部分最初来自于光通信领域，比如Lumentum和II-VI，今年II-VI收购了Coherent，Lumentum收购了NeoPhotonics，继续扩展业务；而AMS和OSRAM合并，强强联合；TRUMPF来自于飞利浦。国产代表初创公司有睿熙科技和纵慧激光。</p>
+<p><strong>激光驱动ASIC：</strong>激光器需要有一个专门IC进行驱动，该IC是数字模拟混合芯片，德州仪器，Analog，ST，AMS都可以提供该类芯片。</p>
+<p><strong>SPAD传感器：</strong>Sony依然是该行业老大，可以提供最高技术最多像素点的SPAD；ST，AMS可以提供64像素的SPAD传感器，主要用于临近传感或者辅助对焦应用；国内的创业公司灵明光子也在独立开发SPAD传感器。</p>
+<p><strong>iTOF CIS传感器：</strong>这种传感器制造方式类似于RGB CMOS，所以传统的CMOS厂商都有提供该种传感器的能力，国内的创业公司聚芯微电子也可以提供背照式iTOF CIS芯片。</p>
+<p><strong>滤光片：</strong>滤光片是TOF中的重要部件，Viavi和水晶光电是主要的供应商。</p>
+<p><strong>DOE和diffuser：</strong>苹果的dTOF方案使用DOE居多，其中台积电和Himax都可以提供DOE，diffuser的供应商有II-VI，舜宇光学，Viavi等。</p>
+<p><strong>镜头：</strong>光学镜头的供应商主要是舜宇光学，大立光学，玉晶光电和瑞声科技等。</p>
+<p><strong>模组组装：</strong>TOF的模组组装也是传统的模组组装厂，其中有ST，LG Innotek，Sharp，舜宇，信利等。</p>
+<p><strong>解决方案和算法公司：</strong>ST，AMS的官网都可以看到在售的TOF模组，pmd和infineon也为各个客户提供各种解决方案，国内的解决方案公司是光鉴科技。</p>
+<p>可以看到TOF产业链已经非常完善，同时，在各个领域，国内都有光学企业占据了或者尝试占据生态位。但是国内企业对于一些核心零部件的掌握还不是很重复，比如VCSEL，激光驱动芯片，解决方案和算法，SPAD传感器等。但是对于镜头，滤光片，整体模组组装。</p>
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p>对于TOF应用，苹果的FaceID刚出现的时候，带起了手机行业的3D识别风。经过这几年的沉淀，手机上后置TOF国内手机企业更多的是使用TOF进行辅助对焦，或者前置进行人脸识别，高级一些的有后置的体感交互，不过没有很好的应用，手机上的临近传感器也是TOF。</p>
+<p>智能家居的TOF应用也越来越多，扫地机器人是一个很好的例子，新形态的机器人开始从扫地机器人发展而来，比如Amazon近期发布的家用机器人Astro。</p>
+<p>对于工业自动化的自动避障，测量距离，定位，TOF的应用从以前专门的工业结局方案到现在的更多的集成化解决方案。</p>
+<p>ToB业务种新零售也使用了很多TOF，比如手势识别，客流统计，行为识别，人脸识别等等。</p>
+<p>不同场景的TOF的应用差别很大，从空间分辨率一个pixel就足矣的应用（比如小便池距离），到需要很高空间分辨率的应用（Lidar等）；从要求快速响应的应用到慢一些也可以的应用；从需要低功耗的应用，到可以连接电源的高功耗可以接受的应用等等。</p>
+<p>所以TOF的传感器设计要综合考虑应用，进行各种参数的平衡，其中包括精度，测量范围，响应速度，空间分辨率，成本，功率等等，并针对应用，进行整体的软硬件设计。</p>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TOF/" rel="tag">TOF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E9%A2%98/" rel="tag">专题</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/OpticsNews20211224/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          光学新闻 20211224
+        
+      </div>
+    </a>
+  
+  
+    <a href="/OpticsNews20211205/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">光学新闻 20211205</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dTOF%E5%92%8CiTOF%E6%AF%94%E8%BE%83"><span class="nav-number">1.</span> <span class="nav-text">dTOF和iTOF比较</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%A7%E4%B8%9A%E9%93%BE"><span class="nav-number">2.</span> <span class="nav-text">产业链</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">应用</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

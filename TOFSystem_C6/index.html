@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TOF系统 第六章 电路系统 | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="TOF专题" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="本章主要介绍TOF系统中的电路系统，包括iTOF和dTOF的电路系统，将使用两个实际TOF产品作为例子进行说明，其中dTOF系统将使用ST的VL53l5CX作为例子；iTOF系统将使用TI的OPT8241 3D Time-of-Flight Sensor以及配套的OPT9221 Time-of-Flight Controller和开发板电路进行介绍。由于作者本人不是电子工程专家，本章主要是在系统和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TOF系统 第六章 电路系统">
+<meta property="og:url" content="https://faster-than-light.net/TOFSystem_C6/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="本章主要介绍TOF系统中的电路系统，包括iTOF和dTOF的电路系统，将使用两个实际TOF产品作为例子进行说明，其中dTOF系统将使用ST的VL53l5CX作为例子；iTOF系统将使用TI的OPT8241 3D Time-of-Flight Sensor以及配套的OPT9221 Time-of-Flight Controller和开发板电路进行介绍。由于作者本人不是电子工程专家，本章主要是在系统和">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-20.png">
+<meta property="article:published_time" content="2022-04-05T10:30:00.000Z">
+<meta property="article:modified_time" content="2022-04-05T10:01:05.403Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="TOF">
+<meta property="article:tag" content="专题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-20.png">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-TOF系统 第六章 电路系统" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-20.png" rel="gallery_cldopy7x60045g8w61ucaggo6 noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-20.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      TOF系统 第六章 电路系统
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/TOFSystem_C6/" class="article-date">
+	  <time datetime="2022-04-05T10:30:00.000Z" itemprop="datePublished">April 5, 2022</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本章主要介绍TOF系统中的电路系统，包括iTOF和dTOF的电路系统，将使用两个实际TOF产品作为例子进行说明，其中dTOF系统将使用ST的VL53l5CX作为例子；iTOF系统将使用TI的OPT8241 3D Time-of-Flight Sensor以及配套的OPT9221 Time-of-Flight Controller和开发板电路进行介绍。由于作者本人不是电子工程专家，本章主要是在系统和模块级别进行一定的介绍和分析。</p>
+<span id="more"></span>
+
+<hr>
+<p>回顾<a href="https://faster-than-light.net/TOFSystem_C1/">TOF系统：第一章系统综述</a>，两种TOF系统的架构基本相同，主要都是由发射端和接收端构成（见下图）。而电子电路系统是实现系统架构的重要组成部分。比如发射端激光需要激光驱动芯片；接收端根据接收传感器的不同需要图像处理芯片对信号进行不同的处理，并直接进行一些片上计算输出深度信息；整个系统需要一个微控制芯片进行控制；需要一些储存单元储存固件及校准信息等。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C1/C1-3.png"></p>
+<p>而控制这些硬件电路的是固件Firmware，固件一般是以半永久的方式记录在硬件中的一种软件，在硬件断电后也不会消失；和Firmware进行交互的是该套系统的驱动driver/应用程序接口，该套程序可以让用户使用一系列更高级别的功能来控制固件的初始化，启动和停止测量距离，模式的选择等，可以通过I2C接口和Firmware进行交互；最上层就是用户自行开发的应用程序，调用系统的TOF测距的功能。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-1.png" style="zoom:50%;" />
+
+<h1 id="dTOF电路系统"><a href="#dTOF电路系统" class="headerlink" title="dTOF电路系统"></a>dTOF电路系统</h1><p>我们以STMicroelectronics(意法半导体)的VL53l5CX作为例子进行dTOF电路系统的介绍</p>
+<h2 id="系统简介"><a href="#系统简介" class="headerlink" title="系统简介"></a>系统简介</h2><p>VL53l5CX是ST出品的一款dTOF型测距模组，下图为实际模组图，正面图可以看到其发射端和接收端，中间是散热部件；背面图可以看到模组的电路连接端口和最中间的散热pad。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-2.png" style="zoom:40%;" />
+
+<p><strong>该模组的特点有：</strong></p>
+<ul>
+<li><p>快速的测距能力</p>
+<ul>
+<li>多个zone的测距，可以选择4x4或者8x8zone</li>
+<li>低功耗待机模式</li>
+<li>最高400cm的测量距离</li>
+<li>单一zone内多目标探测距离能力</li>
+<li>60Hz帧率</li>
+<li>模组内的直方图处理和算法补偿以最小化和移除cover glass造成的串扰</li>
+<li>每个zone内有移动指示判断目标是否有位移</li>
+</ul>
+</li>
+<li><p>小型化和大FOV</p>
+<ul>
+<li>940nm VCSEL发射端，集成模拟驱动</li>
+<li>63° DFOV视场，使用DOE在发射端和接收端</li>
+<li>接收端是SPAD阵列</li>
+<li>低功耗的微处理器运行固件</li>
+<li>大小：6.4mm x 3.0mm x 1.5mm</li>
+</ul>
+</li>
+<li><p>易于集成</p>
+<ul>
+<li>单次回流焊组件</li>
+<li>灵活的供电选择，使用单一3.3V或2.8V控制，或者使用3.3V在AVDD和1.8V在IOVDD</li>
+<li>可以搭配多种范围的cover glass材质</li>
+</ul>
+</li>
+</ul>
+<p><strong>应用场景有：</strong></p>
+<ul>
+<li>场景理解，多区域zone和多目标的识别能力可以用于机器人应用的3D室内空间映射和障碍识别。</li>
+<li>大FOV和多区域扫描可以实现内容管理（卡车中的装货量，水箱，垃圾桶）</li>
+<li>姿态识别</li>
+<li>液面控制</li>
+<li>视频投影仪的keystone校正</li>
+<li>激光辅助对焦，增强相机AF自动对焦系统速度，增强若光照低对比度情况下的对焦鲁棒性</li>
+<li>VR、AR增强，双相机立体视觉和3D深度辅助</li>
+<li>智能建筑和智能光照</li>
+<li>IoT（用户和物体检测）</li>
+<li>视频对焦追踪，60Hz的帧率可以实现连续对焦算法</li>
+</ul>
+<h2 id="电路系统架构"><a href="#电路系统架构" class="headerlink" title="电路系统架构"></a>电路系统架构</h2><p>上一节简述了模组的功能，模组的功能是要靠其系统实现的。下图展示了该dTOF系统的电路系统架构图，可以看到其主要的系统功能块和主要接口。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-3.png" style="zoom:30%;" />
+
+<h3 id="VCSEL-Driver"><a href="#VCSEL-Driver" class="headerlink" title="VCSEL Driver"></a>VCSEL Driver</h3><p>VCSEL Driver用于驱动VCSEL工作，最简单的一种架构如下图所示，由于系统的控制部分是数字信号，VCSEL本身是模拟元器件，而且需要一个高电流，系统需要做的是快速的控制VCSEL的开关以发出高频脉冲光波。其中VCSEL的正极连接高电压，用于VCSEL本身的供电，该电压有时可以和数字电路部分的控制电压分离开来。VCSEL的负极端连接一个MOSFET（金属氧化物半导体场效应管），起到一个开关的作用。VCSEL本身可以被大致描述为一个有着特定大小电阻电容和电感的理想二极管。MOSFET的gate侧可以接收脉冲信号，来对MOSFET进行开关。对于高速应用，gate侧使用一个Gate Driver来提升信号速度，比如使用一对儿MOSFET来对VCSEL的MOSFET进行快速的充放电保证其开关高速性能。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-4.png"></p>
+<h3 id="SPAD-Detection-Array"><a href="#SPAD-Detection-Array" class="headerlink" title="SPAD Detection Array"></a>SPAD Detection Array</h3><p>SPAD detection array执行的是检测任务，主要由SPAD像素点，淬灭和重置电路和读出电路组成。下图展示了一个8x8的SPAD阵列的单像素结构，其中SPAD像素点用于感收到光子时发生雪崩效应产生电信号；淬灭和充值电路进行电压控制，已完成先停止SPAD像素点的雪崩过程，再让其回到工作状态；而读出电路用于识别SPAD读出的信号，并最终输出时间差信号。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-5.png" style="zoom:50%;" />
+
+<p>读出电路中的一个重要组成部分是TDC(Time-to-Digital Converter)电路，为了实现时间相关单光子计数（TCSPC），整个系统要知道VCSEL发射出光子的时间和SPAD接收到光子的时间差。一个典型的TDC包含两个输入端一个输出端，其中输入端包含Start和Stop信号，在TOF应用中，Start信号可以为激光发射时控制信号的高电平，Stop信号为SPAD收到光子后输出的信号，TDC电路会记录两个信号的上升沿然后输出时间差。下图展示的是德州仪器的<a target="_blank" rel="noopener" href="https://www.ti.com/lit/ds/symlink/tdc7200.pdf">TDC7200</a>，可以最多识别开始信号到最多5个结束信号之间的时间差。而ST这个模组的TDC都集成在SPAD阵列周围。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-6.png" style="zoom:33%;" />
+
+<p>SPAD整体的设计难点是整个系统的工作速度，以及随着SPAD像素点增多后，如何提高SPAD像素点的fill factor以及控制整个模组的大小。下图展示了两种不同的SPAD array阵列的结构，不同于上面每个读出电路在单像素点周围（filling factor很小）。一种是读出电路整体在SPAD像素阵列边上（左图），一种是Sony的3D堆叠技术，整体读出电路在SPAD像素阵列下方（右图）。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-7.png" style="zoom:40%;" />
+
+<h3 id="Advance-Ranging-Core"><a href="#Advance-Ranging-Core" class="headerlink" title="Advance Ranging Core"></a>Advance Ranging Core</h3><p>这一部分的系统取决于不同公司叫法不同，主要包含的是对TDC出来的时间差信号，SPAD像素点地址信息等的信号处理。最主要的是片上histogram的计数，然后依据算法，计算出距离，并依据标定的各种参数对数据进行校准并完成最终输出。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C1/C1-7.png" alt="C6-7" style="zoom:80%;" />
+
+<h3 id="Micro-Controller"><a href="#Micro-Controller" class="headerlink" title="Micro Controller"></a>Micro Controller</h3><p>Micro controller用于控制片上各子系统</p>
+<h3 id="NVM，ROM，RAM"><a href="#NVM，ROM，RAM" class="headerlink" title="NVM，ROM，RAM"></a>NVM，ROM，RAM</h3><p>NVM用于来储存firmware，序列号，系统的校准信息等需要一直保存的信息，ROM用于储存系统初始化信息等，RAM用于系统运行的计算存储。</p>
+<h3 id="外围电路和端口"><a href="#外围电路和端口" class="headerlink" title="外围电路和端口"></a>外围电路和端口</h3><p>ST的文档中展示了配合该模组的外围电路，模组通过I2C端口（SCL，SDA，INT）和Host MCU进行通信进行输入控制信号和输出信号的传输。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-8.png" style="zoom:30%;" />
+
+<h3 id="状态机"><a href="#状态机" class="headerlink" title="状态机"></a>状态机</h3><p>该模组系统有断电模式，低功耗待机模式，高功耗待机模式和测距模式。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-9.png" style="zoom:30%;" />
+
+
+
+<h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><p>想使用该模组进行开发，可以选用多种开发板，只要保证Host MCU上安装了该模组的驱动，以及外围电路连接正确即可。</p>
+<p>下图展示了使用Arduino进行连接的方式</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-10.png" style="zoom:24%;" />
+
+<p>下图展示了使用STM32 Nucleo64单片机连接该模组的一种方式以及一个简单的输出形态</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-11.png" style="zoom:40%;" />
+
+<p>下图展示了某些开发人员在开发板上再连接显示屏进行输出</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-12.png" style="zoom:50%;" />
+
+<p>ST会提供面向不同平台的驱动API等，以及一些简单的示例程序。该模组很容易集成进一些电路系统，作为一个传感器进行工作。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-13.png" style="zoom:30%;" />
+
+<h1 id="iTOF电路系统"><a href="#iTOF电路系统" class="headerlink" title="iTOF电路系统"></a>iTOF电路系统</h1><p>我们以Texas Instrument(德州仪器)的OPT8241 Chipset作为例子进行iTOF电路系统的介绍。其中OPT8241是iTOF传感器，需要搭配德州仪器的ToF controller OPT9221进行使用，OPT9221用于接收来自于OPT9241的数据进行深度信息的计算。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-14.png" style="zoom:40%;" />
+
+<p>OPT8241 Evaluation Module是德州仪器开发的用于OPT8241和OPT9221的评估开发板，包括Illlumination Board和Sensor Board，见下图。下图右图展示的是接收端Sensor Board的部分，其中重点标注出了传感器芯片OPT8241（在镜头下面），TOF控制芯片OPT9221以及一个Micron的DDR2，左图展示了加上了带有四个激光发射端的Illunimation Board的整体开发板布局。整体形成了一个iTOF系统。开发板包括一个5V电源插口和一个Micro-USB接口，可以直接连接电脑使用。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-15.png" style="zoom:40%;" />
+
+<h2 id="系统简介-1"><a href="#系统简介-1" class="headerlink" title="系统简介"></a>系统简介</h2><p>OPT8241特性如德州仪器官网介绍如下，它是一个QVGA的iTOF传感阵列</p>
+<ul>
+<li>成像阵列：<ul>
+<li>320 × 240 阵列</li>
+<li>1/3” 光学格式</li>
+<li>像素间距：15µm</li>
+<li>高达 150 帧/秒</li>
+</ul>
+</li>
+<li>光学属性：<ul>
+<li>响应度：850nm 时为 0.35A/W</li>
+<li>解调对比度：50MHz 时为 45%</li>
+<li>解调频率：10MHz 至 100MHz</li>
+</ul>
+</li>
+<li>输出数据格式：<ul>
+<li>12 位相位相关数据</li>
+<li>4 位共模（环境）</li>
+</ul>
+</li>
+<li>芯片集接口：<ul>
+<li>与 TI 的飞行时间控制器 OPT9221 兼容</li>
+</ul>
+</li>
+<li>传感器输出接口：<ul>
+<li>CMOS 数据接口（50MHz DDR，16 通道数据、时钟和帧标记）</li>
+<li>LVDS：<ul>
+<li>600Mbps，3 个数据对</li>
+<li>1LVDS 位时钟对，1LVDS 采样时钟对</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>定时发生器 (TG)：<ul>
+<li>可编程感兴趣区域 (ROI) 的寻址引擎</li>
+<li>调制控制</li>
+<li>抗混叠</li>
+<li>主/从同步操作</li>
+</ul>
+</li>
+<li>用于控制的 I2C 从接口</li>
+<li>电源：<ul>
+<li>3.3V I/O，模拟</li>
+<li>1.8V 模拟，数字，I/O</li>
+<li>1.5V 解调（典型值）</li>
+</ul>
+</li>
+<li>经优化的光学封装 (COG-78)：<ul>
+<li>8.757mm × 7.859mm × 0.7mm</li>
+<li>集成光学带通滤波器（830nm 至 867nm）</li>
+<li>便于对齐的光学基准点</li>
+</ul>
+</li>
+<li>工作温度范围：0°C 至 70°C</li>
+</ul>
+<p><strong>应用场景有</strong></p>
+<ul>
+<li>深度感测：<ul>
+<li>位置和临近感测</li>
+<li>3D 扫描</li>
+<li>3D 机器视觉</li>
+<li>安全和监控</li>
+<li>手势控制</li>
+<li>增强现实和虚拟现实</li>
+</ul>
+</li>
+</ul>
+<p><strong>OPT9221的特性如下</strong></p>
+<ul>
+<li>最高120 FPS的控制能力</li>
+<li>深度信息输出:<ul>
+<li>12-Bit相位</li>
+<li>最高12-Bit强度信息</li>
+<li>最高4-Bit环境光</li>
+<li>过曝检测</li>
+</ul>
+</li>
+<li>芯片集接口：适用于OPT8241</li>
+<li>输出（CMOS，8Lane数据，8个控制信号和时钟）<ul>
+<li>数字视频协议适用：Data, VD, HD, Clock</li>
+<li>同步串行接口（SSI）适用</li>
+</ul>
+</li>
+<li>深度引擎:<ul>
+<li>像素合并</li>
+<li>ROI(Region of Interest)</li>
+<li>去混叠</li>
+<li>非线性校正</li>
+<li>温度校正</li>
+<li>高动态范围</li>
+<li>空间滤波</li>
+</ul>
+</li>
+<li>时钟协调:<ul>
+<li>传感器控制</li>
+<li>主从同步</li>
+</ul>
+</li>
+<li>I2C 接口</li>
+<li>电源: 1.2-V Core, 1.8-V I/O, 3.3-V I/O, 2.5-V Analog</li>
+<li>封装: 256-Pin, 9-mm × 9-mm NFBGA</li>
+<li>工作温度: 0°C to 85°C</li>
+</ul>
+<p>可以看到，由于iTOF使用的芯片更接近CMOS芯片，输出的信息量也比较大，所以OPT8241需要配合一个类似于ISP的OPT9221来工作。</p>
+<h2 id="电路系统架构-1"><a href="#电路系统架构-1" class="headerlink" title="电路系统架构"></a>电路系统架构</h2><p>上一节简述了模组的功能，模组的功能是要靠其系统实现的。下图展示了该iTOF系统在评估开发板中的架构图，可以看到其主要的系统功能块和主要接口。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-16.png" style="zoom:50%;" />
+
+<h3 id="Illunimation-Driver"><a href="#Illunimation-Driver" class="headerlink" title="Illunimation Driver"></a>Illunimation Driver</h3><p>发射端驱动用于驱动激光器，和dTOF的激光驱动没有本质区别，都是使用MOSFET等元器件实现，可以看到激光驱动的控制和调制信号来源自于OPT8241 Sensor，同时发射信号也输出给Depth Engine进行深度信息的计算。</p>
+<h3 id="Sensor-OPT8241"><a href="#Sensor-OPT8241" class="headerlink" title="Sensor(OPT8241)"></a>Sensor(OPT8241)</h3><p>Sensor部分即OPT8241芯片，主要包括像素阵列，ADC和时间发生器。</p>
+<p>像素阵列为320x240，最高支持150帧每秒，由于是iTOF应用，每帧读出4次强度信息(可能是使用的四相位连续波调制)，所以每秒可以读出600次数据。</p>
+<p>ADC用来进行模拟到数字信号的转换</p>
+<p>Timing Generator（TG）可编程，用于控制iTOF的调制，复位，读出，数字化序列。该可编程TG提供了对于不同算法的可能性（包括功率，移动物体的识别稳定性，信噪比和环境光降噪等）</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-17.png" style="zoom:50%;" />
+
+<h3 id="Depth-Engine-OPT9221"><a href="#Depth-Engine-OPT9221" class="headerlink" title="Depth Engine(OPT9221)"></a>Depth Engine(OPT9221)</h3><p>Depth Engine在iTOF系统中充当一个类似于电脑显卡的工作，快速的计算序列化的数据，然后输出简单的深度信息。可以看到它的核心是Depth Engine的计算单元，OPT8241 Sensor的数据和时钟通过LVDS(Low Voltage Differential Signaling) Receiver De-Serializer模块输入到Depth Engine。除了原始数据，Depth Engine还需要一些补充参数用于更准确的深度计算，包括在发射端靠近VCSEL的温度传感器的温度信息（我们提到过VCSEL温漂会造成波长变化进而影响深度计算的准确性），配置信息，时间控制信号等。</p>
+<p>DDR/DDR2用于储存Sensor原始读出信息的储存，不在芯片里，需要连接一个使用，当所有必要信息（4相位的读出信息）都完成储存时，Depth Engine会读出这些数据进行深度信息的计算，TI推荐最小128mbits的DDR用于储存，使用DDR2可以比DDR更快进行数据读入读出，所以OPT9221配置了也可以和DDR2通信的控制器。</p>
+<p>其他的模块是通信接口等模块。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-18.png" style="zoom:40%;" />
+
+<h3 id="Configuration-EEPROM-Calibration-EEPROM-USB-Tx-Rx-FX2"><a href="#Configuration-EEPROM-Calibration-EEPROM-USB-Tx-Rx-FX2" class="headerlink" title="Configuration EEPROM, Calibration EEPROM, USB Tx/Rx(FX2)"></a>Configuration EEPROM, Calibration EEPROM, USB Tx/Rx(FX2)</h3><p>Configuration EEPROM用于存储其Firmware。</p>
+<p>Calibration EEPROM用于储存校准参数，这些参数直接作用于输出后的深度信息矩阵上，所以不需要被Depth Engine读取，而是直接进行处理后完成最终输出。</p>
+<p>USB Tx/Rx(FX2)用于USB的传输，其中开发板的固件存储在这个模块。</p>
+<h3 id="Power-management-and-monitoring"><a href="#Power-management-and-monitoring" class="headerlink" title="Power management and monitoring"></a>Power management and monitoring</h3><p>该模块主要是作为开发板本身的电源控制和监控。</p>
+<h2 id="开发环境-1"><a href="#开发环境-1" class="headerlink" title="开发环境"></a>开发环境</h2><h3 id="固件"><a href="#固件" class="headerlink" title="固件"></a>固件</h3><p>该评估开发板包括两部分的固件fireware，一个是FX2固件和OPT9221的固件，这两个firmware分别存储在不同的EEPROM上。</p>
+<h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><p>该开发板使用开源3D camera software development kit <a target="_blank" rel="noopener" href="https://github.com/3dtof/voxelsdk">Voxel-SDK</a>. 为了使评估更容易，TI提供了一个基于该SDK开发的Voxek Viewer。该软件可以实现以下功能，软件GUI如下图所示：</p>
+<ul>
+<li>实时查看以下数据: 相位，强度，环境光，距离，深度，点云</li>
+<li>配置iTOF相机参数</li>
+<li>基础统计：时间和空间平均，标准差，直方图</li>
+<li>滤波器（时间和空间）：增加、删除、插入滤波器，配置滤波器参数</li>
+<li>校准相机</li>
+<li>更新OPT9221固件</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C6/C6-19.png" style="zoom:40%;" />
+
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><strong>dTOF VL53L5CX</strong></p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://www.st.com/en/imaging-and-photonics-solutions/vl53l5cx.html">ST VL53L5CX</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://makersportal.com/blog/2019/4/10/arduino-vl53l1x-time-of-flight-distance-measurement">Arduino + VL53L1X</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.st.com/resource/en/application_note/an5717-how-to-setup-and-run-the-vl53l5cxsatelusing-an-stm32-nucleo64-board-stmicroelectronics.pdf">STM32 Nucleo64 board + VL53L5CX</a></p>
+</li>
+</ol>
+<p><strong>iTOF OPT8241</strong></p>
+<ol>
+<li><p><a target="_blank" rel="noopener" href="https://www.ti.com/product/OPT8241?utm_source=google&utm_medium=cpc&utm_campaign=asc-null-null-gpn_en-cpc-pf-google-soas&utm_content=opt8241&ds_k=OPT8241&dcm=yes&gclid=CjwKCAjw0a-SBhBkEiwApljU0qyeBEc9poCDxuCffFwUhqPW2EaAmosHiLAu70C3ZRdWYrGzNG9dnhoC7gUQAvD_BwE&gclsrc=aw.ds">OPT8241</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.ti.com/product/OPT9221?utm_source=google&utm_medium=cpc&utm_campaign=asc-null-null-GPN_EN-cpc-pf-google-soas&utm_content=OPT9221&ds_k=OPT9221&DCM=yes&gclid=CjwKCAjw0a-SBhBkEiwApljU0p1sH64dcnOWczmyT83fdbqjvzMRyfE7JdKNr-bnl3c5dysC9cPL5hoCBV0QAvD_BwE&gclsrc=aw.ds">OPT9221</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.ti.com/lit/ug/sbou155b/sbou155b.pdf?ts=1649150588367&ref_url=https%253A%252F%252Fwww.google.com%252F">OPT8241 评估开发板文档</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/3dtof/voxelsdk">Voxel SDK</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.ti.com/lit/ug/sbou157/sbou157.pdf?ts=1649076212391"> Voxel Viewer User’s Guide</a></p>
+</li>
+</ol>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TOF/" rel="tag">TOF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E9%A2%98/" rel="tag">专题</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/OpticsNews20220410/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          光学新闻 20220410
+        
+      </div>
+    </a>
+  
+  
+    <a href="/OpticsNews20220320/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">光学新闻 20220320</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dTOF%E7%94%B5%E8%B7%AF%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">dTOF电路系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">系统简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E8%B7%AF%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">电路系统架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VCSEL-Driver"><span class="nav-number">1.2.1.</span> <span class="nav-text">VCSEL Driver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPAD-Detection-Array"><span class="nav-number">1.2.2.</span> <span class="nav-text">SPAD Detection Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Advance-Ranging-Core"><span class="nav-number">1.2.3.</span> <span class="nav-text">Advance Ranging Core</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Micro-Controller"><span class="nav-number">1.2.4.</span> <span class="nav-text">Micro Controller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NVM%EF%BC%8CROM%EF%BC%8CRAM"><span class="nav-number">1.2.5.</span> <span class="nav-text">NVM，ROM，RAM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E5%9B%B4%E7%94%B5%E8%B7%AF%E5%92%8C%E7%AB%AF%E5%8F%A3"><span class="nav-number">1.2.6.</span> <span class="nav-text">外围电路和端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="nav-number">1.2.7.</span> <span class="nav-text">状态机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="nav-number">1.3.</span> <span class="nav-text">开发环境</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iTOF%E7%94%B5%E8%B7%AF%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.</span> <span class="nav-text">iTOF电路系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%AE%80%E4%BB%8B-1"><span class="nav-number">2.1.</span> <span class="nav-text">系统简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E8%B7%AF%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84-1"><span class="nav-number">2.2.</span> <span class="nav-text">电路系统架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Illunimation-Driver"><span class="nav-number">2.2.1.</span> <span class="nav-text">Illunimation Driver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sensor-OPT8241"><span class="nav-number">2.2.2.</span> <span class="nav-text">Sensor(OPT8241)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Depth-Engine-OPT9221"><span class="nav-number">2.2.3.</span> <span class="nav-text">Depth Engine(OPT9221)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuration-EEPROM-Calibration-EEPROM-USB-Tx-Rx-FX2"><span class="nav-number">2.2.4.</span> <span class="nav-text">Configuration EEPROM, Calibration EEPROM, USB Tx&#x2F;Rx(FX2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Power-management-and-monitoring"><span class="nav-number">2.2.5.</span> <span class="nav-text">Power management and monitoring</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83-1"><span class="nav-number">2.3.</span> <span class="nav-text">开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BA%E4%BB%B6"><span class="nav-number">2.3.1.</span> <span class="nav-text">固件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.3.2.</span> <span class="nav-text">软件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Looking Glass Portrait背后的光学原理 | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="技术评论" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="去年12月Looking Glass Factory Inc.在Kickstarter上进行众筹，Looking Glass Portrait项目，全息显示相框产品，众筹早鸟价格199美元，虽然中间由于疫情导致产品所使用的Raspberry Pi缺货等原因延迟了一些，该产品5月第一批还是顺利发货。产品收到后第一时间点亮还是很惊艳的，看着三维的航天员在相框中缓慢的跑动，机械狗等demo，有一种赛博朋">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Looking Glass Portrait背后的光学原理">
+<meta property="og:url" content="https://faster-than-light.net/TechReview_2_LookingGlass/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="去年12月Looking Glass Factory Inc.在Kickstarter上进行众筹，Looking Glass Portrait项目，全息显示相框产品，众筹早鸟价格199美元，虽然中间由于疫情导致产品所使用的Raspberry Pi缺货等原因延迟了一些，该产品5月第一批还是顺利发货。产品收到后第一时间点亮还是很惊艳的，看着三维的航天员在相框中缓慢的跑动，机械狗等demo，有一种赛博朋">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-1.jpg">
+<meta property="article:published_time" content="2021-05-20T18:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T11:32:05.717Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="技术评论">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Looking Glass Portrait背后的光学原理" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-1.jpg" rel="gallery_cldopy7w10001g8w6hd4j9al5 noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-1.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Looking Glass Portrait背后的光学原理
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/TechReview_2_LookingGlass/" class="article-date">
+	  <time datetime="2021-05-20T18:00:00.000Z" itemprop="datePublished">May 21, 2021</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E8%AF%84%E8%AE%BA/">技术评论</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>去年12月<a target="_blank" rel="noopener" href="https://lookingglassfactory.com/">Looking Glass Factory Inc.</a>在Kickstarter上进行众筹，<a target="_blank" rel="noopener" href="https://www.kickstarter.com/projects/lookingglass/looking-glass-portrait">Looking Glass Portrait项目</a>，全息显示相框产品，众筹早鸟价格199美元，虽然中间由于疫情导致产品所使用的Raspberry Pi缺货等原因延迟了一些，该产品5月第一批还是顺利发货。产品收到后第一时间点亮还是很惊艳的，看着三维的航天员在相框中缓慢的跑动，机械狗等demo，有一种赛博朋克2077的感觉，或者猫猫和狗狗的demo也很讨人喜欢。该款产品的宣传也可以直接通过公司官网的<a target="_blank" rel="noopener" href="https://lookingglassfactory.com/portrait">Portrait产品页面</a>观看。这个小相框摆在桌面上，很容易让自己或者路过的人多看两眼。作为该公司第一款To C的电子消费品（该公司已有两款前期产品，Looking Glass 15.6”和Looking Glass 8K，都是相对更大的产品，光学方案可能不同），笔者认为该产品打磨的很好，产品交互很简单，内容制作相对容易。这篇文章主要只探索Looking Glass Portrait背后的光学方案。来看一下它是如何显示3D信息的。</p>
+<span id="more"></span>
+
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-2.jpg" style="zoom:50%;" />
+
+
+
+<p>我们先看看Portrait的性能参数和它能显示何种3D</p>
+<h2 id="技术参数"><a href="#技术参数" class="headerlink" title="技术参数"></a>技术参数</h2><p><strong>Viewing cone可视角度：</strong>58°</p>
+<p><strong>No. of views可视的三维信息片</strong>：45-100</p>
+<p><strong>Input resolution输入分辨率</strong>：1536像素 x 2048像素</p>
+<p><strong>Aspect ratio长宽深比：</strong>4:3:2</p>
+<p><strong>显示屏：</strong>7.9”/20cm对角</p>
+<p><strong>显示屏：</strong>Advanced high precision lens and microlouvre array 高精密镜片和微百叶窗阵列(我们马上就会讨论这到底在说什么)</p>
+<h2 id="显示效果"><a href="#显示效果" class="headerlink" title="显示效果"></a>显示效果</h2><ol>
+<li>不同角度看过去显示是不同的。</li>
+<li>人的双眼看，是有深度信息的（视差）。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-3.jpg"></p>
+<h2 id="光学原理"><a href="#光学原理" class="headerlink" title="光学原理"></a>光学原理</h2><h3 id="视差显示"><a href="#视差显示" class="headerlink" title="视差显示"></a>视差显示</h3><p>再加上一些细节观察，结合这些技术参数我们可以逐步破解Looking Glass Portrait背后的光学原理。打了一束光到设备上，发现反射光出现了一道条纹，角度一直是如图显示的，略微倾斜。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-4.jpg" style="zoom:33%;" />
+
+<p>近距离观看，发现反光的条纹是一条条的结构自上而下有一个角度穿过整个显示屏。再结合技术参数里说的Advanced high precision lens and microlouvre array 高精密精品和微百叶窗阵列，第一个猜测就是这是用了柱镜光栅的原理（Lenticular lens）</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-5.JPG" style="zoom:50%;" />
+
+<p>对于柱镜光栅，我们其实都在生活中见过，就是常见的3D卡片。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-6.gif" alt="R2-6"></p>
+<p>柱透镜立体光栅实现立体成像原自于视差立体法，下图展示了两种视差立体法，一种是通过视差遮挡，一种是通过柱镜。视差遮挡法是用在显示图像前加上规律变化的遮挡条纹，让观察者在某个距离范围内，左眼只能看到一部分图像，右眼只能看到另一部分图像，这样就可以把有视差的两张图像分割成两组条纹图像（R和L）。柱镜立体法原理类似，形态如图所示。</p>
+<img src="https://raw.githubusercontent.com/Sterncat/BlogPics/main/TechReview/2-LookingGlass/R2-7.png" style="zoom:50%;" />
+
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-8.jpg"></p>
+<p>下一个问题就很有趣了，Looking Glass Portrait是如何实现这么丝滑的立体显示的（我们小时候用的卡片图像变化都很快，然后也没有丝滑的连续的变化感觉）？为什么这个设备里的柱镜是倾斜的？</p>
+<p>通过查询Looking Glass Portrait的几个专利，发现在<a target="_blank" rel="noopener" href="https://patents.google.com/patent/US20190268588A1/en?assignee=Looking+Glass+Factory,+Inc.&num=50&sort=new">US20190268588A1</a>里提到了使用Lenticular lens等方法产生视差，同时专利里提到了另一个专利描述了图像分割来实现期待的显示效果.（This technique is described further in <a target="_blank" rel="noopener" href="https://patentimages.storage.googleapis.com/37/e6/27/c427a4c1441125/US6064424.pdf">U.S.Pat.No.6,064,424</a>. Images licing or division(of light source 10 output) may be accomplished in any manner to achieve a desired viewing result.）。找到另一个专利，发现是飞利浦公司1997年的专利，主要描述了如何充分使用电子显示屏幕的相同的横向和纵向分辨率和柱镜结合来完成3D显示（该专利已于2017年过了专利保护期）。</p>
+<p>我们先讨论柱镜3D显示的一个问题，是如果柱镜是竖直的，我们水平左右移动从不同不同角度就可以看到不同的视角（view），如果我们想看到很多视角，我们就可以横向去在一个柱镜里去添加更多的图像块（视角），如下图所示，展示了4个view如何构建，如果我们需要在在4度的观察视场角里，丝滑的观察图像，我们需要在一个柱镜的范围里添加4个view，让我们每一度里都有一个不同的角度的图像信息。如果我们的显示部分横向纵向分辨率是一样的，我们会发现，由于柱镜的存在，我们的横向分辨率比纵向分辨率低4倍。这个问题如果是使用打印的图像，很好解决，我们纵向上只需要降低4倍打印分辨率，这样我们横向和纵向分辨率就是1：1了。但如果我们用的是一个电子显示屏，我们如果这么做去把横向纵向分辨率调节成一样，我们就要不去显示纵向的一些像素点，那就白白损失掉了我们显示屏纵向的像素点的作用。当我们想在50度视场角里丝滑的显示50个view时，我们需要在一个柱镜里并列塞进去50个图像slice（view），这就出现了两个问题，第一个问题是我们刚才提到的（1：50的分辨率区别太大了，我们浪费掉了98%的像素），第二个问题是我们的柱镜可能要做的很宽，去塞下这些图像slice，对于一个300 PPI的显示屏，一个像素点（RGB）是85um，50个就是4.25mm，已经肉眼的一定距离可见柱镜了。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-10.jpg" style="zoom:40%;" />
+
+<p>飞利浦提出的专利通过倾整个柱镜的面，让其和显示屏呈现一定角度，来利用其纵向的显示屏像素点。如专利的下图所示，16是柱镜，条状块是像素点。通过让柱镜面和显示屏呈现一个夹角，可以看到view 1最靠近柱镜左侧，然后依次是2，3，4，5，6。这样，每两排像素点会构成了一组全信息。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-11.png" style="zoom:80%;" />
+
+<p>回到Looking Glass Potriat，产品信息里，输入分辨率是1536像素 x 2048像素，No. of Views是45-100，我们可以实际数一下到底有多少个柱镜。通过下图照片，简单数了一下，是大概横向250个左右，考虑横向像素点一共1536个，我们可以猜测一共大概有256个柱镜，正好是6倍的关系。那这样，横向每个柱镜就可以放入6个像素点，如果要达到产品信息的No. of Views的最低要求45，纵向我们需要8~16行像素。8应该是最合理的，因为这样还基本在一个正方向的空间内显示完整的48个view的信息。宏观分辨率是256 x 256（1536/6 = 256, 2048/8=256）。大概计算了一下产品中柱镜的角度，是8°左右，如果是柱镜的一侧边从上到下通过8个像素，从左到右通过1个像素，那么是7.12°。不过这只是大概观察，主要是为了说明原理。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-12.png"></p>
+<p>我们尝试画一个图展示如何显示这48个像素点，每个像素点都在显示什么。Looking Glass Portrait的柱镜是向左倾斜，但是为了结合专利图示，我们的示意图按专利图示也向右倾斜。最终画出来的图如下图所示，我们想象成每一个黑色框中是一个空间信息pixel（我们叫它大pixel），每一个这样的pixel结合柱镜可以展示48个角度的图像信息。这样，Look Glass Portrait就成为了一个256 x 256像素的空间信息显示屏。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-13.png" style="zoom:60%;" />
+
+<h3 id="颜色显示"><a href="#颜色显示" class="headerlink" title="颜色显示"></a>颜色显示</h3><p>如何处理颜色呢？我们知道每一个小像素点都是由RGB像素点组成的，可以显示各种颜色，但是如果简单的正常显示，对于1-48这些角度的信息，由于他们和柱镜的相对位置不同，造成显示时，亮度可能会有所不同（出射光角度，杂光等问题），同时由于不同角度的放大率不同，会造成色彩条纹的问题。飞利浦的专利提出了几种方式去解决色彩条纹的问题，而且我们可以从Looking Glass Portrait的显示中看到应用了类似的方法。飞利浦展示了一个7 view的系统，我们把每7个view叫做一个大像素。</p>
+<p>第一种方法是使用第一个大像素的view 1显示红，第二个大像素的view 1显示绿，第三个大像素的view 1显示蓝，4A展示了这个概念，4B展示了大像素层面，rgb是如何现实的。这个方式的问题是彩色条纹还是会出现，会出现在对角（图4B，r练成了一条线）。所以飞利浦又提出了两种其他的方法去解决这个问题</p>
+<p>方法二和方法三的概念相同，比如方法二，用第一个大像素的第一行所有view显示红，然后右下角的大像素的第一行所有view显示绿，然后这个大像素的再左下角的大像素的第一行所有view显示蓝，见图5A。在5B中，虚线类似梯形框起来的就是一个大号的色彩pixel，这种显示问题是会和下一个显示点的信息有cross talk，因为在这个虚线框里会有一个来自于另一个大号色彩pixel的g’。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-14.png"></p>
+<p>我们看看Looking Glass Portrait是如何排布颜色的，通过放大镜拍摄像素点，这是一片宏观上（远看）显示为白色的区域，我们发现像素颜色是如图所示的，我们可以大胆假设一下可能的方式。竖向的倾斜线是柱镜的边界，可以看到纵向颜色的重复正好是8行，如果继续放大是可以看到方形的显示屏基础像素点的。观察这个像素点我们发现可能1-48view和我们的简单排布可能不太一样，看起来是个类似菱形，可能这些行之间有shift以构建完整的256x256pixel，让算法更方便（矩形排布在边角会有半个大pixel的情况）。然后就是颜色显示上，看起来每个大pixel上部分显示r，然后b，然后g的总体思路，但是实际上混色是一个比较复杂的组成而不是简单的某一行展示单色。个人认为可能这样做的原因应该是可以让显示效果更好，毕竟飞利浦提出专利后显示屏技术也发展了20年，而且Looking Glass Portrait的每个大像素里像素多得多，也小的多。如果有更好的放大设备，我们可以一探究竟。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TechReview/2-LookingGlass/R2-15.png"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>上面的分析当然都是基于表面上看到的信息得出的，不过如果真的是如分析所说，Looking Glass Portrait并不是像产品介绍中一样使用了“next generation holographic display technology”（下一代的全息显示技术），相反，它使用了“last generation technology”（上一代的技术，飞利浦的专利是1997年的）。不过，作为一种产品宣传策略这可以理解。而且，这并不妨碍我认为这是一款好产品，无论是从显示效果，产品形态上，还是价格上，都可以说是一款85分以上的作品。</p>
+<p>需要探索的问题还有很多，比如产品宣传里所说的45-100view，我们分析了48view的情况，如果100view，Looking Glass Portrait是如何实现的？而且这种连续的分view是否能在软件端实现？还是这种说法只是产品宣传？个人认为可能是为了避免技术上的猜测，实际的变化范围可能是48-96view。</p>
+<p>对这个产品的分析过程有一种侦探探案的感觉，也确实是拿着一个放大镜还有开着闪光灯去仔细观察这个产品，格物，致知。</p>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E8%AF%84%E8%AE%BA/">技术评论</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E8%AF%84%E8%AE%BA/" rel="tag">技术评论</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/LensMaking_C3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          塑料镜头制造 第三章：模具
+        
+      </div>
+    </a>
+  
+  
+    <a href="/LensMaking_C2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">塑料镜头制造 第二章：材料</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">技术参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E6%95%88%E6%9E%9C"><span class="nav-number">2.</span> <span class="nav-text">显示效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E5%AD%A6%E5%8E%9F%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">光学原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%86%E5%B7%AE%E6%98%BE%E7%A4%BA"><span class="nav-number">3.1.</span> <span class="nav-text">视差显示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E6%98%BE%E7%A4%BA"><span class="nav-number">3.2.</span> <span class="nav-text">颜色显示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

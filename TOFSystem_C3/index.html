@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TOF系统 第三章 iTOF系统 | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="TOF专题" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="第一章中我们介绍了TOF的基本原理，应用，系统架构和分类。第二章中，我们详细介绍了dTOF系统，系统原理，架构和零部件性能出发，分析重要的系统参数。本章，我们会用同样的形式介绍iTOF系统。阅读本章前，请阅读第一章。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TOF系统 第三章 iTOF系统">
+<meta property="og:url" content="https://faster-than-light.net/TOFSystem_C3/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="第一章中我们介绍了TOF的基本原理，应用，系统架构和分类。第二章中，我们详细介绍了dTOF系统，系统原理，架构和零部件性能出发，分析重要的系统参数。本章，我们会用同样的形式介绍iTOF系统。阅读本章前，请阅读第一章。">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-0.jpg">
+<meta property="article:published_time" content="2021-10-07T12:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-12T12:55:56.999Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="TOF">
+<meta property="article:tag" content="专题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-0.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-TOF系统 第三章 iTOF系统" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-0.jpg" rel="gallery_cldopy7x3003ug8w6ctdy9bwe noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-0.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      TOF系统 第三章 iTOF系统
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/TOFSystem_C3/" class="article-date">
+	  <time datetime="2021-10-07T12:00:00.000Z" itemprop="datePublished">October 7, 2021</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一章中我们介绍了TOF的基本原理，应用，系统架构和分类。第二章中，我们详细介绍了dTOF系统，系统原理，架构和零部件性能出发，分析重要的系统参数。本章，我们会用同样的形式介绍iTOF系统。阅读本章前，请阅读第一章。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="iTOF基本原理和核心组件"><a href="#iTOF基本原理和核心组件" class="headerlink" title="iTOF基本原理和核心组件"></a>iTOF基本原理和核心组件</h1><p>如第一章的介绍，iTOF的原理是测量发射的正弦波/脉冲信号与接收的正弦波/脉冲信号之间的相位差的方法计算出时间。iTOF可以按发射光波的调制方式分成连续波调制（CW-iTOF）和脉冲调制（Pulsed-iTOF）。下图一展示了iTOF的系统架构，发射端iTOF主要也使用VCSEL，但是有一些应用里，iTOF可以使用LED。激光或LED的光线经过diffuser匀光片照射被测场景。接收端使用传感器进行接收。dTOF和iTOF在传感器端的区别是iTOF使用的是CMOS工艺开发的CIS传感器(Camera Image Sensor)以及配套电路，而dTOF需要使用SPAD传感器。CW-iTOF和Pulsed-iTOF在硬件架构上没有很大区别，主要是控制和传感电路的一些调制解调电路区别。下图二展示了一个实际的iTOF模组（由Leica和pmd联合研发），可以从外观上看到发射端的diffuser和接收端的镜头。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-1.png" style="zoom:67%;" />
+
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-2.webp" style="zoom:50%;" />
+
+<p>iTOF的主要优势是和dTOF比起来相对简单低速的硬件电路，可以实现更高的帧率，以及空间分辨率，同时模组成本也更低；但是iTOF有着测量精度随距离增加下降，多路串扰以及相对比较高功耗等问题。</p>
+<h2 id="激光驱动"><a href="#激光驱动" class="headerlink" title="激光驱动"></a>激光驱动</h2><p>Laser/LED Driver是发射端电路的主要部分，负责驱动激光或者LED，控制电路发出调制信号，控制光源发射。发射调制的信号可以是脉冲型或者连续波型。</p>
+<h2 id="激光器或LED"><a href="#激光器或LED" class="headerlink" title="激光器或LED"></a>激光器或LED</h2><p>在iTOF中，根据不同应用场景的模组，选择使用VCSEL或者LED。和LED相比，激光器的调制速度快很多，高频LED的3dB roll-off 频率一般为10MHz到30MHz，而VCSEL的3dB roll-off 频率一般高于100MHz。iTOF主流还是使用VCSEL。因为调制速度越高，深度测量的精度就越高，我们会在后面的系统参数部分列出公式。下图展示了LED和激光调制能力的对比。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-3.gif"></p>
+<h2 id="发射端光学"><a href="#发射端光学" class="headerlink" title="发射端光学"></a>发射端光学</h2><p>iTOF发射端一般直接使用diffuser进行光束整形，让光源均匀照射被测场景，diffuser一般是玻璃基底上的规则或者非规则微结构，将VCSEL阵列发出的光进行均匀化，最后形成top hat形式的光束。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-4.png"></p>
+<h2 id="接收端光学"><a href="#接收端光学" class="headerlink" title="接收端光学"></a>接收端光学</h2><p>和dTOF系统一样，接收端光学零部件需要的主要是收集期望测量的视场角内的光线，这种镜头F数越小越好，相对照度越高越好，同时镜片上可以进行一定的镀膜增强透光性，同时接收端会使用尽量窄带的滤光片，去滤除其他波长的杂光干扰。</p>
+<h2 id="接收传感器CMOS"><a href="#接收传感器CMOS" class="headerlink" title="接收传感器CMOS"></a>接收传感器CMOS</h2><p>iTOF接收端是基于CMOS Image Sensor工艺制程的，主要使用的是 (CAPD)像素工艺。如我们第一章介绍，iTOF是一个调制解调信号的过程，为了能更准确的计算发射信号和接收信号的相位偏移，使用Current-Assisted Photonic Demodulator（电流辅助光子解调CAPD）像素工艺，该种工艺可以同步取样发射光和接收光信号。同时CAPD允许在每一个像素的光电二极管中加载可转换方向的偏转电压，制造一个漂移电场，这样可以把光信号产生的电子拉向两个不同的半导体结。如下图所示，VCSEL发射出来的光，进入传感器，被转换成电子，每个像素点在不断转换的电压的辅助下，持续输出成两个信号，通过这两个信号，就可以计算相位偏移，</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-5.gif" style="zoom:67%;" />
+
+<p>以Sony的IMX556为例：</p>
+<ul>
+<li>背照式CMOS工艺</li>
+<li>640 x 480像素</li>
+<li>Global Shutter</li>
+<li>10.0um 像素大小</li>
+<li>1/2”传感器大小</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-6.jpg" style="zoom:50%;" />
+
+<p>提供iTOF的传感器供应商有 <a target="_blank" rel="noopener" href="https://www.sony-depthsensing.com/">Sony</a>, <a target="_blank" rel="noopener" href="https://www.infineon.com/cms/en/product/sensor/tof-3d-image-sensors/">Infineon</a>, <a target="_blank" rel="noopener" href="https://www.melexis.com/en/product/MLX75027/Automotive-VGA-Time-Of-Flight-Sensor">Melexis</a>, <a target="_blank" rel="noopener" href="https://www.analog.com/en/applications/technology/3d-time-of-flight.html">Analog Devices</a>, <a target="_blank" rel="noopener" href="https://www.espros.com/">EPC Photonics</a>, <a target="_blank" rel="noopener" href="https://www.samsung.com/semiconductor/minisite/isocell/vision-sensor/tof-sensor/">Samsung</a>, <a target="_blank" rel="noopener" href="https://www.artiluxtech.com/explore">Artilux</a>等。</p>
+<h2 id="电路"><a href="#电路" class="headerlink" title="电路"></a>电路</h2><p>iTOF不需要特别的额外电路，传感器输出的信号经过一定的处理后和发射信号进行对比即可计算出相位偏移，但是为了实现比较好的效果，算法比较复杂。iTOF的CMOS输出是模拟信号，为了进行数字处理，还需要进行模数转换电路，但是ADC电路本身就非常普遍。dTOF直接输出的就是数字信号。</p>
+<hr>
+<h1 id="系统参数"><a href="#系统参数" class="headerlink" title="系统参数"></a>系统参数</h1><h2 id="探测距离"><a href="#探测距离" class="headerlink" title="探测距离"></a>探测距离</h2><p>电子消费品的iTOF的探测距离受限于精度，比如1%的精度，在10米就是10cm的深度误差。所以到底多远的距离，取决于应用。电子消费品的iTOF应用，一般只能达到5m左右的探测距离。同时，由于iTOF采用泛光透射，传感器可以探测到的能量随距离降低的速度很快，随着距离增加，信噪比降低到一个程度下就完全无法区分调制信号和背景噪声了。</p>
+<h2 id="探测距离的精度和误差"><a href="#探测距离的精度和误差" class="headerlink" title="探测距离的精度和误差"></a>探测距离的精度和误差</h2><p>iTOF的测量精度和量程存在矛盾，同样相位解析精度下，测量精度反比于调制频率。但是高调制频率会降低测量量程，造成距离测量含糊混叠，不过这种混叠可以通过一些方式解决，比如多频率调制去歧义。我们在这里具体讨论这几个问题。当我们通过算法得到相位偏移ϕ后，距离d就如下公式所示，fmod为调制频率。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-7.png"></p>
+<p>实际中，由于光子散粒噪声，读出电路噪声和多径干扰等问题，相位估计ϕ会有误差ϵϕ，那么距离估计误差ϵd如以下公式所示，可以看到，通过增加调制频率，可以降低距离估计误差。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-8.png"></p>
+<p>下图也很好地展示了为什么提高调制频率可以很好地降低距离误差。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-9.jpg"></p>
+<p><strong>误差</strong></p>
+<p>产生相位估计误差的原因主要有：时钟精度，发射端电路调制精度，VCSEL的调制脉冲速度，接收传感器的精度，读出电路噪声等。比如发射和接收端的同步信号发生了10ps的偏移，就相当于1.5mm的位移。这些需要在后面的标定和校准过程中进行补偿。</p>
+<h2 id="距离歧义"><a href="#距离歧义" class="headerlink" title="距离歧义"></a>距离歧义</h2><p>但是，使用高调制频率会造成距离估计的歧义。由于iTOF是通过计算相位后计算距离的，相位是在0-2π中变化的。根据公式，如果调制频率是100MHz，那么每1.5m，相位0-2π完成一次变化，如果是200MHz，就是每0.75m完成一次变化。假设100MHz调制频率，测出一个相位偏移是2π，那么距离可以是1.5m, 3m, 4.5m等等。解决距离歧义的一种方法是多频率调制，如下图所示，可以使用几个不同的调制频率去确认哪个距离才是真实的距离，这种方法低调制频率的部分可以提供无歧义的距离估计，而高调制频率的部分可以提供更高的精度，兼顾了测量距离和测量精度的需求。但是增加了计算量降低了帧率。最终的深度估计是通过不同调制频率得到的距离给上不同的权重进行计算，更高的频率的权重更高。如果最优选择各个调制频率的权重，深度识别误差是反比于调制频率的均方值rms的。对于一个固定的深度误差需求，增加调制频率可以降低积分时间或者降低发射光强。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-10.png" style="zoom:50%;" />
+
+<h2 id="噪声和抗干扰能力"><a href="#噪声和抗干扰能力" class="headerlink" title="噪声和抗干扰能力"></a>噪声和抗干扰能力</h2><p><strong>多路径干扰</strong></p>
+<p>多径干扰(Multi-Path Interference，MPI)是光线通过多个路径返回传感器，如下图所示。iTOF无法分辨哪个信号是直接返回的信号，哪个信号是经过多次反射返回的信号。学术界和工业界尝试多种方法去解决多路径干扰，但是这是iTOF原理本质上问题，无法完全根除。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-11.jpeg"></p>
+<p><strong>飞点噪声</strong></p>
+<p>飞点噪声是深度信息图里出现的不连续的无效深度信息，如下图所示，a图示深度点云图，红色代表距离更近，蓝色代表距离更远；b图示强度值，c图是振幅值。飞点噪声是下面的白圈中展示的情况，形成原因是在深度变化较大的位置（不连续），物体反射率不是很好，传感器同时接收到前景和后景反射回来的能量，这两个能量叠加在一起，使原始数据中包含了两部分的信息，于是计算深度时就无法得到准确的深度值。下图中左上角的白圈里的飞点噪声是另一种现象，深度信息错误是由于显示屏上部的高反射造成的。同时镜头散射，像素间的串扰等问题也会引起飞点噪声。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-14.png"></p>
+<h2 id="空间图像分辨率"><a href="#空间图像分辨率" class="headerlink" title="空间图像分辨率"></a>空间图像分辨率</h2><p>现阶段电子消费品iTOF使用的sensor多为QVGA或者VGA(0.3MP，10um像素大小)，三星在2021年初的一个会议论文中推出了1.2MP的iTOF传感器。</p>
+<h2 id="功耗"><a href="#功耗" class="headerlink" title="功耗"></a>功耗</h2><p>iTOF需要采用高频调制发射相对较高功率的激光，相对于dTOF，平均功率要高。</p>
+<h2 id="工艺分析"><a href="#工艺分析" class="headerlink" title="工艺分析"></a>工艺分析</h2><p>对于i-ToF的发射端，前面我们分析了，如果想提高精度，就要提高调制频率，所以需要高频率高功率调制的驱动芯片。这种芯片和VCSEL的温度系数与 i-ToF 测量的温漂紧密相关，需要尽可能保证线性。同时，在接收端，虽然iTOF的传感器没有SPAD传感器制造起来难，但是也需要有足够的灵敏度，动态测量范围，足够的像素尺寸。对于普通的图像传感器，需要增加2TAP或者4TAP的采样和控制电路。</p>
+<h2 id="iTOF的标定和校准"><a href="#iTOF的标定和校准" class="headerlink" title="iTOF的标定和校准"></a>iTOF的标定和校准</h2><p>iTOF校准一般来说需要进行以下几种校准：镜头校准，频率校准，非线性校准，相位共偏校准 ，逐像素校准，温度校准 。如下图所示，展示了校准的过程，温度校准参数独立于其他几个校准流程。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C3/C3-15.png"></p>
+<p><strong>镜头校准</strong></p>
+<p>镜头校准主要校准镜头的光学中心和畸变等问题，使用张正友标定算法进行。</p>
+<p><strong>频率校准</strong></p>
+<p>设定的调制频率和实际产生的频率是有误差的，需要校准。</p>
+<p><strong>非线性校准</strong></p>
+<p>发射端的光波不是理想方波或者正弦波，会产生误差，这种误差表现为测量得到的相位差，与理想的相位差之间有偏差，这个偏差呈现一定的变化规律，在2pi的相位范围内，呈现误差先变大再变小的规律。见上图中非线性校准中的绿线和红线，绿线是一个圆代表理论相位，红线是实际相位。这种误差可以使用插值查表法进行非线性误差补偿。主要是对于波长范围内，均匀选取多个位置，记录真实距离和深度测量值，然后进行插值，得到对应相位的表数据，在测量到这个相位的时候，就对该相位进行补偿。这种校准也叫Wiggling标定校准或Cyclic error calibration。</p>
+<p><strong>共偏校准</strong></p>
+<p>完成前几步校准后，进行共偏校准。共偏校准是确定图像中心的相位偏移，然后基于已知确定的距离进行校准。</p>
+<p><strong>逐像素校准</strong></p>
+<p>逐像素校准是校准非中心的像素距离测量值。完成共偏校准后，测量一个平面时，可能会得到一个不是很平的有起伏的深度点云，这时就需要进行逐像素的校准和补偿。这时整个校准的最后一步。也叫Pixel dependent offset calibration。</p>
+<p><strong>温度校准</strong></p>
+<p>由于温度变化导致测量产生相位偏移并造成误差的影响因素有两个：光源和接收传感器。光源端，发射波长随着温度的升高会发生红移现象。计算深度的波长和实际波长不一致，这就会导致检测的深度值出现误差。接收传感器端，存在由于温度上升导致测量出的深度值也变大的情况，这种和温度线性相关的现象称为温飘。这种温度补偿通过测量不同温度下的TOF性能，发射及接收的参数，计算出补偿参数，写入模组。实际模组通过使用NTC测量温度，在不同温度下使用不同的温度补偿系数。</p>
+<hr>
+<h1 id="参考模组"><a href="#参考模组" class="headerlink" title="参考模组"></a>参考模组</h1><p>以下列出一些参考模组，供读者研究学习</p>
+<p><a target="_blank" rel="noopener" href="https://www.analog.com/en/design-center/evaluation-hardware-and-software/evaluation-boards-kits/AD-96TOF1-EBZ.html?icid=ToF-AD-96TOF1-EBZ-research">Analog AD-96TOF1-EBZ开发板</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.analog.com/en/products/adsd3100.html#product-overview">Analog ADSA3100传感器</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.deptrum.com/site/product_details/40">光鉴科技Stellar 200</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.abax-sensing.com/pro-3.html">飞芯电子</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.tof3d.com/index.html">光微科技</a></p>
+<p><a target="_blank" rel="noopener" href="https://components.omron.com/sensors/3d-tof-sensor-module">Omron B5L</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.ti.com/product/OPT8241#description">Texas Instrument OPT8241</a></p>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TOF/" rel="tag">TOF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E9%A2%98/" rel="tag">专题</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/OpticsNews20211010/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          光学新闻 20211010
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Spectroscopy_C1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">浅谈吸收光谱学 第一章 光谱学及吸收光谱测量</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iTOF%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E5%92%8C%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">iTOF基本原理和核心组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E5%85%89%E9%A9%B1%E5%8A%A8"><span class="nav-number">1.1.</span> <span class="nav-text">激光驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E5%85%89%E5%99%A8%E6%88%96LED"><span class="nav-number">1.2.</span> <span class="nav-text">激光器或LED</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B0%84%E7%AB%AF%E5%85%89%E5%AD%A6"><span class="nav-number">1.3.</span> <span class="nav-text">发射端光学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E7%AB%AF%E5%85%89%E5%AD%A6"><span class="nav-number">1.4.</span> <span class="nav-text">接收端光学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E4%BC%A0%E6%84%9F%E5%99%A8CMOS"><span class="nav-number">1.5.</span> <span class="nav-text">接收传感器CMOS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%B5%E8%B7%AF"><span class="nav-number">1.6.</span> <span class="nav-text">电路</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">系统参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB"><span class="nav-number">2.1.</span> <span class="nav-text">探测距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB%E7%9A%84%E7%B2%BE%E5%BA%A6%E5%92%8C%E8%AF%AF%E5%B7%AE"><span class="nav-number">2.2.</span> <span class="nav-text">探测距离的精度和误差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%9D%E7%A6%BB%E6%AD%A7%E4%B9%89"><span class="nav-number">2.3.</span> <span class="nav-text">距离歧义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E5%92%8C%E6%8A%97%E5%B9%B2%E6%89%B0%E8%83%BD%E5%8A%9B"><span class="nav-number">2.4.</span> <span class="nav-text">噪声和抗干扰能力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%9B%BE%E5%83%8F%E5%88%86%E8%BE%A8%E7%8E%87"><span class="nav-number">2.5.</span> <span class="nav-text">空间图像分辨率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%80%97"><span class="nav-number">2.6.</span> <span class="nav-text">功耗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E8%89%BA%E5%88%86%E6%9E%90"><span class="nav-number">2.7.</span> <span class="nav-text">工艺分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#iTOF%E7%9A%84%E6%A0%87%E5%AE%9A%E5%92%8C%E6%A0%A1%E5%87%86"><span class="nav-number">2.8.</span> <span class="nav-text">iTOF的标定和校准</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%A8%A1%E7%BB%84"><span class="nav-number">3.</span> <span class="nav-text">参考模组</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TOF系统 第二章 dTOF系统 | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="TOF专题" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="第一章中我们介绍了TOF的基本原理，应用，系统架构和分类。本章和下一章，我们会详细介绍dTOF和iTOF系统，从他们的系统原理，架构和零部件性能出发，分析重要的系统参数，进而理解这两种系统的不同以及其中部件的选择。阅读本章前，请阅读第一章。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TOF系统 第二章 dTOF系统">
+<meta property="og:url" content="https://faster-than-light.net/TOFSystem_C2/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="第一章中我们介绍了TOF的基本原理，应用，系统架构和分类。本章和下一章，我们会详细介绍dTOF和iTOF系统，从他们的系统原理，架构和零部件性能出发，分析重要的系统参数，进而理解这两种系统的不同以及其中部件的选择。阅读本章前，请阅读第一章。">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-2.png">
+<meta property="article:published_time" content="2021-09-19T14:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T11:32:05.726Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="TOF">
+<meta property="article:tag" content="专题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-2.png">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-TOF系统 第二章 dTOF系统" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-2.png" rel="gallery_cldopy7x4003yg8w6274n0jrv noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-2.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      TOF系统 第二章 dTOF系统
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/TOFSystem_C2/" class="article-date">
+	  <time datetime="2021-09-19T14:00:00.000Z" itemprop="datePublished">September 19, 2021</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第一章中我们介绍了TOF的基本原理，应用，系统架构和分类。本章和下一章，我们会详细介绍dTOF和iTOF系统，从他们的系统原理，架构和零部件性能出发，分析重要的系统参数，进而理解这两种系统的不同以及其中部件的选择。阅读本章前，请阅读第一章。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="dTOF基本原理和核心组件"><a href="#dTOF基本原理和核心组件" class="headerlink" title="dTOF基本原理和核心组件"></a>dTOF基本原理和核心组件</h1><p>如第一章的介绍，dTOF的原理很直接，就是使用<strong>时间相关单光子计数法</strong>(TCSPC，Time correlated single photon counting)直接测量光飞行的时间。下图展示了一个更具体的dTOF系统图<a target="_blank" rel="noopener" href="https://www.mdpi.com/1424-8220/19/24/5464/htm#fig_body_display_sensors-19-05464-f002">(引用)</a>，以及AMS的一个TOF临近传感器模组1D Proximity Sensor <a target="_blank" rel="noopener" href="https://ams.com/tmf8801">TMF8801</a>，我们可以看到发射端，接收端以及模组的pin脚。根据系统原理图和实际模组，我们来分析一下dTOF的基本原理，核心组件和系统参数。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-1.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-2.png"></p>
+<h2 id="激光驱动"><a href="#激光驱动" class="headerlink" title="激光驱动"></a>激光驱动</h2><p>Laser Driver是发射端电路的主要部分，负责驱动Laser，控制电路发出数字脉冲信号，一般使用该信号控制MOSFET进行开关，控制激光发射。</p>
+<h2 id="激光器"><a href="#激光器" class="headerlink" title="激光器"></a>激光器</h2><p>在dTOF中，激光器负责发射激光。采用激光的主要原因是激光光谱窄，能量强度高，调制速度快，而且易于集成。电子消费品的dTOF应用中，主要使用的是垂直腔表面发射激光 Vertical Cavity Surface Emitting Laser (VCSEL)。在一些其他平台或者应用中，尤其是车载激光雷达中，会更多的使用功率更高的EEL（Edge Emitting Laser）和光纤激光器。一般，电子消费品使用的dTOF会选择850nm或者940nm的激光。（根据第一章我们的说明，850nm和940nm处的太阳光谱都有水的吸收峰。940nm的环境光强更小，所以噪声小；但是传感器在850nm的量子效率（QE）是940nm处的两倍，接收信噪比更好。）</p>
+<p>数字电路产生的脉冲方波输入给激光驱动，变成实际的光脉冲后，在时域上可以看到由完美方波，变成了不那么完美的方波（图示里是画的比较夸张，实际上，VCSEL的脉冲调制性能已经非常好了）。由于激光驱动的响应速度，这里在时域上产生了一个不确定性的参数，即为δ-laser(图中的δ-t)</p>
+<h2 id="发射端光学"><a href="#发射端光学" class="headerlink" title="发射端光学"></a>发射端光学</h2><p>发射端一般为一个简单的光学镜头，把激光能量发射到需要的视场角内，有一些应用也会使用准直镜+DOE等元器件，把VCSEL发出的光线先准直，然后分成很多束光线指向不同的视场角方向。</p>
+<h2 id="接收端光学"><a href="#接收端光学" class="headerlink" title="接收端光学"></a>接收端光学</h2><p>接收端光学零部件需要的主要是收集期望测量的视场角内的光线，这种镜头F数越小越好，相对照度越高越好，同时镜片上可以进行一定的镀膜增强透光性，同时接收端会使用尽量窄带的滤光片，去滤除其他波长的杂光干扰。</p>
+<h2 id="接收传感器SPAD"><a href="#接收传感器SPAD" class="headerlink" title="接收传感器SPAD"></a>接收传感器SPAD</h2><p>dTOF应用中主要使用的接收传感器为single-photon avalanche diode (SPAD)单光子雪崩二极管或Silicon photomultipliers(SiPM)硅光子光电倍增管，他们的主要区别是每一个SiPM像素里包含多个SPAD像素。不同于传统CMOS传感器，对于光的接收时积分形式的，既接收某一时间段内的光强，转换为电流；SPAD如其名字所描述的，可以对单一光子进行相应，只需要一个光子就能触发一次强的雪崩，产生电流信号。可以说，SPAD输出的就是有光1和没光0两种状态（见下图）。SPAD传感器芯片每次被光子激活后，电子淬灭电路降低二极管中的电压使其在短时间内低于阈值电压，因此雪崩停止，经过一段恢复时间，探测器可以探测其它的光子，这个恢复时间决定了传感器的识别速度。</p>
+<p>SPAD的像素相对于传统CMOS图像传感器来说还无法做的很小，比如一款传统图像传感器，三星的GN1，50MP，1/1.31”大小，像素大小1.2um。而SPAD的像素大小很大，这是由于其需要各种电路对SPAD进行复位造成的。比如根据机构的分析，iPhone中使用的Lidar是Sony的SPAD传感器，只有30K的像素数，每个像素10um大小。所以SPAD的传感器限制了dTOF的空间分辨率。</p>
+<p>信号被SPAD接收后，会再产生一个一个时间不确定性因素δ-tSPAD，这个是SPAD的响应速度决定的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-30.webp"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-3.png"></p>
+<h2 id="TDC电路"><a href="#TDC电路" class="headerlink" title="TDC电路"></a>TDC电路</h2><p>Time-to-digital converter(TDC)，时间数字转换器，是将模拟信号转换成以时间表示的数字信号的电路，TDC输出了每一个脉冲与所设起始点相比被记录下来的时间。这些脉冲被记录下来后，转换成直方图，然后通过比较哪个时间的直方数量最大，确认目标物的位置。TDC电路的精度也会对时域信号产生影响，引入了一个不确定性δ-tTDC。通过TDC电路后的电路，都是数字电路。</p>
+<hr>
+<h1 id="系统参数"><a href="#系统参数" class="headerlink" title="系统参数"></a>系统参数</h1><h2 id="探测距离"><a href="#探测距离" class="headerlink" title="探测距离"></a>探测距离</h2><p>一款dTOF可以探测多远的距离？根据系统的基本原理，理论上，只要发出去的光子到了目标物上，然后被反射回来，被接收端接收到，并且被最终的算法识别，认定为非噪声的信号即可。所以，理论上，只需要接收端在目标物上看到的该波长的信噪比足够即可。所以，针对于不同探测距离的应用场景，dTOF在发射端或者接收端也可能使用不同的技术方案。比如对于电子消费品，探测距离在5m内，使用VCSEL作为发射端，但是对于车载类应用，探测距离要达到100m甚至更远，VCSEL去照亮整个视场的功率远远不够，这就需要使用EEL或者光纤激光器扫描整个视场，既一个一个点的照亮视场的方式。</p>
+<h2 id="最大无歧义探测距离"><a href="#最大无歧义探测距离" class="headerlink" title="最大无歧义探测距离"></a>最大无歧义探测距离</h2><p>假设我们发射了两个脉冲，第一个脉冲发射的早，但是飞行的远，第二个脉冲发射的晚，但是飞行的近，这样，第二个脉冲回来的早，第一个脉冲回来的晚，识别的时候，我们就会弄混两个脉冲。那如何能尽量分辨两个脉冲呢？最简单的方法就是把两个脉冲的发射间距拉长。其中，不造成混叠的最大无歧义探测距离为c*脉冲间隔/2，也等于c/2f，f为激光的调制频率。假设我们的激光调制在1Mhz，那么最大无歧义探测距离就是150m。所以，探测5m范围的dTOF可以使用更高的调制频率，就是因为探测距离足够小，并不会有脉冲间隔产生的距离歧义问题。</p>
+<h2 id="探测距离的精度和误差"><a href="#探测距离的精度和误差" class="headerlink" title="探测距离的精度和误差"></a>探测距离的精度和误差</h2><p><strong>精度</strong></p>
+<p>假设一个脉冲的宽度为Δt，一个激光器把它发射出去后，接收端收到了反射回来的光子，但是接收端无法知道这个光子是来自于脉冲刚刚开始的第一个光子，还是脉冲结束时的最后一个光子，所以即使没有任何噪声或者不确定性的情况下，dTOF的距离探测精度，本质上是受限于脉冲宽度的，距离探测精度ΔR = c*Δt/2。假设每个脉冲宽度为1ns，那么ΔR = 0.15m。VCSEL作为一种半导体激光器，响应速度很快，可以达到ps级，假设脉冲宽度达到0.1ns，那么，ΔR 就可以达到0.015m，既15mm的探测距离精度。通过这个公式，我们可以看到，dTOF的探测距离精度，并不随距离的增加有所下降，这是dTOF一个很大的优势，也是dTOF类型的系统会使用在长距离场景探测的主要原因（车用激光雷达）。</p>
+<p><strong>误差</strong></p>
+<p>探测距离d = cΔT/2，根据前面一部分的分析我们看到，在发射端到接收端的各种零部件上，在脉冲的时域上产生了很多的不确定参数，其中由数字电路产生的ΔT，经过激光驱动产生的激光脉冲产生了时间不确定参数 δlaser；被SPAD探测到后，SPAD的响应产生了 δSPAD；TDC电路的响应，产生了 δTDC。由此，总计的探测时间不确定RMS如下公式所示，其中δother是系统中的其他统计上独立的不确定参数，可能包括其他电路部分的响应，pixel之间互相的影响等，但是整体上这部分是相对比较小的。那么，测量误差为c*δtotal</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-4.png"></p>
+<p>降低误差可以使用在发射端放置一个Reference SPAD，接收刚刚发射出去的VCSEL的光线，用以确认发射的时间，以及参考距离0米的位置。</p>
+<h2 id="噪声和抗干扰能力"><a href="#噪声和抗干扰能力" class="headerlink" title="噪声和抗干扰能力"></a>噪声和抗干扰能力</h2><p><strong>背景噪声</strong></p>
+<p>背景噪声是TOF需要面对的主要问题，当背景噪声能量大于发射信号能量时，接收端完全无法得到足够的信噪比去发现发射信号。室内和室外的阳光直射，反射能量在一个很大的区间。所以一个dTOF在最初设计阶段，要确认在什么应用场景下，多大的距离范围内有效。一般的电子消费品类的TOF都是定位主要面对室内场景。（见图1左上角）</p>
+<p>强光环境下，SPAD很容易就被背景噪声激活过曝，如果我们要在上面增加衰减镀膜，那当我们进入室内，我们自己VCSEL发出的能量也被衰减到没有任何光子进入SPAD了。解决方法之一就是使用多个SPAD像素，比如100个SPAD像素，其中10个像素10%的衰减，10个像素20%的衰减，以此类推。这样，他们就包含了一个可以测量的背景噪声范围，同时增加了像素数量，可以对比各个像素之间的结果用以比对。</p>
+<p>前面我们分析了dTOF的探测精度和激光发射脉冲宽度是直接相关的，但是这里我们发现其信噪比和每次发射的能量又是直接相关的。短的脉冲每次发射的能量也会小。所以dTOF希望发射尽量短的高能量的脉冲。但是请注意电子消费品的激光能量要收到IEC60825标准的限制，所以非常高的能量也是不可取的。</p>
+<p><strong>串扰Cross-talk</strong></p>
+<ol>
+<li><p>串扰可能产生于相邻SPAD像素之间，解决方案就是对这些像素进行隔离，这样就降低了传感器的filling factor。</p>
+</li>
+<li><p>串扰可能是发射端的光线在模组内部直接反射进了接收端，解决这种串扰的方法是隔绝开发射端和接收端。</p>
+</li>
+<li><p>串扰可能是发射端的光线在手机的前玻璃面板中发生了反射，进入了接收端，解决这种串扰的方式是算法以及在发射端放置一颗SPAD芯片作为参考信号或者进行后期的标定和校准。</p>
+</li>
+</ol>
+<p><strong>多路径干扰</strong></p>
+<p>dTOF抗多路径干扰的能力很强，通过统计直方图和合适的算法，很容易分辨哪些光子是多路反射回来的，哪些是目标物反射回来的。这是dTOF对比iTOF的一大优势。</p>
+<h2 id="空间图像分辨率"><a href="#空间图像分辨率" class="headerlink" title="空间图像分辨率"></a>空间图像分辨率</h2><p>SPAD传感器的传统工艺是前照式FSI(Front Side Illumination)工艺，如下图左所示，用于吸收光子的厚度非常有限，限制了光子的吸收率，同时SPAD的淬火电路（Quenching circuit）部分占据了很大一部分芯片表面，限制了filling factor。Sony基于自己的CMOS技术开发了背照式的SPAD传感器，见下图中和右，大幅度提升了光子吸收率和filling factor以及吸收厚度。据分析，iPhone中的LiDAR使用的是Sony的0.1MP的SPAD传感器，Sony正在不断提升SPAD传感器的像素数量。当SPAD传感器可以达到和使用CMOS类型的iTOF传感器近似的像素数量时，dTOF会被更多手机厂所选择。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C2/C2-5.png"></p>
+<h2 id="功耗"><a href="#功耗" class="headerlink" title="功耗"></a>功耗</h2><p>由于dTOF发射的是脉冲，所以功耗上，相对iTOF需要发射连续波以及持续接收，功耗较低。</p>
+<h2 id="工艺分析"><a href="#工艺分析" class="headerlink" title="工艺分析"></a>工艺分析</h2><p><strong>整体控制电路</strong></p>
+<p>基于前面的分析，我们发现dTOF整体上需要一个高速电路，设计和制造高速电路也是一个难点。其中包括了高频调制的激光脉冲的发射，SPAD的相关电路，高速信号的分析等。</p>
+<p><strong>SPAD</strong></p>
+<p>对比起CMOS类型的芯片，可以提供SPAD的供应商很少，其中有AMS，ST，Sony等。SPAD本身需要较高的电压，这也对电路设计是一个挑战。比如dTOF由于工作脉冲很多，所以数据量非常大，这需要在SPAD芯片上直接实现信号处理。其中包括了可能要使用镜片堆叠工艺等实现，进一步增加了工艺难度。</p>
+<p><strong>整体来说dTOF的工艺难度和技术壁垒高，成本也高。</strong></p>
+<h2 id="dTOF的标定"><a href="#dTOF的标定" class="headerlink" title="dTOF的标定"></a>dTOF的标定</h2><p>标定dTOF可以使用不同光照条件下，放置在不同距离的不同反射率的标板进行标定。比如参考AMS的<strong>TMF8805</strong> dTOF模组，其spec中汇报了以下几种场景的识别准确性，同时也可以用这些场景进行标定：</p>
+<p><strong>350 Lux Fluorescent Light and 18% Grey Card</strong></p>
+<p><strong>350 Lux Fluorescent Light, 18% Grey Card and Smudge on Glass</strong></p>
+<p><strong>1 k Lux Sunlight Represented by 170 Lux Halogen Light and 18% Grey Card</strong></p>
+<p><strong>1 k Lux Sunlight Represented by 170 Lux Halogen Light and 90% White Card</strong></p>
+<p><strong>5 k Lux Sunlight Represented by 830 Lux Halogen Light and 18% Grey Card</strong></p>
+<hr>
+<h1 id="参考模组"><a href="#参考模组" class="headerlink" title="参考模组"></a>参考模组</h1><p>以下列出一些参考模组，供读者研究学习</p>
+<p><a target="_blank" rel="noopener" href="https://www.st.com/en/imaging-and-photonics-solutions/time-of-flight-sensors.html">ST系列临近传感器</a></p>
+<p><a target="_blank" rel="noopener" href="https://ams.com/proximity">AMS系列的临近传感器</a>：TMD2620, TMD2635,TMD8701,TMD8801,TMD8805</p>
+<p><a target="_blank" rel="noopener" href="http://www.adapsphotonics.com/">灵明光子ADS3000</a></p>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TOF/" rel="tag">TOF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E9%A2%98/" rel="tag">专题</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/OpticsNews20210925/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          光学新闻 20210925
+        
+      </div>
+    </a>
+  
+  
+    <a href="/OpticsNews20210918/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">光学新闻 20210918</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#dTOF%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E5%92%8C%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">dTOF基本原理和核心组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E5%85%89%E9%A9%B1%E5%8A%A8"><span class="nav-number">1.1.</span> <span class="nav-text">激光驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BF%80%E5%85%89%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">激光器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B0%84%E7%AB%AF%E5%85%89%E5%AD%A6"><span class="nav-number">1.3.</span> <span class="nav-text">发射端光学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E7%AB%AF%E5%85%89%E5%AD%A6"><span class="nav-number">1.4.</span> <span class="nav-text">接收端光学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E4%BC%A0%E6%84%9F%E5%99%A8SPAD"><span class="nav-number">1.5.</span> <span class="nav-text">接收传感器SPAD</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TDC%E7%94%B5%E8%B7%AF"><span class="nav-number">1.6.</span> <span class="nav-text">TDC电路</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">系统参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB"><span class="nav-number">2.1.</span> <span class="nav-text">探测距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E6%97%A0%E6%AD%A7%E4%B9%89%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB"><span class="nav-number">2.2.</span> <span class="nav-text">最大无歧义探测距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A2%E6%B5%8B%E8%B7%9D%E7%A6%BB%E7%9A%84%E7%B2%BE%E5%BA%A6%E5%92%8C%E8%AF%AF%E5%B7%AE"><span class="nav-number">2.3.</span> <span class="nav-text">探测距离的精度和误差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%99%AA%E5%A3%B0%E5%92%8C%E6%8A%97%E5%B9%B2%E6%89%B0%E8%83%BD%E5%8A%9B"><span class="nav-number">2.4.</span> <span class="nav-text">噪声和抗干扰能力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%9B%BE%E5%83%8F%E5%88%86%E8%BE%A8%E7%8E%87"><span class="nav-number">2.5.</span> <span class="nav-text">空间图像分辨率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%80%97"><span class="nav-number">2.6.</span> <span class="nav-text">功耗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E8%89%BA%E5%88%86%E6%9E%90"><span class="nav-number">2.7.</span> <span class="nav-text">工艺分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dTOF%E7%9A%84%E6%A0%87%E5%AE%9A"><span class="nav-number">2.8.</span> <span class="nav-text">dTOF的标定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%A8%A1%E7%BB%84"><span class="nav-number">3.</span> <span class="nav-text">参考模组</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>塑料镜头制造 第八章：信赖性测试 | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="镜头专题" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="信赖性（可靠性）工程是所有产品的制造中的重要工程项目，对于被大规模人群，在全球各种环境下，长时间使用的电子消费品来说尤其重要。一个产品如果没法长时间在各种环境保证功能，这个产品无法取得成功。定义上，信赖性工程是系统工程的子学科，强调一个设备可以无失效的工作的能力。信赖性描述了一个系统，或者零部件可以在特定的时间长度和特定的条件下可以正常工作的能力。对于手机等电子消费品，信赖性测试是这些产品在各种环">
+<meta property="og:type" content="article">
+<meta property="og:title" content="塑料镜头制造 第八章：信赖性测试">
+<meta property="og:url" content="https://faster-than-light.net/LensMaking_C8/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="信赖性（可靠性）工程是所有产品的制造中的重要工程项目，对于被大规模人群，在全球各种环境下，长时间使用的电子消费品来说尤其重要。一个产品如果没法长时间在各种环境保证功能，这个产品无法取得成功。定义上，信赖性工程是系统工程的子学科，强调一个设备可以无失效的工作的能力。信赖性描述了一个系统，或者零部件可以在特定的时间长度和特定的条件下可以正常工作的能力。对于手机等电子消费品，信赖性测试是这些产品在各种环">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C8/C8-4.jpg">
+<meta property="article:published_time" content="2021-07-21T09:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T11:32:05.729Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="镜头">
+<meta property="article:tag" content="专题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C8/C8-4.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-塑料镜头制造 第八章：信赖性测试" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C8/C8-4.jpg" rel="gallery_cldopy7xd0050g8w6hdf2ccgf noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C8/C8-4.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      塑料镜头制造 第八章：信赖性测试
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/LensMaking_C8/" class="article-date">
+	  <time datetime="2021-07-21T09:00:00.000Z" itemprop="datePublished">July 21, 2021</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%A1%91%E6%96%99%E9%95%9C%E5%A4%B4%E5%88%B6%E9%80%A0/">塑料镜头制造</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>信赖性（可靠性）工程是所有产品的制造中的重要工程项目，对于被大规模人群，在全球各种环境下，长时间使用的电子消费品来说尤其重要。一个产品如果没法长时间在各种环境保证功能，这个产品无法取得成功。定义上，信赖性工程是系统工程的子学科，强调一个设备可以无失效的工作的能力。信赖性描述了一个系统，或者零部件可以在特定的时间长度和特定的条件下可以正常工作的能力。对于手机等电子消费品，信赖性测试是这些产品在各种环境下，设计寿命里的工作能力。信赖性测试有助于在开发阶段发现产品的不足并加以修改，保证最终产品的信赖性，也用于在产品的生产中持续进行抽样信赖性测试保证批次产品的信赖性。本章主要介绍塑料镜头的信赖性测试的种类，测试项目，测试设备。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="信赖性测试项目"><a href="#信赖性测试项目" class="headerlink" title="信赖性测试项目"></a>信赖性测试项目</h1><p>不同的产品有不同的信赖性测试项目和要求，根源都是实际的使用场景。比如对于电子显示屏，模拟持续的点击和滑动是必须的；对于汽车用镜头，高强度持久的震动测试是显而易见的；对于电池，要进行持续充电实验等。</p>
+<p>对于手机类塑料镜头，由于其组成的材料和结构，光学成像的原理，其最易收到震动，冲击，温度变化，化学制品的影响，所以塑料镜头的最主要的信赖性测试项目为：跌落实验，震动实验，高温高湿，湿热循环，热冲击，以及这些项目的混合测试等。</p>
+<h2 id="跌落测试"><a href="#跌落测试" class="headerlink" title="跌落测试"></a>跌落测试</h2><p>跌落实验一般是把镜头从某一高度跌落，模拟手机从高处跌落的场景，一般为1.5m。实验设备相对简单，既为一个可以在固定高度释放样品的测试平台，底座可以为大理石。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C8/C8-0.png"></p>
+<h2 id="机械震动测试"><a href="#机械震动测试" class="headerlink" title="机械震动测试"></a>机械震动测试</h2><p>机械震动测试模拟镜头在各种震动场景下的表现，生活中可以产生震动的场景非常多，手机本身自己就有震动马达，汽车等场景也会有各种频率的震动。机械震动测试一般在震动平台上测试，以某个加速度进行震动，震动一定次数。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C8/C8-1.jpeg"></p>
+<h2 id="高温高湿测试"><a href="#高温高湿测试" class="headerlink" title="高温高湿测试"></a>高温高湿测试</h2><p>把镜头置于相对高温度高湿度的测试箱中，比如85℃，85%相对湿度，每隔一段时间（100小时，200小时，500小时，1000小时）取出检查。模拟镜头长时间处于一个高温高湿环境中的性能，也是模拟老化的手段。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C8/C8-2.jpg"></p>
+<h2 id="湿热循环测试"><a href="#湿热循环测试" class="headerlink" title="湿热循环测试"></a>湿热循环测试</h2><p>把镜头置于环境测试箱中，从高温高湿条件停留2个小时，相对缓慢降低到低温停留2个小时，再缓慢上升至高温高湿反复循环，模拟环境的变化。测试条件会定义温度湿度，循环次数，升温降温速率等。</p>
+<h2 id="热冲击测试"><a href="#热冲击测试" class="headerlink" title="热冲击测试"></a>热冲击测试</h2><p>把镜头置于环境测试箱中，进行快速的温度变化，比如从-30°C到80℃，一分钟20℃的速率反复变化，做1000个循环。这是模拟环境温度的剧烈变化，比如冬天从室外到室内，手机从最热的使用状态进入到室外，手机从夏天的车里拿入空调房等场景。</p>
+<h2 id="热盘测试"><a href="#热盘测试" class="headerlink" title="热盘测试"></a>热盘测试</h2><p>将镜头放置在100度以上的热盘上加热一段时间，这是模拟维修时为了开启后盖手机被热风枪或者热盘加热到一个较高温度的场景。</p>
+<h2 id="高海拔，低海拔测试"><a href="#高海拔，低海拔测试" class="headerlink" title="高海拔，低海拔测试"></a>高海拔，低海拔测试</h2><p>将镜头置于密封腔中，进行加压或者降压，用以模拟手机的使用和运输的各种海拔环境。</p>
+<h2 id="UV老化实验"><a href="#UV老化实验" class="headerlink" title="UV老化实验"></a>UV老化实验</h2><p>使用一定功率UV灯照射镜头一定时间，模拟塑料镜头长时间被太阳光照射后的发黄老化。</p>
+<h2 id="化学侵蚀实验"><a href="#化学侵蚀实验" class="headerlink" title="化学侵蚀实验"></a>化学侵蚀实验</h2><p>如果镜头暴露在外（有一些镜头的第一片没有额外保护），需要考虑各种化学品的侵蚀，用过涂抹各种化学品进行测试。</p>
+<h2 id="瀑布测试"><a href="#瀑布测试" class="headerlink" title="瀑布测试"></a>瀑布测试</h2><p>结合两种或以上信赖性试验按顺序进行测试，比如先进行一定循环数的热冲击测试，再进行跌落测试。</p>
+<hr>
+<h1 id="采样-标准-失效分析"><a href="#采样-标准-失效分析" class="headerlink" title="采样/标准/失效分析"></a>采样/标准/失效分析</h1><h2 id="采样"><a href="#采样" class="headerlink" title="采样"></a>采样</h2><p>采样一般按每个Config（镜头搭配）进行，根据样品数量，依照AQL (可接受质量限制Acceptable Quality Limit) 中描述的方法采样，</p>
+<h2 id="标准"><a href="#标准" class="headerlink" title="标准"></a>标准</h2><p>进行信赖性测试的样品测试前会经过各种光学性能测量，外观记录等（或使用同等性能的Golden Sample进行测试）。进行测试的过程中及测试完成后会再根据要求进行相应的测量和观察记录。其中包括镜头的MTF性能，焦距，场曲，外观，杂光等，基本要求是没有性能偏差，要能通过出货标准。随着高端镜头片数越来越多，镜片越来越薄，口径越来越大，镜头面向信赖性的设计越来越重要。一方面，要镜片装得紧，保证镜片在跌落和震动中不会位移，另一方面镜片和镜片之间又不能太紧，防止在高温高湿的过程中变形产生应力。所以镜头设计的机械组装结构设计是高端镜头非常重要的一个课题。</p>
+<h2 id="失效分析"><a href="#失效分析" class="headerlink" title="失效分析"></a>失效分析</h2><p>如果镜头进行信赖性测试后出现了问题，需要进行失效分析（FA）和后续DOE的实验发现问题，一般FA实验室会配备各种设备，比如用于观察的光学显微镜，扫描结构的X光机和CT设备，进行表面扫描的SEM/EDS，进行物质成分分析的FTIR，以及各种我们提到过的光学零部件测试设备如UA3P或者Trioptics ImageMaster® HR等。对于塑料镜头来说，常用的分析手段有：</p>
+<ol>
+<li>使用Trioptics ImageMaster® HR进行光学品质分析，通过MTF曲线的变化分析镜头内部发生的变化；</li>
+<li>使用CT设备扫描内部结构，观察是否有镜片位移；</li>
+<li>镜头拆开，使用UA3P对每个镜片进行面型测量，观察是否经过信赖性测试，镜片由于应力发生了形变，面型发生了变化。</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C8/C8-3.png"></p>
+<hr>
+<h1 id="持续信赖性测试"><a href="#持续信赖性测试" class="headerlink" title="持续信赖性测试"></a>持续信赖性测试</h1><p>工艺参数的稳定和锁定不变对信赖性的稳定至关重要。但是光学镜头生产中，工艺变化时有发生（比如镜片旋转的角度）。持续信赖性测试，ORT(On-going Reliability Testing)是指在大规模量产进行的过程中，不停的对产品抽样并投入信赖性测试，用以监控量产产品的信赖性。根据生产的规模，工艺的稳定性，会定义不同的采样频率，数量和测试项目及测试要求。随着生产，如果持续性信赖性测试的结果良好，可以逐渐降低采样数量或者采样频率。</p>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%A1%91%E6%96%99%E9%95%9C%E5%A4%B4%E5%88%B6%E9%80%A0/">塑料镜头制造</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E9%A2%98/" rel="tag">专题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%95%9C%E5%A4%B4/" rel="tag">镜头</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/OpticsNews20210725/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          光学新闻 20210725
+        
+      </div>
+    </a>
+  
+  
+    <a href="/OpticsNews20210718/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">光学新闻 20210718</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%A1%E8%B5%96%E6%80%A7%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.</span> <span class="nav-text">信赖性测试项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%8C%E8%90%BD%E6%B5%8B%E8%AF%95"><span class="nav-number">1.1.</span> <span class="nav-text">跌落测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E6%A2%B0%E9%9C%87%E5%8A%A8%E6%B5%8B%E8%AF%95"><span class="nav-number">1.2.</span> <span class="nav-text">机械震动测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AB%98%E6%B8%A9%E9%AB%98%E6%B9%BF%E6%B5%8B%E8%AF%95"><span class="nav-number">1.3.</span> <span class="nav-text">高温高湿测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B9%BF%E7%83%AD%E5%BE%AA%E7%8E%AF%E6%B5%8B%E8%AF%95"><span class="nav-number">1.4.</span> <span class="nav-text">湿热循环测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E5%86%B2%E5%87%BB%E6%B5%8B%E8%AF%95"><span class="nav-number">1.5.</span> <span class="nav-text">热冲击测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%83%AD%E7%9B%98%E6%B5%8B%E8%AF%95"><span class="nav-number">1.6.</span> <span class="nav-text">热盘测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AB%98%E6%B5%B7%E6%8B%94%EF%BC%8C%E4%BD%8E%E6%B5%B7%E6%8B%94%E6%B5%8B%E8%AF%95"><span class="nav-number">1.7.</span> <span class="nav-text">高海拔，低海拔测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UV%E8%80%81%E5%8C%96%E5%AE%9E%E9%AA%8C"><span class="nav-number">1.8.</span> <span class="nav-text">UV老化实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%96%E5%AD%A6%E4%BE%B5%E8%9A%80%E5%AE%9E%E9%AA%8C"><span class="nav-number">1.9.</span> <span class="nav-text">化学侵蚀实验</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E6%B5%8B%E8%AF%95"><span class="nav-number">1.10.</span> <span class="nav-text">瀑布测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%87%E6%A0%B7-%E6%A0%87%E5%87%86-%E5%A4%B1%E6%95%88%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">采样&#x2F;标准&#x2F;失效分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%87%E6%A0%B7"><span class="nav-number">2.1.</span> <span class="nav-text">采样</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86"><span class="nav-number">2.2.</span> <span class="nav-text">标准</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%B1%E6%95%88%E5%88%86%E6%9E%90"><span class="nav-number">2.3.</span> <span class="nav-text">失效分析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8C%81%E7%BB%AD%E4%BF%A1%E8%B5%96%E6%80%A7%E6%B5%8B%E8%AF%95"><span class="nav-number">3.</span> <span class="nav-text">持续信赖性测试</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

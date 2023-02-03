@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>塑料镜头制造 第七章：性能检测 | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="镜头专题" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="镜头组装完成后，要通过各种检测才能出货。其中包括光学性能检测，外观检测和各种信赖性测试。其中光学性能检测主要检测产品的光学性能，包括镜头的MTF，杂光；外观检测主要检测产品的外观，包括镜头表面及内部的各种缺陷和尘埃；信赖性测试主要测试镜头在长时间各种可能的环境中使用后依然能保证其功能。我们本章主要说明光学性能检测和外观检测部分，下一章重点关注信赖性测试。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="塑料镜头制造 第七章：性能检测">
+<meta property="og:url" content="https://faster-than-light.net/LensMaking_C7/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="镜头组装完成后，要通过各种检测才能出货。其中包括光学性能检测，外观检测和各种信赖性测试。其中光学性能检测主要检测产品的光学性能，包括镜头的MTF，杂光；外观检测主要检测产品的外观，包括镜头表面及内部的各种缺陷和尘埃；信赖性测试主要测试镜头在长时间各种可能的环境中使用后依然能保证其功能。我们本章主要说明光学性能检测和外观检测部分，下一章重点关注信赖性测试。">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-8.jpg">
+<meta property="article:published_time" content="2021-07-15T10:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T11:32:05.727Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="镜头">
+<meta property="article:tag" content="专题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-8.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-塑料镜头制造 第七章：性能检测" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-8.jpg" rel="gallery_cldopy7x8004gg8w657o5bdz9 noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-8.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      塑料镜头制造 第七章：性能检测
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/LensMaking_C7/" class="article-date">
+	  <time datetime="2021-07-15T10:00:00.000Z" itemprop="datePublished">July 15, 2021</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%A1%91%E6%96%99%E9%95%9C%E5%A4%B4%E5%88%B6%E9%80%A0/">塑料镜头制造</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>镜头组装完成后，要通过各种检测才能出货。其中包括光学性能检测，外观检测和各种信赖性测试。其中光学性能检测主要检测产品的光学性能，包括镜头的MTF，杂光；外观检测主要检测产品的外观，包括镜头表面及内部的各种缺陷和尘埃；信赖性测试主要测试镜头在长时间各种可能的环境中使用后依然能保证其功能。我们本章主要说明光学性能检测和外观检测部分，下一章重点关注信赖性测试。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="光学性能检测"><a href="#光学性能检测" class="headerlink" title="光学性能检测"></a>光学性能检测</h1><p>一颗镜头生产出来后，主要要检测其各项光学指标是否和设计一致，其中包括焦距EFL，法兰距FFL，F/#，各种像差参数如畸变，色差，场曲，色散等，镜头的CRA，以及最重要的镜头调制传输函数MTF，包括各个视场的MTF以及离焦曲线。</p>
+<p>镜头光学性能检测设备从测试需求角度可以分成两种：</p>
+<ul>
+<li>用于精细检测的研究型设备，这种设备可以完整地以很高精度和解析度测试一颗镜头的各种参数，但是速度较慢，主要用于设计验证等工作。代表性设备有Trioptics公司的ImageMaster® HR系列等。</li>
+<li>用于量产检测的快速测试设备，这种设备可以快速测出一颗镜头某些视场的MTF值和一些关键参数，主要用于量产产线的光学性能100%测试。代表性设备有Trioptics公司的ImageMaster® Pro系列等。</li>
+</ul>
+<p>一个公司根据自己的产能情况只需要相对较少数量的精密检测设备，同时配备大量的量产检测设备（对于头部企业来说，可能会有几百台）。</p>
+<p>下面用Trioptics公司的这两个系列的设备，结合一些其他公司的设备为例说明两种测试设备的设备结构，原理，性能和使用场景。</p>
+<h2 id="精密测试设备"><a href="#精密测试设备" class="headerlink" title="精密测试设备"></a>精密测试设备</h2><h3 id="Trioptics-ImageMaster®-HR"><a href="#Trioptics-ImageMaster®-HR" class="headerlink" title="Trioptics ImageMaster® HR"></a>Trioptics ImageMaster® HR</h3><p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-1.png"></p>
+<p>Trioptics ImageMaster® HR系列测试设备是Trioptics公司开发的用于镜头光学性能测试的设备，该系列设备具有相当多的功能，可以实现精确的光学测试，同时包括了很多不同型号和适配模块，用以满足客户对于不同应用镜头的测试（不同大小的镜头，不同视场角，不同应用波段，有限距/无限距等）。系列中包含了HR VIS（可见光波段普通版本），HR UltraPrecision（超高精度款），HR MAX（宽光谱测试版，近紫外到近红外），HR MAX IR（近紫外到深红外），HR TempControl（测试镜头温度可调，-40℃到120℃）。同时该公司提供对应软件，可以很容易实现自动化测试流程和输出报告。</p>
+<p>以基础版本的ImageMaster® HR为例，该设备可以测试：轴上/轴外视场MTF，EFL，畸变，场曲，色散，像散，CRA，点扩散函数，杂光（Veiling glare)，离焦曲线，视场角，FFL（法兰焦距），相对照度（RI）。该设备是手机镜头光学制造企业的主要研究型测试设备型号，用来对镜头进行各种精密测量。</p>
+<h3 id="设备结构"><a href="#设备结构" class="headerlink" title="设备结构"></a>设备结构</h3><p>设备的基本结构如下两图所示，两张图的左侧都是展示了实际设备形态和主要结构，右侧是展示了测试原理：</p>
+<p>1）<strong>标板（Target）模块：</strong>标板模块包括光源，标板，平行光管和摆臂。光源的作用是提供测试用波长。标板的作用是作为物存在，一般是由某个光源照射的一个目标物（透明狭缝/十字/小孔，标板其他部分不透光）。平行光管的作用是提供无限物距测量，用以投射标板图像，如果是有限物距测试，直接使用标板和光源放置在需要的物距位置；摆臂的作用是可以进行不同视场角的测量</p>
+<p>2）<strong>样品承台和被测样品镜头：</strong>样品承台提供镜头的放置平台，该平台可以旋转，结合摆臂可以满足测量镜头不同视场角不同位置的光学性能；</p>
+<p>3）<strong>图像分析模块：</strong>在最下面，主要由一个CCD相机和Relay Optics组成，这个Relay Optics一般是一个显微镜的物镜镜头。右侧的图展示了测量轴上和轴外MTF时摆臂，被测镜头，图像分析模块的状态。这种测量方式就是模拟镜头的实际使用状态，物体在物方，成像到成像面，然后被读取。</p>
+<p>4）<strong>其他各种精密移动模块，驱动设备</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-30.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-31.png"></p>
+<h3 id="测试原理"><a href="#测试原理" class="headerlink" title="测试原理"></a>测试原理</h3><p><strong>MTF测试</strong></p>
+<p>Trioptics ImageMaster® HR使用的MTF测试方法基于ISO 9334标准。根据傅里叶综合，一个狭缝可以被认为是所有强度=1的频率的和。这个狭缝通过被测镜头，由于各种像差的存在会模糊变宽，展示出来的就是线传递函数（Line Spread Function ，LSF），LSF经过一维傅里叶变换后就是MTF。所以MTF测试使用的标板可以是一个在不透光的板子上开一个透光狭缝。但是更多的情况是使用十字（cross-hair）作为标板，这样可以同时得到S和T方向的MTF值。有些时候也会使用pinhole（小孔），直接得到点扩散函数（Point Spread Function，PSF），二维傅里叶变换既得到OTF，取强度值既MTF信息，这种情况得到的信息很多时候太多了，并不是很需要，所以一般十字型就足够进行分析了。</p>
+<p>通过摆臂和样品旋转平台进行扫描式测试，Trioptics ImageMaster® HR就可以得到镜头不同位置，不同视场角的MTF性能。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-4.jpg"></p>
+<p><strong>EFL和畸变测试</strong></p>
+<p>首先测量某个选定频率的轴上MTF，确定近轴焦平面，然后摆臂开始根据设定扫描选定的视场角，在每个视场角，测量像高，EFL由h/tan(α)得出，然后通过拟合确认阿尔法=0时的EFL，最后根据ISO 9039:2008描述的方法，计算近轴焦距和轴上焦距确认畸变值。</p>
+<p><strong>离焦曲线测试</strong></p>
+<p>离焦曲线测试只需要上下移动传感器模块，在成像面一定距离内再进行多次测试。</p>
+<p><strong>相对照度（RI）测试</strong></p>
+<p>根据ISO 13653:1996，设备测试轴上光强和轴外光强，最后计算相对照度。</p>
+<p><strong>场曲</strong></p>
+<p>场曲可以使用离焦曲线的结果计算得出。</p>
+<p><strong>主光线角CRA</strong></p>
+<p>在不同视场角，平行光管发出的平行光通过被测镜头，达到像面，传感器通过扫描最强光线的位置，传感器的纵向和横向移动可以计算出主光线和光轴的夹角既CRA。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-5.jpg"></p>
+<p><strong>F/#</strong></p>
+<p>F数定义为EFL和入瞳直径的比值，ImageMaster®系列设备使用ISO-517描述的方法，首先测量EFL，然后样品翻转，使入瞳朝向传感器侧，传感器对焦在入瞳上，测量入瞳的大小。通过选择合适的配合传感器的镜头，即使入瞳位置在被测镜头内部很深的位置，也是可以测量到。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-6.png"></p>
+<p><strong>色差</strong></p>
+<p> ImageMaster®设备有着不同的滤光片，通过更换滤光片，确定镜头在轴上不同波长下的像面位置，以确认轴向色差（axial），如下图；通过不同视场角下的成像位置，确认横向色差（Lateral）。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-7.png"></p>
+<h3 id="其他设备"><a href="#其他设备" class="headerlink" title="其他设备"></a>其他设备</h3><p>Trioptics除了ImageMaster® HR系列，也有横向形态的MTF测试设备等，Optikos公司也有自己生产的MTF测试设备LensCheck。但是对于手机类镜头，ImageMaster® HR系列是行业共识的标准设备，所以基本上主要的制造企业都配备了该型号设备。</p>
+<hr>
+<h2 id="量产测试设备"><a href="#量产测试设备" class="headerlink" title="量产测试设备"></a>量产测试设备</h2><h3 id="Trioptics-ImageMaster®-PRO"><a href="#Trioptics-ImageMaster®-PRO" class="headerlink" title="Trioptics ImageMaster® PRO"></a>Trioptics ImageMaster® PRO</h3><p>ImageMaster® PRO系列测试设备是用于进行量产MTF检测的设备，对比ImageMaster® HR系列，ImageMaster® PRO只能测试某些设定点的MTF，但是这些点的MTF值可以同时测试。经过多年的发展，该系列存在用于测试普通手机镜头的最初的Pro 1型号一直到最新的Pro 10等型号，PRO X Compact（小型化型号），PRO 10 Wafer（用于测试晶圆级镜头WLO），ProSort 10（测试+镜头挑选自动化款），FingerPrint（小有限物距测试，主要用于指纹识别镜头测试，FOD (Finger-on-Display). ）。HR设备进行一颗镜头的MTF多个角度扫描完整测试可能要进行30分钟，但是Pro 10可以同时测试27个视场的MTF，每小时可以测试2700颗镜头。</p>
+<p>ImageMaster® PRO可以测试不同频率的轴上，轴外MTF，最佳MTF位置，EFL，FFL，场曲，像面倾斜，离焦曲线，对焦位置，像散，畸变，相对照度等。根据产品模组的需求以及模组端制程选择，会测量不同的项目。最主要的还是MTF离焦曲线，确认镜头在像面一定范围内性能达标。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-8.jpg"></p>
+<h3 id="设备结构-1"><a href="#设备结构-1" class="headerlink" title="设备结构"></a>设备结构</h3><p>下面两张图展示了Pro 10设备的结构和测试原理，对比ImageMaster® HR系列，Pro系列的测试方式并没有本质区别，但是可以说是“反过来”的，主要包括</p>
+<p>1）<strong>测试标板和光源：</strong>作为测试的物存在，但是不同于HR系列，Pro系列的测试标板和光源是在镜头的像面侧；</p>
+<p>2）<strong>测试平台和被测镜头</strong>：测试平台由可动承台和镜头托盘组成，两者三点接触，由于是用于量产测试，所以托盘是一个可以放置多颗镜头（Pro 10是148颗），承台在测试中可以在x,y方向移动，用以对不同的镜头进行测试；</p>
+<p>3）<strong>测试传感器模块</strong>：由固定这些传感器的穹顶，传感器相机，Telescope和用于准直的自准直镜组成。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-9.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-10.png"></p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>Pro系列的MTF测试原理和HR系列相同，同样是使用十字型分划板作为标板（由于用在透射条件，所以使用负性分划板，紫外熔融石英作为基底[紫外熔融石英可以从红外到紫外波段都具有出色的透射率]，将基质全都镀上铬金属[挡光]，但是将图案留空。十字线的位置既为测试的像高/视场角位置）。</p>
+<p>首先测试托盘放置到位，设备开始对每个镜头进行测试，每个镜头MTF测试完成后，软件会进行一些倾斜补偿，更好地反应出真实MTF。得到MTF后，根据设备的设定，设备会标注出每个镜头是否通过测试门槛，也可能是把镜头性能分成A，B，NG，这取决于各公司需求。这些信息会记录在数据库中，最后会用这些信息进行镜头分拣。</p>
+<p>镜头分拣一般单独使用一台机器进行，量产MTF测试完成后，把托盘取出，放入镜头分拣设备，该设备会读取Pro 10输出的数据，把OK的镜头放入一个托盘，NG的镜头放入一个托盘。Trioptics也有自己的全自动设备ProSort 10（测试+镜头挑选自动化款）。</p>
+<h3 id="其他设备-1"><a href="#其他设备-1" class="headerlink" title="其他设备"></a>其他设备</h3><p>镜头的量产使用ImageMaster® PRO系列测试机台已经是行业标准，但是各个光学制造企业也会使用自己公司开发的产品，或者使用其他公司的测试。主要原因是价格，Trioptics的产能，以及技术原因。</p>
+<p>1）Trioptics Pro系列的设备价格较高，有些公司会生产自己的替代性测试机台或者使用其他品牌的测试机台，如果终端客户不要求使用Pro系列进行测试，或者本身镜头是标准品，生产企业自己制定测试标准的情况，同时Pro系列的设备没有产能，会使用其他设备测试产品。实际上，通过标准的合致流程，这些设备也能实现和Pro系列几乎一样的性能。</p>
+<p>2）Trioptics作为一家德国公司，设备生产能力也有限，前几年光学企业大规模扩大生产规模的时候，Trioptics的产能无法满足这些企业的需求，企业不得不使用各种设备区满足量产检测需求。</p>
+<p>3）Pro系列是为了手机镜头中的大类标准镜头开发的，标准款可以处理的视场角&lt;100°。同时，设备最多只能使用27个telescope，再多就放不下了。所以，对于有一些广角镜头或者需要更多测试点的情况，Pro系列无法满足，需要使用类似于HR系列的测试原理，或者增加设备大小（覆增大相机固定穹顶用以覆盖更大的视场）。所以，有一些量产检测设备是基于HR系列的测试原理开发的，既在被测镜头物方布置标板，像方布置传感器模块。这种设备的好处一个是可以布置更多的检测点，更自由的覆盖更多的视场范围，也包括更便宜的价格，因为只需要在被测镜头像方布置传感器，所以只需要一个传感器，而Pro系列有27个传感器相机。当然这种方式也会有精度上和测试速度上的损失。</p>
+<p>不过，这些年Trioptics公司也在持续开发适用于现阶段各种应用条件的测试设备，不但是面向手机镜头，还包括逐渐流行的AR，VR类光学产品。比如Trioptics推出了用于VR显示镜片量产检测的ImageMaster® PRO VR和用于AR光学组件检测的ImageMaster® Lab AR。</p>
+<hr>
+<h1 id="杂光检测"><a href="#杂光检测" class="headerlink" title="杂光检测"></a>杂光检测</h1><p>杂光的评价相对主观，各公司有自己的评价标准，所以杂光测试行业内并没有标准化设备，各个企业根据内部测试需求及外部不同客户的需求，使用不同的设备和标准。设备原理比较简单，既在镜头的被测视场内或者视场外建立强光光源（点光源，线光源灯），在被测镜头像方设置传感器测试杂光强度。有一些标准也定义了杂光测试和计算方法，比如ISO 9358:1994(en), Optics and optical instruments — Veiling glare of image forming systems — Definitions and methods of measurement同样，类似于MTF检测，杂光检测设备也可以有研发使用的精密测试设备和量产使用的量产测试设备两种形态。</p>
+<p><strong>精密测试设备：</strong>单镜头测试，可以用摆臂带动一个强光源扫描需要测量的镜头视场范围</p>
+<p><strong>量产测试设备：</strong>在测试视场点布置一系列强光LED，测试时根据测试需求同时或者分时打开。</p>
+<hr>
+<h1 id="外观检测"><a href="#外观检测" class="headerlink" title="外观检测"></a>外观检测</h1><p>镜头的外观检测主要检测包括镜头的所有外表面以及各个镜片内表面，缺陷包括划伤，灰尘，脱模，溢胶，膜裂，脏污等等。这些外观不良可能会造成很多问题，包括信赖性问题（比如脱模可能造成镜头开裂），模组传感器污染（镜头上的灰尘在模组组装时掉落在传感器上），美观损失（镜头上表面缺陷从外面可以被看到）。</p>
+<p>主要检测方法有人工和自动化，近年来由于技术进步，标准更加严格，全自动化的外观检测逐渐在各镜头生产企业占据更多的比重，但是人工检测或者抽检依然不可或缺。自动化测试设备主要是工业机器视觉范畴，使用不同的光照条件和镜头去发现镜头内外的外观不良，比如对于镜头内侧，可以使用变焦镜头对焦到镜头内部镜片的各个表面，发现灰尘。</p>
+<p>下图展示了舜宇仪器公司生产的一款镜头<a target="_blank" rel="noopener" href="http://www.sunnyoptical.com/001022001/p1746.html">外观和内尘检测设备</a>和该设备机器视觉的拍下来的实际照片。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/LensMaking-C7/C7-11.png"></p>
+<hr>
+<h1 id="OQC和出货"><a href="#OQC和出货" class="headerlink" title="OQC和出货"></a>OQC和出货</h1><p>最后镜头还会经过OQC的抽检检测等标准化质量监控体系流程，最终完成包装和出货。</p>
+<hr>
+<h1 id="模组入料检测"><a href="#模组入料检测" class="headerlink" title="模组入料检测"></a>模组入料检测</h1><p>最后简单对模组入料检测进行一些说明，因为镜头制造企业是输出镜头给下游模组厂，下游的标准（模组厂和终端客户）最终决定了镜头厂的标准。理论上，只要模组入料完成，就代表这一批次镜头模组厂接受了，后面如果出了问题，就不完全是镜头厂的问题了（比如保存不当）。IQC是划分了镜头厂和模组厂对镜头的品质的管理的所有权。</p>
+<p>镜头厂的OQC和模组的入料IQC会进行MTF抽检，也会使用Trioptics ImageMaster@ Pro系列产品，测试标准会经过终端客户，模组厂和镜头厂的共同确认，一般镜头厂的OQC和模组端的IQC检测各视场的OK/NG阈值会比镜头厂的生产MTF全检检测阈值要低一点，把测试误差和波动性考虑进去。</p>
+<p>模组IQC也会进行外观检测，使用和镜头厂出货标准同样的标准。</p>
+<p>一般模组厂会有镜头厂的驻场FAE或者镜头厂的专门FAE代表，如果有问题可以及时以镜头厂立场进行交流并协助模组厂解决问题。</p>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/%E5%A1%91%E6%96%99%E9%95%9C%E5%A4%B4%E5%88%B6%E9%80%A0/">塑料镜头制造</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E9%A2%98/" rel="tag">专题</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%95%9C%E5%A4%B4/" rel="tag">镜头</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/OpticsNews20210718/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          光学新闻 20210718
+        
+      </div>
+    </a>
+  
+  
+    <a href="/OpticsNews20210710/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">光学新闻 20210710</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%89%E5%AD%A6%E6%80%A7%E8%83%BD%E6%A3%80%E6%B5%8B"><span class="nav-number">1.</span> <span class="nav-text">光学性能检测</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B2%BE%E5%AF%86%E6%B5%8B%E8%AF%95%E8%AE%BE%E5%A4%87"><span class="nav-number">1.1.</span> <span class="nav-text">精密测试设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Trioptics-ImageMaster%C2%AE-HR"><span class="nav-number">1.1.1.</span> <span class="nav-text">Trioptics ImageMaster® HR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.2.</span> <span class="nav-text">设备结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%8E%9F%E7%90%86"><span class="nav-number">1.1.3.</span> <span class="nav-text">测试原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%AE%BE%E5%A4%87"><span class="nav-number">1.1.4.</span> <span class="nav-text">其他设备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%8F%E4%BA%A7%E6%B5%8B%E8%AF%95%E8%AE%BE%E5%A4%87"><span class="nav-number">1.2.</span> <span class="nav-text">量产测试设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Trioptics-ImageMaster%C2%AE-PRO"><span class="nav-number">1.2.1.</span> <span class="nav-text">Trioptics ImageMaster® PRO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87%E7%BB%93%E6%9E%84-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">设备结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">1.2.3.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%AE%BE%E5%A4%87-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">其他设备</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%82%E5%85%89%E6%A3%80%E6%B5%8B"><span class="nav-number">2.</span> <span class="nav-text">杂光检测</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%96%E8%A7%82%E6%A3%80%E6%B5%8B"><span class="nav-number">3.</span> <span class="nav-text">外观检测</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#OQC%E5%92%8C%E5%87%BA%E8%B4%A7"><span class="nav-number">4.</span> <span class="nav-text">OQC和出货</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E7%BB%84%E5%85%A5%E6%96%99%E6%A3%80%E6%B5%8B"><span class="nav-number">5.</span> <span class="nav-text">模组入料检测</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>

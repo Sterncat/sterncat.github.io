@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TOF系统 第五章 VCSEL | 超 - 光</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="TOF专题" />
+  
+  
+    <meta name="google-site-verification" content="zSoRG0ZThH4SSppd_q3ipq_sgETJ2bq4XmARwV4G0zw" />
+  
+  
+    <meta name="baidu-site-verification" content="code-nIvXpu9zRn" />
+  
+  
+  <meta name="description" content="本章主要介绍TOF系统中的重要零部件VCSEL，介绍其基本原理，结构，制程，封装，主要参数，产业链等，为不熟悉VCSEL的读者提供一个了解VCSEL的初始信息和基本体系结构的了解，可以作为一个更深入了解VCSEL的入门信息。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TOF系统 第五章 VCSEL">
+<meta property="og:url" content="https://faster-than-light.net/TOFSystem_C5/index.html">
+<meta property="og:site_name" content="超 - 光">
+<meta property="og:description" content="本章主要介绍TOF系统中的重要零部件VCSEL，介绍其基本原理，结构，制程，封装，主要参数，产业链等，为不熟悉VCSEL的读者提供一个了解VCSEL的初始信息和基本体系结构的了解，可以作为一个更深入了解VCSEL的入门信息。">
+<meta property="og:locale">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-3.png">
+<meta property="article:published_time" content="2022-02-05T10:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-09T01:39:49.746Z">
+<meta property="article:author" content="Sterncat">
+<meta property="article:tag" content="TOF">
+<meta property="article:tag" content="专题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-3.png">
+  
+    <link rel="alternate" href="/atom.xml" title="超 - 光" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+  <link rel="stylesheet" href="/css/fashion.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+
+
+<header id="allheader" class="site-header" role="banner" 
+   >
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="超 - 光" rel="home"> 超 - 光 </a>
+            
+          </h1>
+          
+          
+            <div class="site-description">Optics is the study of light 分享光学知识</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+
+            <div class="clearfix sf-menu">
+              <ul id="main-nav" class="menu sf-js-enabled sf-arrows"  style="touch-action: pan-y;">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="/"> <a class="" href="/">首页</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="archives"> <a class="" href="/archives">归档</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="categories"> <a class="" href="/categories">分类</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="tags"> <a class="" href="/tags">标签</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663" linktext="about"> <a class="" href="/about">关于</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-TOF系统 第五章 VCSEL" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-3.png" rel="gallery_cldopy7x50041g8w6dh32hhcu noopener">
+        <img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-3.png" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      TOF系统 第五章 VCSEL
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/TOFSystem_C5/" class="article-date">
+	  <time datetime="2022-02-05T10:00:00.000Z" itemprop="datePublished">February 5, 2022</time>
+	</a>
+
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+ 
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本章主要介绍TOF系统中的重要零部件VCSEL，介绍其基本原理，结构，制程，封装，主要参数，产业链等，为不熟悉VCSEL的读者提供一个了解VCSEL的初始信息和基本体系结构的了解，可以作为一个更深入了解VCSEL的入门信息。</p>
+<span id="more"></span>
+
+<hr>
+<h1 id="VCSEL简介"><a href="#VCSEL简介" class="headerlink" title="VCSEL简介"></a>VCSEL简介</h1><p>垂直腔表面发射激光 Vertical Cavity Surface Emitting Laser (VCSEL)，是一种光电元器件，是一种半导体激光器件。由于其有各种优良的特性，近些年在通信，电子消费品，工业，汽车，医疗领域得到的广泛的应用。尤其是电子消费品领域，VCSEL作为光源出现在各种应用中，包括临近传感器，距离传感器，面部识别，3D相机等。2020年75%的VCSEL产值是在传感领域，24%的产值在通信领域。</p>
+<h2 id="VCSEL-LED-EEL对比"><a href="#VCSEL-LED-EEL对比" class="headerlink" title="VCSEL, LED, EEL对比"></a>VCSEL, LED, EEL对比</h2><p>常用的半导体光源有三种，分别是VCSEL，LED（light-emitting diode）和边发射器 edge-emitting laser（EEL）。从下面的图和表格我们来比较他们的不同。</p>
+<ul>
+<li>这三种光源都是使用半导体制程制造，其中LED和VCSEL发光从表面垂直方向发出，EEL从侧面发出，这种模式决定了LED和VCSEL都可以在Wafer上进行片上测试，而EEL要把Wafer切开后形成单个零部件封装后才能进行测试，由此，成本上EEL最高。</li>
+<li>光强上，EEL可以提供单一元件的最强光强，所以常用在光通信领域。单一的VCSEL和LED光强受限于本身的几何结构，但是可以使用阵列的形式提供高强度光强。</li>
+<li>光谱宽度方面，VCSEL和EEL都是受激发光，属于激光，都有很窄的光谱宽度。LED属于发光半导体，光谱宽度较宽。</li>
+<li>光束质量上，VCSEL可以提供相对小发散角的光束，而LED发光是Lambertian，EEL发出的是椭圆形光束，常需要光束整形。</li>
+<li>调制速度上VCSEL和EEL都可以达到相对高速，所以常用于光通信领域，同时VCSEL的高调制速度使其可以使用在TOF应用中。LED相对较慢。</li>
+<li>光电转换效率上，VCSEL对比LED有着更高的效率，所以也受电子消费品领域的青睐。</li>
+<li>封装方式上，VCSEL和LED由于是表面发光，可以使用多种表面元器件通用的封装技术，而EEL受限于侧面发光，封装方式需要特别设计。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-1.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-2.png"></p>
+<h2 id="VCSEL形态"><a href="#VCSEL形态" class="headerlink" title="VCSEL形态"></a>VCSEL形态</h2><p>如果按一个die上有几个发光点去分，VCSEL可以分成单点，多点和阵列式，如下图所示（请注意，下图的不同VCSEL的放大比例不同，单点的VCSEL其实很小，相当于阵列VCSEL的一个点的大小）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-3.png"></p>
+<p>下图展示另一个单点VCSEL，左图展示了有1个点和4个点的VCSEL，每个发光点被称为Mesa。右图展示了一个单点VCSEL，可以看到中间的发光点，该VCSEL包括1个anode和3个cathode触点，可以看到Mesa本身的宽度和厚度的比例。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-4.png"></p>
+<p>VCSEL十分小巧，下图来自于II-VI公司的<a target="_blank" rel="noopener" href="https://ii-vi.com/vcsel-technology/">宣传图</a>，可以看到单点VCSEL和一个蚂蚁头部的对比。VCSEL是上面的薄层，下面都是wafer的本身基底（substrate）。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-5.jpg" style="zoom: 20%;" />
+
+<p>阵列型的VCSEL如下图所示，该VCSEL已经封装在一个基板（submount）上并通过Wire bond进行了电路的连接。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-6.png"></p>
+<h1 id="VCSEL结构"><a href="#VCSEL结构" class="headerlink" title="VCSEL结构"></a>VCSEL结构</h1><p>首先，我们先复习一下最简单的激光器模型。激光器是利用受激辐射原理使光在某些受激发的物质中放大或振荡发射激光的器件。典型的激光器包括1.增益媒介 2.激光泵浦源 3.高反射镜（理想情况100%） 4.输出耦合（99%反射镜） 5.激光光束。3和4构成了谐振腔。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-7.png" style="zoom:33%;" />
+
+<p>下图展示了VCSEL最基本的模型，作为一种激光器，它的基本模型和典型激光器没有区别，只是实现不同结构的方式是通过半导体制造的方式实现的。其中激光的谐振腔由两个分布式布拉格反射器（distributed Bragg reflector，DBR）构成，相当于两个反射镜，这个结构是在由高、低折射率介质材料交替生长成的，每层都是发射激光的四分之一波长。常见的VCSEL中，上下两层DBR结构会被注入p型和n型材料，形成半导体pn结，这样电流就可以流过。激光的量子阱在这两层DBR中间，常见的是3~5层。最上面是金属电极，中间红色是出光位置。下层是n型基底和最下层的金属电极，同时下层金属电极也可以作为反射镜增加出光效率。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-8.png" style="zoom:33%;" />
+
+<p>下图展示了更贴近实际的VCSEL的结构和形态</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-9.png" style="zoom:40%;" />
+
+<p>下左图展示了各层的材料。可以看到最中间是三层InGaAs材料形成的量子阱，中间两层GaAs材料分隔开，整个激光激发区的外侧由AlGaAs形成的限制区夹住。限制区/氧化层/氧化孔径是限制光束和电流的区域，是由侧向氧化方式实现的。右图重点展示了氧化层的位置和形态，以及如何限制光路和电流的，电流和光束正常情况下都无法穿过氧化层（电流增大会穿过氧化层，因为很薄）。再外侧是上下分布式布拉格反射器，由掺杂p型材料的30个1/4波长周期AlGaAs/GaAs构成其中一个反射镜，一般反射率会在99.5-99.9%之间，由掺杂n型材料的17.5个1/4波长周期的AlAs/GaAs构成另一个反射镜，一般反射率为99%。然后是两侧的高浓度掺杂的p+GaAs层和n型GaAs基底以及最外侧的金属接触点。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-10.png"></p>
+<p>VCSEL可以设计成上面变出光或者下表面出光，如下图所示，上面的VCSEL是基底在下，上方出光，而下方的VCSEL是设计成从基底侧出光，同时基底一面被做上了微透镜阵列，这种形式的好处是直接可以对光束进行整形，或者改变光束的方向。不过现阶段常见的VCSEL还是第一种。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-11.png"></p>
+<h1 id="VCSEL制程"><a href="#VCSEL制程" class="headerlink" title="VCSEL制程"></a>VCSEL制程</h1><p>前面一节简单介绍了VCSEL的结构，VCSEL制造就是要实现这种结构。VCSEL主体结构是多层的“千层饼”结构，基于多层主体结构中，再继续进行限制氧化层，台面，电极等结构的制造，以实现光，电，热的设计需求；也会进行绝缘保护等工序，实现更好的寿命和信赖性。</p>
+<p>VCSEL的主要制程被分成两个主要的部分，一部分是实现千层饼结构的<strong>MOCVD(metal organic chemical vapor deposition)金属有机物化学气相沉积技术</strong>了；一部分是实现后端各种结构和需求的<strong>FAB晶圆工艺</strong>，其中FAB晶圆工艺包括光刻，电极蒸发沉积及剥离，湿法台面蚀刻，侧向湿法氧化，BCB填充等。</p>
+<p>我们使用下图作为例子来具体说明，图1为实现的VCSEL的形态，左边为我们前文就看到的侧视结构图，右图为实际的VCSEL俯视图，可以看到p和n电极；</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-12.png"></p>
+<p>图2为制造流程。图片引自<a target="_blank" rel="noopener" href="https://www.semanticscholar.org/paper/Vertical-Cavity-Surface-Emitting-Lasers%3A-Large-and-Haglund/ae7e69b921743cd8645734f546039c943ffa5656">Vertical-Cavity Surface-Emitting Lasers: Large Signal Dynamics and Silicon Photonics Integration</a></p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-13.png" style="zoom:60%;" />
+
+<h2 id="晶圆MOCVD外延"><a href="#晶圆MOCVD外延" class="headerlink" title="晶圆MOCVD外延"></a>晶圆MOCVD外延</h2><p>MOCVD，metal organic chemical vapor deposition，金属有机物化学气相沉积是在基板上成长半导体薄膜的一种方法（是一种外延技术，其他外延技术还有分子束外延，液相外延，固相外延），是实现VCSEL千层饼结构的第一步。MOCVD是一种外延技术，主要实现的是在晶圆上一层一层的物质。在MOCVD制程中，反应气体在升高的温度下在反应器中结合以引起化学相互作用，将材料沉积在基板上。在MOCVD中，将超纯气体注入反应器中并精细计量以将非常薄的原子层沉积到半导体晶片上。含有所需化学元素的有机化合物或金属有机物和氢化物的表面反应为晶体生长创造条件，形成材料和化合物半导体的外延。不同于传统的硅半导体，这些半导体可以包含的组合III族和V族，II族和VI族，IV族或第IV族，V和VI族的元素。 外延工艺的难点在于精准控制每层外延层的厚度、均匀度，以及控 制缺陷密度。由于每层外延层只有几纳米至几十纳米厚度，所以对于 工艺精细度的要求非常高。</p>
+<p>对于VCSEL，一般为在GaAs或InP晶圆上生长多层反射层与发射层。</p>
+<h2 id="a-p极触点制造"><a href="#a-p极触点制造" class="headerlink" title="(a) p极触点制造"></a>(a) p极触点制造</h2><p>p极触点一般触点材料是 Ti/Pt/Au，使用电子束蒸发或者金属蒸镀后剥离方式实现。</p>
+<h2 id="b-第一台面蚀刻并进行SixNx沉积"><a href="#b-第一台面蚀刻并进行SixNx沉积" class="headerlink" title="(b) 第一台面蚀刻并进行SixNx沉积"></a>(b) 第一台面蚀刻并进行SixNx沉积</h2><p>完成极点的沉积后，进行第一台面蚀刻，把上层的DBR反射部分和激发层暴露出来。这步蚀刻是一个化学过程，比如使用ICP-RIE方法结合NF3及SlCl4进行蚀刻。完成蚀刻后，一层SixNx被PECVD方法被沉积在整个台面上，这层SixNx可以在后面的侧向氧化制程中保护Mesa表面和芯片表面。</p>
+<h2 id="c-侧向氧化"><a href="#c-侧向氧化" class="headerlink" title="(c) 侧向氧化"></a>(c) 侧向氧化</h2><p>首先侧面的SixNx会被移除，然后进行侧向氧化的制程，该制程是VCSEL制造中非常重要的一步。湿法氧化工艺氧化工艺中，外延结构中高铝组分氧化层通过湿法氧化工艺后变成低折射率、高绝缘性的Al2O3形成有效的光场和电场限制。（在高温水蒸汽中将 AlAs 层氧化，变为有绝缘性的 AlxOy 层，其折射率也大大降低，因而成为把光、载流子限制在垂直方向的结构。）氧化孔径的大小和形状影响着VCSEL器件的很多性能参数，如VCSEL的阈值电流大小、光功率大小、串联电阻大小等。湿法氧化工艺时，通过控制氮气气体流量、腔室内加热温度来控制氧化速率，保证氧化速率的稳定性，从而达到用时间精准控制氧化孔径大小的目的，同时还使用红外光源的CCD用于实时观察氧化情况，保证氧化工艺的成功率。VCSEL的湿法侧向氧化孔径的大小和形状影响着VCSEL器件的很多性能，一般该限制孔径的大小为4~20um。VCSEL氧化限制层的横向结构形状通常为圆形，所以VCSEL的光斑基本为圆形。</p>
+<p>侧向氧化后，为了不让氧化制程的AlAs层继续向内氧化影响谐振腔体积，造成激光特性突变，一些VCSEL很多还会增加一步绝缘保护制程(passivation)，使用ALD方式，沉积跟VCSEL氧化层特性接近的氧化铝（Al2O3）薄膜，这种侧面镀膜均匀，致密性高，厚度很薄就可以完全绝缘保护芯片，应力也小。</p>
+<h2 id="d-第二台面蚀刻"><a href="#d-第二台面蚀刻" class="headerlink" title="(d) 第二台面蚀刻"></a>(d) 第二台面蚀刻</h2><p>完成侧向氧化孔径后，使用SiCl4和ICP-RIE工艺进行蚀刻，形成第二台面。保护的SixNy层被ICP-RIE结合NF3移除。</p>
+<h2 id="e-n极触点制造"><a href="#e-n极触点制造" class="headerlink" title="(e) n极触点制造"></a>(e) n极触点制造</h2><p>n极触点为Ni/Ge/Au，使用电子束蒸发或者金属蒸镀后剥离方式实现。完成后在惰性N2环境中进行退火（430℃）。</p>
+<h2 id="f-接触层剥离"><a href="#f-接触层剥离" class="headerlink" title="(f) 接触层剥离"></a>(f) 接触层剥离</h2><p>Mesa和n触点外的接触层被进一步剥离，以降低bondpad（接触pad）的电容。</p>
+<h2 id="g-BCB填充"><a href="#g-BCB填充" class="headerlink" title="(g) BCB填充"></a>(g) BCB填充</h2><p>使用喷溅式镀膜方式将一层BCB（苯并环丁烯）喷射到整个VCSEL芯片上，使整个VCSEL平面化。</p>
+<h2 id="h-Bondpad沉积"><a href="#h-Bondpad沉积" class="headerlink" title="(h) Bondpad沉积"></a>(h) Bondpad沉积</h2><p>沉积Ti/Au的bondpad使其和n/p极接触点连接。</p>
+<p><strong>不同VCSEL种类可能步骤多多少少有些区别，但是基本都是类似于上述流程，其中外延，侧向氧化和绝缘保护制程是关键工艺。</strong></p>
+<h1 id="VCSEL封装"><a href="#VCSEL封装" class="headerlink" title="VCSEL封装"></a>VCSEL封装</h1><p>完成VCSEL制造后，整体晶圆将经过检测，dicing进行出货。VCSEL在模组端会进行封装，主要会进行Die attach和wire bonding。Die attach的主要目的是将VCSEL和模组基板建立导电和导热通道，如下图所示。对于不同功率的VCSEL，使用的bonding环氧树脂种类不同，以实现不同的散热和信赖性需求。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-14.png" style="zoom:30%;" />
+
+<p>完成基底bonding后，会进行wire bonding，单一VCSEL发光点一般使用一条wire bonding即可，但是对于高功率VCSEL阵列，需要用多个wire bonding以避免高电流熔断金线。如下图所示，左边是单一wire bonding，右边是多个wire bonding。根据Vixar，对于1 mil粗细的金线，最大可以承受0.7安培的电流。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-15.png" style="zoom:50%;" />
+
+<h1 id="VCSEL关键参数"><a href="#VCSEL关键参数" class="headerlink" title="VCSEL关键参数"></a>VCSEL关键参数</h1><p>VCSEL作为一种半导体激光器元件，有很多参数，其中关键参数为光学，电学和热学特性等。波长特性，包括波长，光谱宽度，波长和温度的关系；光束质量（模式，发散角）；输出功率和转换效率等。</p>
+<h2 id="波长特性（波长，光谱宽度，温度特性）"><a href="#波长特性（波长，光谱宽度，温度特性）" class="headerlink" title="波长特性（波长，光谱宽度，温度特性）"></a>波长特性（波长，光谱宽度，温度特性）</h2><p>VCSEL的光谱特性由其量子阱中增益介质和DBR的设计决定。常见的VCSEL波长为650nm-1080nm，1550nm等，以红外应用为主，最新的研究可以实现280-320 nm的紫外VCSEL。对于有多个发光点的VCSEL阵列，由于制程误差，每个VCSEL的波长会略有偏移，整体展示出一个相对较宽的整体光谱，单个VCSEL Mesa的光谱宽度一般小于1nm。VCSEL波长对于温度十分稳定，为~0.06nm/K的数量级。</p>
+<h2 id="光束质量（模式，发散角）"><a href="#光束质量（模式，发散角）" class="headerlink" title="光束质量（模式，发散角）"></a>光束质量（模式，发散角）</h2><p>VCSEL中的氧化限制层在DBR中制造了一个波导结构，VCSEL的横模类似于光纤中的弱波导模式。对于足够小的氧化限制孔径，只有基础模式LP01可以存在，扩大孔径会让更多的模式射出。VCSEL整体发出的光是由多个模式组成的，每个模式都有自己的发散角。基础模式LP01在远场是高斯光束，高阶模式发散角更大，光束质量也更差。下图（a）展示了不同模式的形态，图（b）展示了单一Mesa对于不同孔径的光束发散角的区别。VCSEL的光束发散角一般定义为包含一半Peak能量的发散角宽度。同时电流也会影响光束质量，图（c）（d）展示了电流是如何影响光束偏离理想高斯光束的，其中θm是测量的光束发散角，θ0是理想高斯光束的发散角。电流越低，光束质量越好，原因是大电流直接流出了限制孔径范围，造成更复杂的发光情况。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-16.png" style="zoom:40%;" />
+
+<h2 id="输出功率和转换效率"><a href="#输出功率和转换效率" class="headerlink" title="输出功率和转换效率"></a>输出功率和转换效率</h2><p>根据应用需求的不同，VCSEL功率从mW到W级别。工作电流和孔径的大小都影响其输出功率。功率会随着电流增大而增大，达到一个峰值然后下降，如下左图所示，展示了直流情况下电流和功率的关系。这种现象的原因是半导体结内的温度上升导致的，被称为“thermal rollover”。可以通过使用脉冲模式来实现更高的峰值功率，如下右图所示，展示了1%duty cyle， 50ns pulse width，不同温度下的峰值功率。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-17.png" style="zoom:30%;" />
+
+<p>一般来说，单独的Mesa用大孔径会实现更大的功率。小孔径的VCSEL较小的电流密度限制了一个VCSEL可以实现的最大Wall Plug Efficiency (WPE)。但是由于VCSEL孔径的大小和DBR厚度比例的限制，出现最大WPE的孔径为某个值，然后WPE开始下降。假设这个值为8um左右，随着aperture变大，其中的电流分布就开始不均匀，影响了其WPE。为了实现高功率，如果要做一个VCSEL阵列，可能会选择使用10-12um的孔径，并制造成阵列。这种方式很好的平衡了最大的功率需求和电光转换效率，以及光束质量。下图展示了VCSEL的电光转换效率，孔径和温度的关系。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-18.png" style="zoom:40%;" />
+
+<p>VCSEL设计中还有很多其他需要考量的因素，包括其阈值电流，电阻，上升沿下降沿时间，工作温度范围，效率等。可以看到很多参数之间是相互影响，需要在设计中进行取舍和平衡。</p>
+<h2 id="信赖性"><a href="#信赖性" class="headerlink" title="信赖性"></a>信赖性</h2><p>由于VCSEL是一种千层饼式的激光结构，这种结构的每层都是不同物质，同时每层都很薄，所以这种结构很容易收到各种影响，其中包括水汽，应力和热等。绝缘保护制程可以很好的增强防水氧侵袭，良好的封装散热也很重要，制造的参数控制也对应力很有帮助（比如会有退火的流程）。</p>
+<h1 id="VCSEL企业和市场"><a href="#VCSEL企业和市场" class="headerlink" title="VCSEL企业和市场"></a>VCSEL企业和市场</h1><h2 id="VCSEL企业"><a href="#VCSEL企业" class="headerlink" title="VCSEL企业"></a>VCSEL企业</h2><p>现阶段最大的VCSEL器件玩家主要是Lumentum，II-VI，Trumpf，Vixar等供应商，这些公司在VCSEL主要使用在通信领域的时期积累了非常多的经验，尤其是高信赖性的产品上有着独一无二的优势。在传感器领域，这些公司依然是主要玩家。国内的重要玩家是睿熙科技，纵慧激光和长光华芯等，都是在苹果发布FaceID时期，创办或开始重点研发VCSEL的企业。</p>
+<img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-19.png" style="zoom:40%;" />
+
+<h2 id="VCSEL市场"><a href="#VCSEL市场" class="headerlink" title="VCSEL市场"></a>VCSEL市场</h2><p>根据Yole的调研报告（见下图）：</p>
+<ul>
+<li><strong>市场预期</strong></li>
+</ul>
+<p>全球VCSEL市场预期在2026年增长到24亿美元的规模，21-26年CAGR为13.6%，主要驱动力是数据通信和手机应用需求。其中手机和电子消费品领域VCSEL规模预期达到17亿美元，21-26年CACG为16.4%；车用VCSEL在2026年预期达到5700万美元规模，CAGR 21-26 122%。</p>
+<ul>
+<li><strong>技术预期</strong></li>
+</ul>
+<p>多结VCSEL(Multi-junction VCSEL)技术代表着VCSEL工业界的下一个大飞跃；同时VCSEL生产厂商从4”晶圆向6”晶圆升级，并很快会进入8”晶圆生产；对于OLED屏下传感的应用，由于组装方式和集成方式不同，可能会打破传统的供应链形式。</p>
+<ul>
+<li><strong>供应链</strong></li>
+</ul>
+<p>Lumentum和II-VI掌握着80%的市场占有率，VCSEL的供应商很多，但是头部玩家很少，主要是中小型企业。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/TOFSystem/C5/C5-20.png"></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-3-642-24986-0">VCSELs - Fundamentals, Technology and Applications of Vertical-Cavity Surface-Emitting Lasers</a></li>
+<li><a target="_blank" rel="noopener" href="http://vixarinc.com/vcsel-technology/application-notes">Vixar公司的一系列 Application Notes</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.abax-sensing.com/newsInfo-10-9.html">飞芯电子 一文读懂VCSEL</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.lumentum.com/en/diode-lasers/products/vcsels">Lumentum  VCSEL</a></li>
+<li><a target="_blank" rel="noopener" href="https://ii-vi.com/vcsel-technology/">II-VI VCSEL</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.yole.fr/VCSEL_Market_Update_2021.aspx">Yole VCSEL Market Research</a></li>
+</ol>
+<hr>
+<p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/TOF%E7%B3%BB%E7%BB%9F/">TOF系统</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TOF/" rel="tag">TOF</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%93%E9%A2%98/" rel="tag">专题</a></li></ul>
+
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC81MzQzMS8yOTkwNQ==">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
+      
+    </footer>
+    <hr class="entry-footer-hr">
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/OpticsNews20220320/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          光学新闻 20220320
+        
+      </div>
+    </a>
+  
+  
+    <a href="/OpticsNews20220108/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">光学新闻 20220108</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VCSEL%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">VCSEL简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VCSEL-LED-EEL%E5%AF%B9%E6%AF%94"><span class="nav-number">1.1.</span> <span class="nav-text">VCSEL, LED, EEL对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VCSEL%E5%BD%A2%E6%80%81"><span class="nav-number">1.2.</span> <span class="nav-text">VCSEL形态</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VCSEL%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">VCSEL结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VCSEL%E5%88%B6%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">VCSEL制程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%B6%E5%9C%86MOCVD%E5%A4%96%E5%BB%B6"><span class="nav-number">3.1.</span> <span class="nav-text">晶圆MOCVD外延</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#a-p%E6%9E%81%E8%A7%A6%E7%82%B9%E5%88%B6%E9%80%A0"><span class="nav-number">3.2.</span> <span class="nav-text">(a) p极触点制造</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b-%E7%AC%AC%E4%B8%80%E5%8F%B0%E9%9D%A2%E8%9A%80%E5%88%BB%E5%B9%B6%E8%BF%9B%E8%A1%8CSixNx%E6%B2%89%E7%A7%AF"><span class="nav-number">3.3.</span> <span class="nav-text">(b) 第一台面蚀刻并进行SixNx沉积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#c-%E4%BE%A7%E5%90%91%E6%B0%A7%E5%8C%96"><span class="nav-number">3.4.</span> <span class="nav-text">(c) 侧向氧化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#d-%E7%AC%AC%E4%BA%8C%E5%8F%B0%E9%9D%A2%E8%9A%80%E5%88%BB"><span class="nav-number">3.5.</span> <span class="nav-text">(d) 第二台面蚀刻</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#e-n%E6%9E%81%E8%A7%A6%E7%82%B9%E5%88%B6%E9%80%A0"><span class="nav-number">3.6.</span> <span class="nav-text">(e) n极触点制造</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#f-%E6%8E%A5%E8%A7%A6%E5%B1%82%E5%89%A5%E7%A6%BB"><span class="nav-number">3.7.</span> <span class="nav-text">(f) 接触层剥离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#g-BCB%E5%A1%AB%E5%85%85"><span class="nav-number">3.8.</span> <span class="nav-text">(g) BCB填充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#h-Bondpad%E6%B2%89%E7%A7%AF"><span class="nav-number">3.9.</span> <span class="nav-text">(h) Bondpad沉积</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VCSEL%E5%B0%81%E8%A3%85"><span class="nav-number">4.</span> <span class="nav-text">VCSEL封装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VCSEL%E5%85%B3%E9%94%AE%E5%8F%82%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">VCSEL关键参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A2%E9%95%BF%E7%89%B9%E6%80%A7%EF%BC%88%E6%B3%A2%E9%95%BF%EF%BC%8C%E5%85%89%E8%B0%B1%E5%AE%BD%E5%BA%A6%EF%BC%8C%E6%B8%A9%E5%BA%A6%E7%89%B9%E6%80%A7%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">波长特性（波长，光谱宽度，温度特性）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%89%E6%9D%9F%E8%B4%A8%E9%87%8F%EF%BC%88%E6%A8%A1%E5%BC%8F%EF%BC%8C%E5%8F%91%E6%95%A3%E8%A7%92%EF%BC%89"><span class="nav-number">5.2.</span> <span class="nav-text">光束质量（模式，发散角）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E5%8A%9F%E7%8E%87%E5%92%8C%E8%BD%AC%E6%8D%A2%E6%95%88%E7%8E%87"><span class="nav-number">5.3.</span> <span class="nav-text">输出功率和转换效率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E8%B5%96%E6%80%A7"><span class="nav-number">5.4.</span> <span class="nav-text">信赖性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VCSEL%E4%BC%81%E4%B8%9A%E5%92%8C%E5%B8%82%E5%9C%BA"><span class="nav-number">6.</span> <span class="nav-text">VCSEL企业和市场</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VCSEL%E4%BC%81%E4%B8%9A"><span class="nav-number">6.1.</span> <span class="nav-text">VCSEL企业</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VCSEL%E5%B8%82%E5%9C%BA"><span class="nav-number">6.2.</span> <span class="nav-text">VCSEL市场</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 超 - 光 All Rights Reserved.
+        
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hipaper" target="_blank">hipaper</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+
+
+    <!-- headerblur min height -->
+    
+    
+</script>
+    
+<div style="display: none;">
+  <script src="" language="JavaScript"></script>
+</div>
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-196810386-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+	</script>
+
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
