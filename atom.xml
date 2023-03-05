@@ -6,7 +6,7 @@
   <link href="https://faster-than-light.net/atom.xml" rel="self"/>
   
   <link href="https://faster-than-light.net/"/>
-  <updated>2023-02-01T15:05:08.196Z</updated>
+  <updated>2023-03-05T14:09:16.383Z</updated>
   <id>https://faster-than-light.net/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>光学新闻 20230305</title>
+    <link href="https://faster-than-light.net/OpticsNews20230305/"/>
+    <id>https://faster-than-light.net/OpticsNews20230305/</id>
+    <published>2023-03-05T15:00:00.000Z</published>
+    <updated>2023-03-05T14:09:16.383Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>近几周的五篇光学新闻：</strong></p><ol><li> 全息显示Light Field Lab完成5000万美元B轮融资 — </li><li> MIT发明垂直堆叠MicroLEDs，像素密度高达5千PPI—</li><li> 小米无线AR眼镜—</li><li> 我国科学家研制出“微型化三光子显微镜”并首次实现“深脑成像”— </li><li> 突破光学超构表面偏振复用容量极限—</li></ol><span id="more"></span><hr><h2 id="全息显示Light-Field-Lab完成5000万美元B轮融资"><a href="#全息显示Light-Field-Lab完成5000万美元B轮融资" class="headerlink" title="全息显示Light Field Lab完成5000万美元B轮融资"></a>全息显示Light Field Lab完成5000万美元B轮融资</h2><p>评论：SolidLight全息显示平台背后的开发商Light Field Lab日前宣布，已完成由NCSOFT领投的5000万美元B轮融资。同时，新投资者康宁、比尔·盖茨旗下风投机构Gates Frontier、LG Tech Ventures和OTOY，以及原有投资者Khosla Ventures、三星、Verizon、博世、Forvia、Liberty Global、以及台杉投资等同样有份参投。</p><p>Light Field Lab宣称，SolidLight是有史以来最高分辨率的全息显示平台，可以实现无需头显的裸眼3D全息效果。这个硬件具有自发光无边框面板，可组装成模块化全息视频墙，并为广泛的下一代体验提供了交钥匙系统解决方案。</p><p>看该公司提供的原理介绍，整个显示平台分为三个模块，High Performance Proprietary FPGA, Electronics, Wall &amp; Display Controllers; Photonics Array &amp; Nanoparticle Polymer Fused Surface Energy Relay; Complex Phaseguide Modulation Surface. 虽然名字很花哨，但可能系统的基本原理依然是柱镜光栅的某种变体。未来可以观察一下网上的测评或者实际产品后再最终判断。</p><p>该公司获得这么不错的投资的主要原因可能还是因为系统做的好，有比较好的整体解决方案可以很快推向市场。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230305/1-1.jpg" style="zoom:50%;" /><p><a href="https://www.lightfieldlab.com/">Light Field Lab官网</a></p><hr><h2 id="MIT发明垂直堆叠MicroLEDs，像素密度高达5千PPI"><a href="#MIT发明垂直堆叠MicroLEDs，像素密度高达5千PPI" class="headerlink" title="MIT发明垂直堆叠MicroLEDs，像素密度高达5千PPI"></a>MIT发明垂直堆叠MicroLEDs，像素密度高达5千PPI</h2><p>评论：MIT的研究人员通过一种新颖的超薄薄膜制造工艺制作了一种垂直堆叠的红色、蓝色和绿色像素显示器，而这可能会令像素密度提高一个数量级，从而帮助虚拟现实实现与现实世界别无二致的视觉效果。</p><p>之前有相关论文实现了垂直层叠LED，从上到下进行制造，但是很难缩小其横向距离。该研究使用新的方法，实现了最高5100pixel/inch的像素密度，最小像素点大小4um的层叠全彩MicroLED显示，最高叠合厚度9um。在Jeehwan Kim教授的领导下，科学家们开发了一种技术，首先将超薄的红色、绿色和蓝色LED膜一个一个地堆叠在一起，形成一个类似于慕斯蛋糕的排列。然后，这个“蛋糕”被精细地切成网格状，将其分割成许多独立的像素–每个像素只有4微米宽。在实验室测试中，通过改变应用于一个这样的像素中的每个微型LED的电压，研究人员能够产生彩虹般的颜色，就像OLED像素所能产生的那样。然而，人们可能会问，难道堆栈顶部的蓝色微型LED不总是显示得最多，而底部的红色微型LED总是显示得最少？研究报告的共同作者Jiho Shin解释说：“LED发出的光的颜色（能量）取决于LED的带隙–蓝色LED的带隙最宽（因此蓝光的能量最高），红色LED的带隙最小（能量最低）。”一种材料不会吸收能量小于带隙的光（光子），因此红光和绿光将穿透蓝色LED层而不被吸收，这就是为什么我们按照R（底部）、G（中部）、B（顶部）的顺序垂直堆叠这些层。目前该研究团队正在研究可同时控制数百万个 Micro LED 像素的方法，研究人员透露“有源矩阵”（active matrix）将是需进一步开发的东西。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230305/2.png" style="zoom:30%;" /><p><a href="https://www.nature.com/articles/s41586-022-05612-1">论文</a></p><hr><h2 id="小米无线AR眼镜"><a href="#小米无线AR眼镜" class="headerlink" title="小米无线AR眼镜"></a>小米无线AR眼镜</h2><p>评论：小米在 MWC 2023 世界移动通信大会上正式发布了小米无线 AR 眼镜探索版。小米无线 AR 眼镜探索版配有一对 Micro-OLED 屏幕，支持 1200 尼特亮度，提供全高清 FHD 视觉效果。光学显示方案上是自由曲面Bird Bath方案，还配备了一个电致变色镜片，来自于伯宇科技。眼镜前面有三个前向摄像头，用于绘制佩戴者正前方的环境和手势识别。眼镜搭载高通骁龙 XR2 Gen 1 芯片，没有板载存储，因此必须连接到主机设备（测试使用小米 13）。眼镜是完全无线的，通过小米的“专有低延迟通信链路”（WiFi 和蓝牙的组合）连接到智能手机，小米宣传的延迟仅为 50 毫秒，XDA 测试体验确实延迟非常低，包括刷了 20 分钟视频，延迟几乎感觉不到，画质也没有下降。</p><p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230305/3.png"></p><p><a href="https://www.leiphone.com/category/industrynews/VAUdTevBNWRyQrCz.html">新闻稿</a></p><hr><h2 id="我国科学家研制出“微型化三光子显微镜”并首次实现“深脑成像”"><a href="#我国科学家研制出“微型化三光子显微镜”并首次实现“深脑成像”" class="headerlink" title="我国科学家研制出“微型化三光子显微镜”并首次实现“深脑成像”"></a>我国科学家研制出“微型化三光子显微镜”并首次实现“深脑成像”</h2><p>评论：我国科学家研制出一款重量仅为2.17克的“微型化三光子显微镜”，首次实现了小鼠的“深脑成像”。该技术可以在室内温度条件下以四分之一的照明条件和极低的照明强度，实现对活着小鼠的细胞结构和生物机制活动的实时监测和定量分析。这项技术可以实现立体化图像，可以清晰地观测到小鼠大脑内不同层次的活动，并且可以在不进行其他技术干预（包括作侵入处理）的情况下持续观察。同时，微型化三光子显微镜也可以采集小脑活动数据，实现对单个神经元的运动模式、网络构建及其变化过程的定量分析，帮助研究者深入认识大脑神经网络构建及其动态变化特征。未来，这项技术也可以用于帮助研究新药物调节神经电发放的调控作用。由于可以对小鼠大脑的活动有精细的观察，及时发现大脑疾病的发生，所以这种微型化三光子显微镜对于脑科学等研究有重要意义。此外，它还可以在病理学、药物研发、基因检测以及神经网络的应用方面发挥积极作用。它的出现可以使脑科学的研究有了很大的提升，也可以促进脑病的研究和治疗。此外，这种微型化三光子显微镜技术还可以被应用到神经调节技术方面，比如用于精准外科等领域。它可以用来监测活体动物情绪变化，以及运动和行为学分析，这种诊断精度比传统技术更高。此外，它还可以用来监测细胞结构及其中的生物化学变化，这对于研究的精准诊断和治疗有重要的指导意见。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230305/4.png" style="zoom:50%;" /><p><a href="https://www.nature.com/articles/s41592-023-01777-3">论文</a></p><hr><h2 id="突破光学超构表面偏振复用容量极限"><a href="#突破光学超构表面偏振复用容量极限" class="headerlink" title="突破光学超构表面偏振复用容量极限"></a>突破光学超构表面偏振复用容量极限</h2><p>评论：南京大学物理学院彭茹雯教授、王牧教授研究组联合美国东北大学刘咏民教授研究组，创新性地引入光学响应噪声调控，成功突破光学超构表面偏振复用的容量极限，为发展高容量光学显示、信息加密、数据存储提供新范式。他们的研究论文”Breaking the limitation of polarization multiplexing in optical metasurfaces with engineered noise” 近日发表于国际学术期刊《Science》上。偏振是光的基本性质，在信号传输、传感探测等方面起着重要的作用，被广泛应用于光子学和信息技术的多个领域。比如光的偏振可应用于大容量的复用技术，将信息通过多个独立通道传递到预定目标。随着光学器件的小型化，人们发现在诸如光学超构表面的二维平面系统中，二阶琼斯矩阵能够完整刻画偏振光与其相互作用，从而该体系最多只有3个独立偏振通道，造成偏振复用存在内禀的容量极限。近年来尽管基于机器学习和迭代优化等逆向设计方案很好地优化了偏振复用技术，但是，3个独立偏振通道的容量极限始终存在。打破该物理上限对于发展高容量的光学显示、信息加密、数据存储等应用至关重要。最近，南京大学彭茹雯和王牧研究组与美国东北大学刘咏民研究组联合，创新性地将精心设计的光学响应噪声引入琼斯矩阵方案中，突破超构表面偏振复用容量的物理极限，理论演绎并实验证实利用单一超构表面成功获得高达11个独立偏振通道，该超构表面在不同偏振的单色可见光照射下可观测到11种独立的全息图像。该研究结果为目前光学超构表面偏振复用的最高容量。基于该理论策略，研究团队又进一步证实这种新型的偏振复用技术能够与其它复用技术（比如空间复用，角动量复用等）相融合，并实验展示单一超构表面（样品大小仅 0.33mm × 0.33mm）能够产生36种独立的全息图像，形成包含26个英文字母和10个数字的全息键盘图案。该研究为发展亚波长尺度下高容量光学显示、信息加密、数据存储提供新思路，在光通信和互联、光计算、光传感与探测、增强现实和虚拟现实（AR/VR）技术等领域具有广阔的应用前景。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230305/5-1.jpg" style="zoom:15%;" /><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230305/5-2.jpg" style="zoom:15%;" /><p><a href="https://www.science.org/doi/10.1126/science.ade5140">论文</a> <a href="https://mp.weixin.qq.com/s/ihogv1l5Ur1LMeOHBqGJdg?forceh5=1">新闻</a></p><hr><p>这里记录值得分享的光学科技内容，欢迎投稿或推荐科技内容。</p><p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;近几周的五篇光学新闻：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt; 全息显示Light Field Lab完成5000万美元B轮融资 — &lt;/li&gt;
+&lt;li&gt; MIT发明垂直堆叠MicroLEDs，像素密度高达5千PPI—&lt;/li&gt;
+&lt;li&gt; 小米无线AR眼镜—&lt;/li&gt;
+&lt;li&gt; 我国科学家研制出“微型化三光子显微镜”并首次实现“深脑成像”— &lt;/li&gt;
+&lt;li&gt; 突破光学超构表面偏振复用容量极限—&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="光学新闻" scheme="https://faster-than-light.net/categories/%E5%85%89%E5%AD%A6%E6%96%B0%E9%97%BB/"/>
+    
+    
+    <category term="光学新闻" scheme="https://faster-than-light.net/tags/%E5%85%89%E5%AD%A6%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>光学新闻 20230201</title>
@@ -532,34 +560,6 @@
     <category term="TOF" scheme="https://faster-than-light.net/tags/TOF/"/>
     
     <category term="专题" scheme="https://faster-than-light.net/tags/%E4%B8%93%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>光学新闻 20220108</title>
-    <link href="https://faster-than-light.net/OpticsNews20220108/"/>
-    <id>https://faster-than-light.net/OpticsNews20220108/</id>
-    <published>2022-01-08T15:00:00.000Z</published>
-    <updated>2022-01-08T15:35:25.439Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>近两周的五篇光学新闻：</strong></p><ol><li> 光谱芯片初创公司与光科技完成数亿元Pre-A轮融资 — </li><li> 科思创和 TactoTek展示新的智能表面 —</li><li>  滨松推出近红外增强型ToF图像传感器 —</li><li> OV发布5MP 2.2um RGB-IR Global Shutter传感器— </li><li> Voyant Photonics获1540万美元投资</li></ol><span id="more"></span><hr><h2 id="光谱芯片初创公司与光科技完成数亿元Pre-A轮融资"><a href="#光谱芯片初创公司与光科技完成数亿元Pre-A轮融资" class="headerlink" title="光谱芯片初创公司与光科技完成数亿元Pre-A轮融资"></a>光谱芯片初创公司与光科技完成数亿元Pre-A轮融资</h2><p>评论：光谱芯片初创公司<a href="https://www.seetrum.com/">与光科技</a>宣布完成数亿元Pre-A轮融资，本轮融资由武岳峰科创领投，红杉中国、招商清控、信熹资本、中美绿色等跟投，老股东韦豪创芯、元禾原点、SEE Fund持续加码。本轮融资将用于光谱芯片核心技术的工程化和商业化，践行与光科技“让光谱感知无处不在”的愿景。与光科技专注于为全球客户提供先进的光谱芯片、AI算法和智慧感知方案。成立的一年多以来，陆续发布了SEE8610和SEE8810，其中SEE8610已经开始向行业头部客户送测，并进入量产筹备阶段。在AIoT、生鲜检测、工业检测等应用场景，与光科技和行业头部客户对智慧感知方案的深度合作开发，正在有序推进。光谱作为空间分辨率和3D立体视觉之外新的传感维度，与光科技坚定看好光谱成为超越人眼感知能力的蓝海市场，为机器视觉提供多元化的物理信息输入。与光科技认为，在不远的将来，光谱芯片有望成为人工智能和大数据行业的基础设施。</p><p>2021年8月，高光谱传感器的开发公司Spectricity B轮融资了1600万美元，说明这条赛道上开始出现一些公司，但是光谱芯片的应用场景依然不是非常明确，而且技术壁垒感觉也没有非常高，现在看起来只是在filter上做文章，这对于传统CMOS大厂来说都不是问题。最终会造成不同的主要还是算法和解决方案，谁家的算法可以基于硬件做出最好的应用，这是最重要的know-how。</p><p>值得一提的是，与光科技的两款参考设计的产品名字非常好听，“复虹”和“斓彩”。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220108/1.png" style="zoom:40%;" /><p><a href="https://www.seetrum.com/news/288.html">新闻稿</a></p><hr><h2 id="科思创和-TactoTek展示新的智能表面"><a href="#科思创和-TactoTek展示新的智能表面" class="headerlink" title="科思创和 TactoTek展示新的智能表面"></a>科思创和 TactoTek展示新的智能表面</h2><p>评论：这条新闻不算是很光学，但是这个产品很有意思，可能是未来的显示和电子集成的一个方向。<a href="https://covestro.com/zh">科思创covestro</a>是世界领先的高科技聚合物材料供应商，<a href="https://www.tactotek.com/">TactoTeck</a>是模内结构电子 (IMSE®) 解决方案的先驱，其关键组件采用聚碳酸酯树脂和薄膜制成。两家公司通过联合开发的新型演示设备——集成显示屏的Nighthawk 演示器展示智能表面的无限可能性。模内结构电子 (IMSE®) 技术主要是将用于布线和触摸控制的电子设备使用清洁的增材工艺印刷，电子元件表面安装在聚碳酸酯薄膜上，该薄膜与装饰薄膜一起插入注塑模具中，以封装在聚碳酸酯树脂中，最终制成单一无缝的IMSE®电子结构。传统制程中面板和电子电路是分离，分别制造然后在总装厂进行组装贴合。</p><p>本次主要展示了带有集成显示屏的 Nighthawk演示器，它采用了科思创的 Makrolon® 树脂和 Makrofol® 薄膜。Makrolon® 聚碳酸酯树脂的高透明度、低粘度和独特的导热性是使这些设备成为可能的关键，而 Makrofol® 聚碳酸酯薄膜提供抗紫外线和抗划伤性。降低任何设备材料堆栈的复杂性，增加了有效分离和回收的潜力。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220108/2-1.jpg" style="zoom:50%;" /><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220108/2-2.png" style="zoom:30%;" /><p><a href="https://finance.yahoo.com/news/covestro-tactotek-debut-smart-surfaces-180300575.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAANCOMZGtekwqQwn19T3yEqCCgfv4mumZUVgzKZbxbgk4ISiFZlqC8CtP6hTkXq6TDtM2PTuJo1p7N4Dvtgyaw08NlCWxjXSDnbNxbjQNgYMXamxGD64SoDsDKRmGjHCiAJU2XYEQEk9XiXJLNVICCDOsXANxorFBrbg2oKnKYQ-I">新闻稿</a></p><hr><h2 id="滨松推出近红外增强型ToF图像传感器"><a href="#滨松推出近红外增强型ToF图像传感器" class="headerlink" title="滨松推出近红外增强型ToF图像传感器"></a>滨松推出近红外增强型ToF图像传感器</h2><p>评论：滨松推出了一款128 x 8pixel的NIR近红外增强型TOF传感器，当与脉冲调制光源结合使用时，该ToF图像传感器输出关于光发射和接收时间的相位差信息，并可以通过使用外部信号处理电路或在PC上对输出信号进行计算来获得距离信息，主要应用包括自动驾驶领域的物体检测、安防领域的入侵检测、物流领域的形状识别等。滨松还为此产品提供相关评估套件。可以看到除了ST和AMS外，Hamamatsu也在TOF领域不断发展。对于机器视觉，这种不是用于手机上的相对高像素的TOF，而是用于这些生活中大家甚至不会注意到的场景的应用也大有发展空间。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220108/3.png" style="zoom:50%;" /><p><a href="https://www.hamamatsu.com/us/en/product/type/S15743-01WT/index.html">官网介绍</a></p><hr><h2 id="OV发布5MP-2-2um-RGB-IR-Global-Shutter传感器"><a href="#OV发布5MP-2-2um-RGB-IR-Global-Shutter传感器" class="headerlink" title="OV发布5MP 2.2um RGB-IR Global Shutter传感器"></a>OV发布5MP 2.2um RGB-IR Global Shutter传感器</h2><p>评论：OV发布了OX05B1X传感器，5MP，2.2um pixel size，RGB-IR。主打in-cabin（汽车车内）监控。Global Shutter的NIR sensor从几年前的OV7251 VGA像素数一路发展到今天5MP。每个不同的像素数都开始有自己的应用场景。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220108/4.png" style="zoom:30%;" /><p><a href="https://www.ovt.com/press-releases/omnivision-unveils-automotive-industrys-first-5mp-rgb-ir-global-shutter-sensor-for-in-cabin-driver-monitoring-systems/">新闻</a></p><hr><h2 id="Voyant-Photonics获1540万美元投资"><a href="#Voyant-Photonics获1540万美元投资" class="headerlink" title="Voyant Photonics获1540万美元投资"></a>Voyant Photonics获1540万美元投资</h2><p>评论：<a href="https://voyantphotonics.com/">Voyant Photonics</a>近期募集了1540万美元资金，本次A轮融资由UP. Partners领投，LDV Capital和Contour Ventures跟投。Voyant是使用基于光子学的调频连续波（FMCW）激光雷达系统并结合硅光子技术以降低尺寸和成本。该方法利用可识别的数据模式编码并不断调整其频率的连续光束，避免了传统激光雷达的飞行时间（ToF）方法的许多问题。Voyant Photonics使用的方法可将激光雷达规模化量产成本降至100美元以下——所有光学、光束操纵和传感等功能都集成于芯片上，而不是使用移动部件。联合创始人Chris Phare和Steven Miller以前在哥伦比亚大学纳米光子学研究组共同工作，并决定一起商业化他们的研究成果。下图展示了该种芯片的形态和公司的开发时间表。</p><p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220108/5.jpg"></p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220108/5-1.webp" style="zoom:50%;" /><p><a href="https://optics.org/news/13/1/2">新闻稿</a></p><hr><p>这里记录值得分享的光学科技内容，欢迎投稿或推荐科技内容。</p><p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;近两周的五篇光学新闻：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt; 光谱芯片初创公司与光科技完成数亿元Pre-A轮融资 — &lt;/li&gt;
-&lt;li&gt; 科思创和 TactoTek展示新的智能表面 —&lt;/li&gt;
-&lt;li&gt;  滨松推出近红外增强型ToF图像传感器 —&lt;/li&gt;
-&lt;li&gt; OV发布5MP 2.2um RGB-IR Global Shutter传感器— &lt;/li&gt;
-&lt;li&gt; Voyant Photonics获1540万美元投资&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    <category term="光学新闻" scheme="https://faster-than-light.net/categories/%E5%85%89%E5%AD%A6%E6%96%B0%E9%97%BB/"/>
-    
-    
-    <category term="光学新闻" scheme="https://faster-than-light.net/tags/%E5%85%89%E5%AD%A6%E6%96%B0%E9%97%BB/"/>
     
   </entry>
   
