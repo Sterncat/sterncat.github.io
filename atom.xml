@@ -6,7 +6,7 @@
   <link href="https://faster-than-light.net/atom.xml" rel="self"/>
   
   <link href="https://faster-than-light.net/"/>
-  <updated>2023-04-01T13:31:20.414Z</updated>
+  <updated>2023-05-13T16:51:46.379Z</updated>
   <id>https://faster-than-light.net/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>光学新闻 20230514</title>
+    <link href="https://faster-than-light.net/OpticsNews20230514/"/>
+    <id>https://faster-than-light.net/OpticsNews20230514/</id>
+    <published>2023-05-13T17:00:00.000Z</published>
+    <updated>2023-05-13T16:51:46.379Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>近几周的五篇光学新闻：</strong></p><ol><li> 小米13 Ultra发布 — </li><li> “激光相对论卫星2号”（LARES-2）—</li><li> 超透镜开发商 Imagia 完成450万美元种子轮融资—</li><li> 丹麦政府阻止向滨松出售NKT Photonics— </li><li> 美国雷声公司新推出“雷文”（RAIVEN）新一代光电智能传感系统—</li></ol><span id="more"></span><hr><h2 id="小米13-Ultra发布"><a href="#小米13-Ultra发布" class="headerlink" title="小米13 Ultra发布"></a>小米13 Ultra发布</h2><p>评论：小米和Leica的合作直接就是最大化Leica的品牌价值，然后就是搞市场的有点儿东西，广告做的真不错。13 Ultra提供四摄六焦段的强大影像系统，拥有四颗高素质徕卡光学镜头，分别是12mm超广，23mm广角，75mm长焦，120mm超长焦。同时，还有两个隐藏的焦段：46mm的2X变焦，240mm的10X变焦，这两个焦段，都是硬件直出。整体搭配非常合理，效果也特别优秀。小米还单独为 13 Ultra 推出了一套摄影套装，包含一个采用科技纳米皮的保护壳，以及一个无线摄影手柄，能够实现更为舒适的握持体验，以及物理快门按键的独特体验。</p><p>个人觉得硬件其实还是那些硬件，硬件当然做的是非常不错，但最终加持的还是Leica的风格调教和品牌效应。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230514/1-1.jpg" style="zoom:50%;" /><p><a href="https://mp.weixin.qq.com/s/cUR5Hvec55bVSqjBCHuyNg">雷军：小米13 Ultra重磅发布</a></p><hr><h2 id="“激光相对论卫星2号”（LARES-2）"><a href="#“激光相对论卫星2号”（LARES-2）" class="headerlink" title="“激光相对论卫星2号”（LARES-2）"></a>“激光相对论卫星2号”（LARES-2）</h2><p>评论：一颗新发射的卫星将测量地球自转如何拉拽了周围时空的结构——这是爱因斯坦广义相对论中提出的一种效应——并将此前的测量精度提高十倍。这颗“激光相对论卫星2号”（LARES-2）2022年从法属圭亚那库鲁的欧洲空间局（ESA）太空港升空。<strong>LARES-2的结构非常简单：它是个有303块反射镜覆盖的金属球，不带任何电子设备或是导航控制系统。</strong>这种类似迪斯科球的设计和它的前代——2012年发射的广义相对论实验卫星LARES，以及NASA于1970年代发射的用来研究地球重力的探测器LAGEOS都很像。（Lares读法是LAY-reez，是古罗马的异教神。）下图展示了“灯球”的样子，以及LARES-1的反射镜以及LARES-2的反射镜</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230514/2.jpg" style="zoom:33%;" /><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230514/2-2.jpg" style="zoom:33%;" /><p><a href="https://www.eoportal.org/satellite-missions/lares-2#spacecraft">Information</a></p><hr><h2 id="超透镜开发商-Imagia-完成450万美元种子轮融资"><a href="#超透镜开发商-Imagia-完成450万美元种子轮融资" class="headerlink" title="超透镜开发商 Imagia 完成450万美元种子轮融资"></a>超透镜开发商 Imagia 完成450万美元种子轮融资</h2><p>评论：新一代透镜技术开发商 Imagia最近宣布完成 450 万美元（约合人民币3107万元）种子轮融资。本轮融资由 Gates Frontier 领投，MetaVC Partners 和其他战略投资者参投，这笔资金将用于帮助 Imagia 加速公司第一代平面硅基光学透镜的开发和初始商业部署。Imagia 由斯坦福大学博士工程师 Greg Kress 创立，由光学物理学家和材料科学工程师团队领导，旨在通过其正在申请专利的超透镜技术，以及使用专有的硅基光学材料和最先进的光刻工具，重塑下一代高性能光电子器件。</p><p>Imagia 表示，其超透镜技术可以将整个光学组件缩小为平面的晶圆薄器件，从而大幅降低光学组件的尺寸和复杂性。根据 Imagia 的说法，通过使用正在申请专利的方法，该公司的技术可以直接在各种基板上精确地图案化纳米级结构，从而创建完全扁平的超透镜，通过设计引导光波，而无需传统的曲面透镜。这些透镜可以是方形或圆形，并且可以做得像数字显示器上的单个像素那么小。</p><p>Imagia 指出，由于传统体光学器件的限制和局限性，AR/VR头显等复杂光电产品的制造商一直不得不在人体工程学形式和光学功能之间做出权衡。根据 Imagia 的说法，这些限制不再适用于超透镜，这为制造商提供了更大的光学设计灵活性，以实现更高性能的产品，同时减小尺寸、重量和复杂性。该公司还声称其方法允许全新的设备架构，其超透镜可以在同一制造流程中直接构建在 CMOS 器件（如 LED 和图像传感器）的顶部，从而消除了光学机械对准的几个关键步骤。Imagia 公司首席执行官 Greg Kress 表示：“超材料是我们操纵光线方式的真正范式转变，类似于从模拟到数字计算的转变，传统的玻璃镜片已经存在了数百年。使用这些类型透镜的固有限制导致复杂、笨重的光学组件，并且需要精确的机械对准。Imagia 通过制造集成电路等透镜改变了这种方法，这直到最近才成为可能。”</p><p>我的评价就是：Another one</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230514/3.png" style="zoom:33%;" /><p><a href="https://www.imagia.io/">官网</a></p><hr><h2 id="丹麦政府阻止向滨松出售NKT-Photonics"><a href="#丹麦政府阻止向滨松出售NKT-Photonics" class="headerlink" title="丹麦政府阻止向滨松出售NKT Photonics"></a>丹麦政府阻止向滨松出售NKT Photonics</h2><p>评论：去年6月24日，日本滨松光子（Hamamatsu Photonics）宣布将以2.05亿欧元（折合人民币17.62亿元）的价格战略收购丹麦光纤激光器制造商NKT Photonics，事件一度成为焦点。当时，滨松表示将通过其位于比利时的全资子公司Photonics Management Europe SRL完成此次收购，预计最迟在2023年第一季度末完成全部收购。最新消息显示，根据丹麦投资审查法案，将NKT Photonics出售给滨松全资子公司Photonics Management Europe SRL的交易已被拒绝，收购就此搁浅。根据《丹麦投资审查法案》（Danish Investment Screening Act），外企对丹麦投资交易中（比如像此次收购NKT Photonics），如若对国家安全或公共秩序构成威胁的，丹麦工业、商业和金融部长可以拒绝批准。</p><p>成立于1953年的日本滨松光子学株式会社，是世界上科技水平最高、市场占有率最大的光科学、光产业公司，目前在全球拥有5300多名员工，年收入近12亿欧元。NKT Photonics公司成立于2009年，主要产品包括超连续介质白光激光器、单频光纤激光器、超快光纤激光器等。其2023年第一季度的初步财务数据显示，公司今年开局强劲，收入大幅增长达到了4.22亿欧元（去年同期3.19亿欧元）。</p><p>此前交易如果顺利完成，NKT Photonics将成为滨松的子公司。去年的收购声明中曾提到，滨松光子专注于基于复合半导体制造技术的激光二极管业务，并与NKT Photonics在光纤激光器方面长的专之间形成紧密互补，双方期待在应用领域实现进一步拓展。随着未来激光应用业务的拓展，NKT Photonics的产品阵容将占据重要地位，特别是光纤激光器——其体积小、重量轻，是目前最具吸引力的激光技术。</p><p>各国都开始护着自己的高技术公司了。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230514/4.png" style="zoom:30%;" /><p><a href="https://www.nktphotonics.com/">NKT Photonics官网</a></p><hr><h2 id="美国雷声公司新推出“雷文”（RAIVEN）新一代光电智能传感系统"><a href="#美国雷声公司新推出“雷文”（RAIVEN）新一代光电智能传感系统" class="headerlink" title="美国雷声公司新推出“雷文”（RAIVEN）新一代光电智能传感系统"></a>美国雷声公司新推出“雷文”（RAIVEN）新一代光电智能传感系统</h2><p>评论：2023年4月，美国雷声公司新推出“雷文”（RAIVEN）新一代光电智能传感系统。该系统采用高光谱、激光雷达和人工智能等先进技术，使部队能够在复杂多域作战环境中更有效地实施目标定位、战场空间感知，作用距离更远，反应速度更快，将大幅提升美军遂行多域作战的能力。</p><p>与多光谱瞄准系统等光电综合系统相比，“雷文”光电智能传感系统具有以下5个显著的技战术优势：</p><ul><li>一是首次在类似系统增加超光谱传感器，大幅提升反伪装、反隐蔽、反欺骗能力。“雷文”系统首次集成了超光谱传感器和激光雷达，因此不仅能够利用传统的辐射探测手段，还可以利用光谱含量进行探测。据称这是首次在单个光电综合系统中实现这种能力。</li><li>二是探测、识别和辨认距离等关键性能指标大幅提升，大幅提升平台战场生存能力。除传统的各种光电探测手段和超光谱成像技术外，“雷文”光电智能传感系统还集成了激光雷达，能够在超远距离快速探测目标，其对目标的探测、识别和确认范围是现有光学成像能力的5倍，有效提升平台和作战人员的战场生存能力。</li><li>三是采用人工智能赋能，提升作战的自动化水平。“雷文”光电智能传感系统还采用了人工智能技术，可以将大量数据整合成分辨率更高的图像，更好地实现战场态势感知。特别是人工智能技术可以自动检测和识别威胁，在一定程度实现自动化，减少操作员认知负担的同时，提升决策和行动的效率。</li><li>四是采用开放式架构，适装性强。“雷文”光电智能传感系统采用了开放式架构、通用标准和通用部件，可实现组件的无缝更换、升级和更新。该系统具备集成至转塔、电子侦察吊舱和其他嵌入式系统的能力，适用于机载、地面和海上等多种作战平台。</li><li>五是多任务能力强，可满足多域作战的需求。“雷文”光电智能传感系统可用于遂行近距离“点对点”作战、人道主义/搜索和救援、巡逻侦察、护航、强干扰、地面防空引导等任务，提升美军多域作战能力。</li></ul><p>很会起名字（RAVEN加了个AI，变成RAIVEN），很会做广告。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20230514/5.png" style="zoom:33%;" /><p><a href="https://www.raytheonintelligenceandspace.com/what-we-do/air-dominance/raiven">产品页</a> </p><hr><p>这里记录值得分享的光学科技内容，欢迎投稿或推荐科技内容。</p><p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;近几周的五篇光学新闻：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt; 小米13 Ultra发布 — &lt;/li&gt;
+&lt;li&gt; “激光相对论卫星2号”（LARES-2）—&lt;/li&gt;
+&lt;li&gt; 超透镜开发商 Imagia 完成450万美元种子轮融资—&lt;/li&gt;
+&lt;li&gt; 丹麦政府阻止向滨松出售NKT Photonics— &lt;/li&gt;
+&lt;li&gt; 美国雷声公司新推出“雷文”（RAIVEN）新一代光电智能传感系统—&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="光学新闻" scheme="https://faster-than-light.net/categories/%E5%85%89%E5%AD%A6%E6%96%B0%E9%97%BB/"/>
+    
+    
+    <category term="光学新闻" scheme="https://faster-than-light.net/tags/%E5%85%89%E5%AD%A6%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>光学新闻 20230401</title>
@@ -537,34 +565,6 @@
     <category term="TOF" scheme="https://faster-than-light.net/tags/TOF/"/>
     
     <category term="专题" scheme="https://faster-than-light.net/tags/%E4%B8%93%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>光学新闻 20220320</title>
-    <link href="https://faster-than-light.net/OpticsNews20220320/"/>
-    <id>https://faster-than-light.net/OpticsNews20220320/</id>
-    <published>2022-03-20T10:00:00.000Z</published>
-    <updated>2022-03-20T09:37:17.233Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>近两周的五篇光学新闻：</strong></p><ol><li> 荣耀发布Magic 4 — </li><li> AR企业Rokid获7亿元C轮融资 —</li><li>  Dispelix和瑞声科技建立战略合作关系 —</li><li> 使用衍射透镜提升裸眼3D效果— </li><li> 基于隐私保护的人体姿态识别</li></ol><span id="more"></span><hr><h2 id="荣耀发布Magic-4系列"><a href="#荣耀发布Magic-4系列" class="headerlink" title="荣耀发布Magic 4系列"></a>荣耀发布Magic 4系列</h2><p>评论：2022年3月17日荣耀发布了Magic 4系列手机。影像方面，荣耀Magic4系列均搭载5000万像素主摄（1/1.56英寸超大底），5000万像素超广角（支持微距摄影），不同的地方在于潜望镜头。标准版采用的是一颗800万像素潜望式长焦，最高支持50倍数字变焦；Pro版则是一颗6400万像素潜望式长焦，最高支持100倍数字变焦。二者前置镜头均为1200万像素，不同是Pro版多了一颗3D ToF镜头，可以进行3D人脸解锁。除了摄像头的相关配置，荣耀Magic4系列还搭载了多个影像辅助传感器，比如dTOF镜头可以提升对焦速度；多光谱色温传感器可以扑捉复杂光线信息，提升色彩准确度。当然荣耀也有不少影像算法，例如自研的AI-RAW超级人像引擎，提升人像在不同场景的效果；荣耀色彩还原引擎 Color Engine 2.0首次引入了人眼色适应机制，帮助用户在照片中找回“氛围感”。荣耀Magic4系列首发4K 60fps 10bit-log电影模式，增加60fps视频片幅技术，让影片更流畅。荣耀联手好莱坞专业影像团队为荣耀Magic4系列调制了多个电影级的3D LUTs，能调出更丰富的色调，表达不同的影调情绪。</p><p>荣耀的Magic 3系列是去年8月发布的，这次3月就发布了Magic 4系列，间隔比较短。对于荣耀，离开了华为后，现在可能有着更多自己的想法，无论是堆料到最满，还是DXO拿排名第一，都有造势的想法，对荣耀来说，抢占更多的市场，扛旗华为以前的大旗可能是现阶段最大的任务。</p><p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220320/1.png"></p><p><a href="https://finance.sina.com.cn/tech/2022-03-17/doc-imcwipih9099091.shtml">新闻稿</a></p><hr><h2 id="AR企业Rokid获7亿元C轮融资"><a href="#AR企业Rokid获7亿元C轮融资" class="headerlink" title="AR企业Rokid获7亿元C轮融资"></a>AR企业Rokid获7亿元C轮融资</h2><p>评论：3月20日消息，近日，国内AR智能眼镜领域领军企业杭州灵伴科技有限公司获得总额7亿元人民币的C轮融资，本轮融资主要用于技术研发、市场营销和生态建设。据公开资料，Rokid 是⼀家专注于⼈机交互技术的产品平台公司，致⼒于AR眼镜等软硬件产品的研发及以YodaOS-XR操作系统为载体的⽣态构建。据悉，该公司此前已获得包括淡马锡、IDG 资本、瑞士信贷、海通证券、元璟资本在内的多家顶级机构投资。</p><p>不去说产品做的是好是坏，To B，To C, To VC里Rokid的To VC和To B做的一直不错，一直愿意拓展合作伙伴和应用场景。</p><p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220320/2.jpg"></p><p><a href="https://www.rokid.com/">公司官网</a></p><hr><h2 id="Dispelix和瑞声科技建立战略合作关系"><a href="#Dispelix和瑞声科技建立战略合作关系" class="headerlink" title="Dispelix和瑞声科技建立战略合作关系"></a>Dispelix和瑞声科技建立战略合作关系</h2><p>评论：诚瑞光学母公司——全球领先的智能设备解决方案提供商瑞声科技，与增强现实(AR)和混合现实(MR)可穿戴式see-through光波导显示技术的领导者Dispelix，联合对外宣布建立战略合作伙伴关系。这种双赢合作关系的建立，将结合Dispelix独特的see-through光波导技术，与诚瑞光学全球领先的晶圆级量产技术，为全球客户提供在外形、图像质量和清晰度等方面性能更优的光波导显示解决方案，以此更好地满足AR&amp;MR等全球可穿戴设备相关市场日益增长的需求。作为瑞声科技旗下聚焦光学业务的子公司，诚瑞光学现已发展成为全球领先的光学产品及解决方案提供商，全面覆盖光学镜头、传动、模组等领域，手机光学镜头市场份额位居全球前三，并与全球主流手机品牌均建立了长期战略合作关系。此次合作是诚瑞光学在AR&amp;MR领域战略布局的重大拓展，将与诚瑞光学其他光学业务产生协同效应，为“光学整体解决方案”赋能。</p><p>Dispelix上次融资是11月8日，由Atlantic Bridge领投、新投资者CCB Trust和Flashpoint跟投的3300万美元B轮融资。包括Lifeline Ventures、VTT Ventures、Finnish Industry Investment和3M Ventures在内的所有老股东也参与了本轮融资。截至目前，Dispelix总融资额达到5000万美元。</p><p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220320/3.webp"></p><p><a href="https://dispelix.com/">Dispelix官网</a></p><hr><h2 id="使用衍射透镜提升裸眼3D效果"><a href="#使用衍射透镜提升裸眼3D效果" class="headerlink" title="使用衍射透镜提升裸眼3D效果"></a>使用衍射透镜提升裸眼3D效果</h2><p>评论：传统的裸眼3D系统经常受限于观察距离，这次中国苏州大学的研究者们使用一种新型的平面透镜设计，以提升远观察距离上的图像效果。裸眼3D系统的传统难点是视觉疲劳，有限的移动视差，有限的观察距离，以及观察角度和解析度的权衡。该团队使用衍射光学元件极大地增加了DOF（Depth of Docus）。研究者们设计了一种结合衍射光学平面透镜的向量光场显示器，用以在一系列的观察位置重建正确的深度信息。研究者们设计了一种优化的锯齿状结构，这些结构纠缠在一起组成了“view modulator”，这些调制器可以将光导入正确的位置。最终这种4inch的原型机展示出了在24-90cm的观察范围，实现了18000倍的DOF提升。下一阶段的提升在于视场角的提升（现阶段视场角只有9°）以及更复杂的算法的开发。本质上这算是计算光学的一部分，使用复杂的计算方法实现裸眼3D，但是看起来这种方法还是有种种限制。</p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220320/4-1.jpg" style="zoom:20%;" /><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220320/4-2.jpg" style="zoom:20%;" /><p><a href="https://doi.org/10.1364/OPTICA.439613">论文</a></p><p><a href="https://www.ovt.com/press-releases/omnivision-unveils-automotive-industrys-first-5mp-rgb-ir-global-shutter-sensor-for-in-cabin-driver-monitoring-systems/">论文</a></p><hr><h2 id="基于隐私保护的人体姿态识别"><a href="#基于隐私保护的人体姿态识别" class="headerlink" title="基于隐私保护的人体姿态识别"></a>基于隐私保护的人体姿态识别</h2><p>评论：几十年来，摄像头一直被设计成模仿人类的视觉系统。固定了光学系统之后，我们使用摄像头获取多张高保真图像，然后调整计算机视觉算法以优化它们在特定任务中的准确性。大多数计算机视觉应用，甚至是隐私保护方法，都依赖于这种传统的光学成像系统。例如，可以检测对隐私敏感的日常情况，并使用机械快门启用或禁用第一人称摄像头。然而，这种方法对传统摄像头获取的高分辨率视频执行软件级处理，可能就已经包含了在攻击中易暴露的隐私敏感数据。受光学和算法联合设计趋势的启发，哥伦比亚的桑坦德工业大学和美国的斯坦福大学的研究人员通过在端到端框架中优化光学编码器（硬件级保护）和软件解码器（卷积神经网络）来解决基于隐私保护的人体姿态估计问题。研究人员在光学编码器中引入了视觉隐私保护层，经过适当的参数化，可以优化光学镜头的点扩散函数（PSF）。研究人员通过广泛的模拟和原型摄像头验证了上述方法，展示了基于隐私保护的“深度光学（deep-optics）”方法成功地降低或抑制了隐私属性，同时保证了重要特征来执行人体姿态估计。</p><p>读了下论文，研究者同时优化硬件部分的光学面型和软件部分的姿态估计神经网络，制造出了一种高度定制化的系统。个人觉得这是一种非常有意思的尝试，把软硬两部分系统放在一起优化，最终实现一个高度定制化的功能性系统。</p><p><img src="https://cdn.jsdelivr.net/gh/Sterncat/BlogPics/OpticsNews/20220320/5.png"></p><p><a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Hinojosa_Learning_Privacy-Preserving_Optics_for_Human_Pose_Estimation_ICCV_2021_paper.pdf">论文</a></p><hr><p>这里记录值得分享的光学科技内容，欢迎投稿或推荐科技内容。</p><p>版权声明: 感谢您的阅读，本文由<a href="https://faster-than-light.net/">超光</a>版权所有。如若转载，请注明出处。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;strong&gt;近两周的五篇光学新闻：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt; 荣耀发布Magic 4 — &lt;/li&gt;
-&lt;li&gt; AR企业Rokid获7亿元C轮融资 —&lt;/li&gt;
-&lt;li&gt;  Dispelix和瑞声科技建立战略合作关系 —&lt;/li&gt;
-&lt;li&gt; 使用衍射透镜提升裸眼3D效果— &lt;/li&gt;
-&lt;li&gt; 基于隐私保护的人体姿态识别&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    <category term="光学新闻" scheme="https://faster-than-light.net/categories/%E5%85%89%E5%AD%A6%E6%96%B0%E9%97%BB/"/>
-    
-    
-    <category term="光学新闻" scheme="https://faster-than-light.net/tags/%E5%85%89%E5%AD%A6%E6%96%B0%E9%97%BB/"/>
     
   </entry>
   
